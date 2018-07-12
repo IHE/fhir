@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.MHD.List" />
+  <text>
+    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+	StructureDefinition for List Resource supporting XDS Folders in the 
+    IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
+	</div></text>
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.List" />
+  <name value="IHE.MHD.List" />
+  <title value="IHE MHD Profile on List (Folder)" />
+  <status value="draft" />
+  <experimental value="false" />
+  <date value="2017-12-18" />
+  <publisher value="Integrating the Healthcare Enterprise (IHE)" />
+  <contact>
+    <name value="IHE" />
+    <telecom>
+      <system value="url" />
+      <value value="http://ihe.net" />
+    </telecom>
+  </contact>
+  <contact>
+    <name value="John Moehrke" />
+    <telecom>
+      <system value="email" />
+      <value value="JohnMoehrke@gmail.com" />
+    </telecom>
+  </contact>
+  <description value="Profile on List for use as a Document Folder based on IHE IT Infrastructure Technical Framework Supplement - Mobile access to Health Documents (MHD) Rev. 2.3.  See http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)" />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="List" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/List" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="List.identifier">
+      <path value="List.identifier" />
+      <comment value="When the List.identifier carries the entryUUID then the List.identifier.use shall be ‘official’; and the uniqueId then the List.identifier.use shall be&#xD;&#xA;‘usual’." />
+      <min value="1" />
+    </element>
+    <element id="List.mode">
+      <path value="List.mode" />
+      <comment value="shall be ‘working’" />
+      <fixedCode value="working" />
+    </element>
+    <element id="List.title">
+      <path value="List.title" />
+      <min value="1" />
+    </element>
+    <element id="List.code">
+      <path value="List.code" />
+      <comment value="code.coding is [0..*] so may contain many." />
+      <min value="1" />
+    </element>
+    <element id="List.subject">
+      <path value="List.subject" />
+      <comment value="URL Points to an existing Patient resource representing Affinity Domain Patient." />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="List.encounter">
+      <path value="List.encounter" />
+      <comment value="These HL7 FHIR STU3 elements are not used in XDS, therefore would not be present. Document Consumers should be robust to these elements holding values." />
+      <max value="0" />
+    </element>
+    <element id="List.source">
+      <path value="List.source" />
+      <comment value="These HL7 FHIR STU3 elements are not used in XDS, therefore would not be present. Document Consumers should be robust to these elements holding values." />
+      <max value="0" />
+    </element>
+    <element id="List.orderedBy">
+      <path value="List.orderedBy" />
+      <comment value="These HL7 FHIR STU3 elements are not used in XDS, therefore would not be present. Document Consumers should be robust to these elements holding values." />
+      <max value="0" />
+    </element>
+    <element id="List.entry.flag">
+      <path value="List.entry.flag" />
+      <comment value="These HL7 FHIR STU3 elements are not used in XDS, therefore would not be present. Document Consumers should be robust to these elements holding values." />
+      <max value="0" />
+    </element>
+    <element id="List.entry.deleted">
+      <path value="List.entry.deleted" />
+      <comment value="These HL7 FHIR STU3 elements are not used in XDS, therefore would not be present. Document Consumers should be robust to these elements holding values." />
+      <max value="0" />
+    </element>
+    <element id="List.entry.date">
+      <path value="List.entry.date" />
+      <comment value="These HL7 FHIR STU3 elements are not used in XDS, therefore would not be present. Document Consumers should be robust to these elements holding values." />
+      <max value="0" />
+    </element>
+    <element id="List.emptyReason">
+      <path value="List.emptyReason" />
+      <comment value="These HL7 FHIR STU3 elements are not used in XDS, therefore would not be present. Document Consumers should be robust to these elements holding values." />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

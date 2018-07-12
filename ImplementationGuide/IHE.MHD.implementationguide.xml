@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="IHE.MHD" />
+    <text>
+    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+	ImplementationGuide for  
+    IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
+	</div></text>
+  <url value="http://ihe.net/fhir/ImplementationGuide/IHE.MHD" />
+  <name value="IHE.MHD" />
+  <status value="draft" />
+  <experimental value="false" />
+  <date value="2017-12-18" />
+  <publisher value="Integrating the Healthcare Enterprise (IHE)" />
+  <contact>
+    <name value="IHE" />
+    <telecom>
+      <system value="url" />
+      <value value="http://ihe.net" />
+    </telecom>
+  </contact>
+  <contact>
+    <name value="John Moehrke" />
+    <telecom>
+      <system value="email" />
+      <value value="JohnMoehrke@gmail.com" />
+    </telecom>
+  </contact>
+  <description value="Implementation Guide for the IHE Mobile access to Health Documents (MHD) Rev. 2.3.  See http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)" />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+  <fhirVersion value="3.0.1" />
+  <package>
+    <name value="MHD" />
+    <description value="IHE Mobile access to Health Documents (MHD) Rev. 2.3. See http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)" />
+    <resource>
+      <example value="false" />
+      <name value="Provide Document Bundle Transaction with Minimal Metadata Option" />
+      <description value="Publishes a set of Documents and metadata with Minimal Metadata" />
+      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal" />
+    </resource>
+    <resource>
+      <example value="false" />
+      <name value="Provide Document Bundle Transaction with Comprehnsive Metadata (XDS on FHIR)" />
+      <description value="Publishes a set of Documents and metadata with Comprehensive Metadata" />
+      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Comprehensive" />
+    </resource>
+    <resource>
+      <example value="false" />
+      <name value="DocumentReference profile Provide Minimal Metadata" />
+      <description value="Constraints on DocumentReference resource in a Provide with Minimal Metadata" />
+      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Provide.Minimal.DocumentReference" />
+    </resource>
+    <resource>
+      <example value="false" />
+      <name value="DocumentReference profile Provide Comprehensive Metadata (XDS on FHIR)" />
+      <description value="Constraints on DocumentReference resource in a Provide with Comprehensive Metadata" />
+      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Provide.Comprehensive.DocumentReference" />
+    </resource>
+    <resource>
+      <example value="false" />
+      <name value="DocumentReference profile with Minimal Metadata" />
+      <description value="Constraints on DocumentReference resource in a Query with Minimal Metadata" />
+      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Minimal.DocumentReference" />
+    </resource>
+    <resource>
+      <example value="false" />
+      <name value="DocumentReference profile with Comprehensive Metadata (XDS on FHIR)" />
+      <description value="Constraints on DocumentReference resource in a Query with Comprehensive Metadata" />
+      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Comprehensive.DocumentReference" />
+    </resource>
+    <resource>
+      <example value="false" />
+      <name value="DocumentManifest profile" />
+      <description value="Constraints on DocumentManifest resource" />
+      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentManifest" />
+    </resource>
+    <resource>
+      <example value="false" />
+      <name value="List profile" />
+      <description value="Constraints on List resource" />
+      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.List" />
+    </resource>
+    <resource>
+      <example value="false" />
+      <name value="Document Source" />
+      <description value="Document Source" />
+      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentSource" />
+    </resource>
+    <resource>
+      <example value="false" />
+      <name value="Document Consumer" />
+      <description value="Document Consumer" />
+      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentConsumer" />
+    </resource>
+    <resource>
+      <example value="false" />
+      <name value="Document Recipient" />
+      <description value="Document Recipient" />
+      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentRecipient" />
+    </resource>
+    <resource>
+      <example value="false" />
+      <name value="Document Responder" />
+      <description value="Document Responder" />
+      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentResponder" />
+    </resource>
+    <resource>
+      <example value="false" />
+      <name value="IHE FormatCode CodeSystem" />
+      <description value="IHE FormatCode CodeSystem" />
+      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.FormatCode.cs" />
+    </resource>
+    <resource>
+      <example value="false" />
+      <name value="IHE FormatCode ValueSet" />
+      <description value="IHE FormatCode ValueSet" />
+      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.FormatCode.vs" />
+    </resource>
+  </package>
+</ImplementationGuide>

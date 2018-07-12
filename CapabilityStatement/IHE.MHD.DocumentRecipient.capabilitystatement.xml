@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="IHE.MHD.DocumentRecipient"/>
+  <text>
+    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+	CapabilityStatement for Document Recipient Actor in the 
+    IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
+	</div></text>
+  <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE.MHD.DocumentRecipient"/>
+  <name value="IHE.MHD.DocumentRecipient"/>
+  <title value="IHE ITI Mobile access to Health Documents (MHD) - Document Recipient"/>
+  <experimental value="false"/>
+  <date value="2017-12-18"/>
+  <publisher value="IHE"/>
+	<contact> 
+		<name value="IHE"/> 
+		<telecom> 
+			<system value="url"/> 
+			<value value="http://ihe.net"/> 
+		</telecom> 
+	</contact> 
+	<contact>
+		<name value="John Moehrke" />
+		<telecom>
+			<system value="email" />
+			<value value="JohnMoehrke@gmail.com" />
+		</telecom>
+	</contact>
+  <description value="see http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+  <kind value="requirements"/>
+  <fhirVersion value="3.0.1"/>
+  <format value="application/fhir+xml"/>
+  <format value="application/fhir+json"/>
+  <implementationGuide value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+  <rest>
+    <mode value="server"/>
+    <documentation value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+    <security>
+      <cors value="false"/>
+      <description value="Recommend IUA or SMART"/>
+    </security>
+    <interaction>
+      <code value="transaction"/>
+      <documentation value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal"/>
+    </interaction>
+  </rest>
+  <rest>
+    <mode value="server"/>
+    <security>
+      <cors value="false"/>
+      <description value="Recommend IUA or SMART"/>
+    </security>
+    <interaction>
+      <code value="transaction"/>
+      <documentation value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Comprehensive"/>
+    </interaction>
+  </rest>
+</CapabilityStatement>
