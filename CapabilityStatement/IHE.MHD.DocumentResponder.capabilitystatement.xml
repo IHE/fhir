@@ -1,261 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir">
-  <id value="IHE.MHD.DocumentResponder"/>
-    <text>
-    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
-	CapabilityStatement for the Document Responder actor in the 
-    IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
-	</div></text>
-  <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE.MHD.DocumentResponder"/>
-  <name value="IHE.MHD.DocumentResponder"/>
-  <title value="IHE ITI Mobile access to Health Documents (MHD) - Document Responder (server)"/>
-  <status value="draft"/>
-  <experimental value="false"/>
-  <date value="2017-12-18"/>
-  <publisher value="IHE"/>
-  <contact>
-    <name value="IHE"/>
-    <telecom>
-      <system value="url"/>
-      <value value="http://ihe.net"/>
-    </telecom>
-  </contact>
-  <contact>
-    <name value="John Moehrke"/>
-    <telecom>
-      <system value="email"/>
-      <value value="JohnMoehrke@gmail.com"/>
-    </telecom>
-  </contact>
-  <description value="see http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)"/>
-  <copyright value="IHE"/>
-  <kind value="requirements"/>
-  <fhirVersion value="STU3"/>
-  <format value="application/fhir+xml"/>
-  <format value="application/fhir+json"/>
-  <profile>
-    <reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Minimal.DocumentReference"/>
-  </profile>
-  <profile>
-    <reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Comprehensive.DocumentReference"/>
-  </profile>
-  <profile>
-    <reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentManifest"/>
-  </profile>
-  <profile>
-    <reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.List"/>
-  </profile>
-  <rest>
-    <mode value="server"/>
-    <resource>
-      <type value="DocumentReference"/>
-      <profile>
-        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Comprehensive.DocumentReference"/>
-      </profile>
-      <interaction>
-        <code value="read"/>
-      </interaction>
-      <interaction>
-        <code value="vread"/>
-      </interaction>
-      <interaction>
-        <code value="search-type"/>
-      </interaction>
-      <interaction>
-        <code value="history-instance"/>
-      </interaction>
-      <searchParam>
-        <name value="_id"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-_id"/>
-        <type value="token"/>
-        <documentation value="Logical id of this artifact"/>
-      </searchParam>
-      <searchParam>
-        <name value="_lastUpdated"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-_lastUpdated"/>
-        <type value="date"/>
-        <documentation value="When the resource version last changed"/>
-      </searchParam>
-      <searchParam>
-        <name value="author"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-author"/>
-        <type value="reference"/>
-        <documentation value="Who and/or what authored the document"/>
-      </searchParam>
-      <searchParam>
-        <name value="class"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-class"/>
-        <type value="token"/>
-        <documentation value="Categorization of document"/>
-      </searchParam>
-      <searchParam>
-        <name value="event"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-event"/>
-        <type value="token"/>
-        <documentation value="Main clinical acts documented"/>
-      </searchParam>
-      <searchParam>
-        <name value="facility"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-facility"/>
-        <type value="token"/>
-        <documentation value="Kind of facility where patient was seen"/>
-      </searchParam>
-      <searchParam>
-        <name value="format"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-format"/>
-        <type value="token"/>
-        <documentation value="Format/content rules for the document"/>
-      </searchParam>
-      <searchParam>
-        <name value="indexed"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-indexed"/>
-        <type value="date"/>
-        <documentation value="When this document reference was created"/>
-      </searchParam>
-      <searchParam>
-        <name value="patient"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-patient"/>
-        <type value="reference"/>
-        <documentation value="Who/what is the subject of the document"/>
-      </searchParam>
-      <searchParam>
-        <name value="period"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-period"/>
-        <type value="date"/>
-        <documentation value="Time of service that is being documented"/>
-      </searchParam>
-      <searchParam>
-        <name value="related-id"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-related-id"/>
-        <type value="token"/>
-        <documentation value="Identifier of related objects or events"/>
-      </searchParam>
-      <searchParam>
-        <name value="related-ref"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-related-ref"/>
-        <type value="reference"/>
-        <documentation value="Related Resource"/>
-      </searchParam>
-      <searchParam>
-        <name value="securitylabel"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-securitylabel"/>
-        <type value="token"/>
-        <documentation value="Document security-tags"/>
-      </searchParam>
-      <searchParam>
-        <name value="setting"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-setting"/>
-        <type value="token"/>
-        <documentation value="Additional details about where the content was created (e.g. clinical specialty)"/>
-      </searchParam>
-      <searchParam>
-        <name value="status"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-status"/>
-        <type value="token"/>
-        <documentation value="current | superseded | entered-in-error"/>
-      </searchParam>
-      <searchParam>
-        <name value="type"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-type"/>
-        <type value="token"/>
-        <documentation value="Kind of document (LOINC if possible)"/>
-      </searchParam>
-    </resource>
-    <resource>
-      <type value="DocumentManifest"/>
-      <profile>
-        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentManifest"/>
-      </profile>
-      <interaction>
-        <code value="read"/>
-      </interaction>
-      <interaction>
-        <code value="vread"/>
-      </interaction>
-      <interaction>
-        <code value="search-type"/>
-      </interaction>
-      <interaction>
-        <code value="history-instance"/>
-      </interaction>
-      <searchParam>
-        <name value="_lastUpdated"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-_lastUpdated"/>
-        <type value="date"/>
-        <documentation value="When the resource version last changed"/>
-      </searchParam>
-      <searchParam>
-        <name value="author"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-author"/>
-        <type value="reference"/>
-        <documentation value="Who and/or what authored the manifest"/>
-      </searchParam>
-      <searchParam>
-        <name value="created"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-created"/>
-        <type value="date"/>
-        <documentation value="When this document manifest created"/>
-      </searchParam>
-      <searchParam>
-        <name value="patient"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-patient"/>
-        <type value="reference"/>
-        <documentation value="The subject of the set of documents"/>
-      </searchParam>
-      <searchParam>
-        <name value="recipient"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-recipient"/>
-        <type value="reference"/>
-        <documentation value="Intended to get notified about this set of documents"/>
-      </searchParam>
-      <searchParam>
-        <name value="source"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-source"/>
-        <type value="uri"/>
-        <documentation value="The source system/application/software"/>
-      </searchParam>
-      <searchParam>
-        <name value="status"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-status"/>
-        <type value="token"/>
-        <documentation value="current | superseded | entered-in-error"/>
-      </searchParam>
-      <searchParam>
-        <name value="type"/>
-        <definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-type"/>
-        <type value="token"/>
-        <documentation value="Kind of document set"/>
-      </searchParam>
-    </resource>
-    <resource>
-      <type value="List"/>
-      <profile>
-        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.List"/>
-      </profile>
-      <interaction>
-        <code value="read"/>
-      </interaction>
-      <interaction>
-        <code value="vread"/>
-      </interaction>
-      <interaction>
-        <code value="search-type"/>
-      </interaction>
-      <interaction>
-        <code value="history-instance"/>
-      </interaction>
-    </resource>
-    <resource>
-      <type value="Binary"/>
-      <interaction>
-        <code value="read"/>
-      </interaction>
-      <interaction>
-        <code value="vread"/>
-      </interaction>
-    </resource>
-    <interaction>
-      <code value="search-system"/>
-    </interaction>
-  </rest>
+	<id value="IHE.MHD.DocumentResponder"/>
+	<text>
+		<status value="additional" />
+		<div xmlns="http://www.w3.org/1999/xhtml">
+	This CapabilityStatement describes the Document Responder actor in the  
+    IHE <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a> Profile. 
+	The IHE MHD Profile text is Normative, this conformance resource is Informative.
+		</div>
+	</text>
+	<url value="http://ihe.net/fhir/CapabilityStatement/IHE.MHD.DocumentResponder"/>
+	<name value="IHE.MHD.DocumentResponder"/>
+	<title value="IHE ITI Mobile access to Health Documents (MHD) - Document Responder (server)"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2018-04-14" />
+	<publisher value="IHE"/>
+	<contact>
+		<name value="IHE"/>
+		<telecom>
+			<system value="url"/>
+			<value value="http://ihe.net"/>
+		</telecom>
+	</contact>
+	<contact>
+		<name value="John Moehrke"/>
+		<telecom>
+			<system value="email"/>
+			<value value="JohnMoehrke@gmail.com"/>
+		</telecom>
+	</contact>
+	<description value="This CapabilityStatement describes the Document Responder actor in the IHE Mobile access to Health Documents (MHD) Rev. 2.3 Profile. See http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD). The IHE MHD Profile text is Normative, this conformance resource is Informative." />
+	<jurisdiction>
+		<coding>
+			<system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+			<code value="001"/>
+		</coding>
+	</jurisdiction>
+	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+	<kind value="requirements"/>
+	<fhirVersion value="3.0.1"/>
+	<acceptUnknown value="both" />
+	<format value="application/fhir+xml"/>
+	<format value="application/fhir+json"/>
+	<profile>
+		<reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Minimal.DocumentReference"/>
+	</profile>
+	<profile>
+		<reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Comprehensive.DocumentReference"/>
+	</profile>
+	<profile>
+		<reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentManifest"/>
+	</profile>
+	<profile>
+		<reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.List"/>
+	</profile>
+	<rest>
+		<mode value="server"/>
+		<resource>
+			<type value="DocumentReference"/>
+			<profile>
+				<reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Comprehensive.DocumentReference"/>
+			</profile>
+			<interaction>
+				<code value="read"/>
+			</interaction>
+			<interaction>
+				<code value="search-type"/>
+			</interaction>
+			<searchParam>
+				<name value="_id"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-_id"/>
+				<type value="token"/>
+				<documentation value="Logical id of this artifact"/>
+			</searchParam>
+			<searchParam>
+				<name value="_lastUpdated"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-_lastUpdated"/>
+				<type value="date"/>
+				<documentation value="When the resource version last changed"/>
+			</searchParam>
+			<searchParam>
+				<name value="author"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-author"/>
+				<type value="reference"/>
+				<documentation value="Who and/or what authored the document"/>
+			</searchParam>
+			<searchParam>
+				<name value="class"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-class"/>
+				<type value="token"/>
+				<documentation value="Categorization of document"/>
+			</searchParam>
+			<searchParam>
+				<name value="event"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-event"/>
+				<type value="token"/>
+				<documentation value="Main clinical acts documented"/>
+			</searchParam>
+			<searchParam>
+				<name value="facility"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-facility"/>
+				<type value="token"/>
+				<documentation value="Kind of facility where patient was seen"/>
+			</searchParam>
+			<searchParam>
+				<name value="format"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-format"/>
+				<type value="token"/>
+				<documentation value="Format/content rules for the document"/>
+			</searchParam>
+			<searchParam>
+				<name value="indexed"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-indexed"/>
+				<type value="date"/>
+				<documentation value="When this document reference was created"/>
+			</searchParam>
+			<searchParam>
+				<name value="patient"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-patient"/>
+				<type value="reference"/>
+				<documentation value="Who/what is the subject of the document"/>
+			</searchParam>
+			<searchParam>
+				<name value="period"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-period"/>
+				<type value="date"/>
+				<documentation value="Time of service that is being documented"/>
+			</searchParam>
+			<searchParam>
+				<name value="related-id"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-related-id"/>
+				<type value="token"/>
+				<documentation value="Identifier of related objects or events"/>
+			</searchParam>
+			<searchParam>
+				<name value="related-ref"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-related-ref"/>
+				<type value="reference"/>
+				<documentation value="Related Resource"/>
+			</searchParam>
+			<searchParam>
+				<name value="securitylabel"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-securitylabel"/>
+				<type value="token"/>
+				<documentation value="Document security-tags"/>
+			</searchParam>
+			<searchParam>
+				<name value="setting"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-setting"/>
+				<type value="token"/>
+				<documentation value="Additional details about where the content was created (e.g. clinical specialty)"/>
+			</searchParam>
+			<searchParam>
+				<name value="status"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-status"/>
+				<type value="token"/>
+				<documentation value="current | superseded | entered-in-error"/>
+			</searchParam>
+			<searchParam>
+				<name value="type"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-type"/>
+				<type value="token"/>
+				<documentation value="Kind of document (LOINC if possible)"/>
+			</searchParam>
+		</resource>
+		<resource>
+			<type value="DocumentManifest"/>
+			<profile>
+				<reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentManifest"/>
+			</profile>
+			<interaction>
+				<code value="read"/>
+			</interaction>
+			<interaction>
+				<code value="search-type"/>
+			</interaction>
+			<searchParam>
+				<name value="_lastUpdated"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-_lastUpdated"/>
+				<type value="date"/>
+				<documentation value="When the resource version last changed"/>
+			</searchParam>
+			<searchParam>
+				<name value="author"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-author"/>
+				<type value="reference"/>
+				<documentation value="Who and/or what authored the manifest"/>
+			</searchParam>
+			<searchParam>
+				<name value="created"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-created"/>
+				<type value="date"/>
+				<documentation value="When this document manifest created"/>
+			</searchParam>
+			<searchParam>
+				<name value="patient"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-patient"/>
+				<type value="reference"/>
+				<documentation value="The subject of the set of documents"/>
+			</searchParam>
+			<searchParam>
+				<name value="recipient"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-recipient"/>
+				<type value="reference"/>
+				<documentation value="Intended to get notified about this set of documents"/>
+			</searchParam>
+			<searchParam>
+				<name value="source"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-source"/>
+				<type value="uri"/>
+				<documentation value="The source system/application/software"/>
+			</searchParam>
+			<searchParam>
+				<name value="status"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-status"/>
+				<type value="token"/>
+				<documentation value="current | superseded | entered-in-error"/>
+			</searchParam>
+			<searchParam>
+				<name value="type"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentManifest-type"/>
+				<type value="token"/>
+				<documentation value="Kind of document set"/>
+			</searchParam>
+		</resource>
+		<resource>
+			<type value="List"/>
+			<profile>
+				<reference value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.List"/>
+			</profile>
+			<interaction>
+				<code value="read"/>
+			</interaction>
+		</resource>
+		<resource>
+			<type value="Binary"/>
+			<interaction>
+				<code value="read"/>
+			</interaction>
+		</resource>
+		<interaction>
+			<code value="search-system"/>
+		</interaction>
+	</rest>
 </CapabilityStatement>

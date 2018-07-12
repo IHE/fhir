@@ -1,114 +1,135 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="IHE.MHD.DocumentManifest" />
-  <text>
-    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+	<id value="IHE.MHD.DocumentManifest" />
+	<text>
+		<status value="additional" />
+		<div xmlns="http://www.w3.org/1999/xhtml">
 	StructureDefinition for DocumentManifest as represented in the Provide and Query interactions in the 
-    IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a></div></text>
-  <url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentManifest" />
-  <name value="IHE.MHD.DocumentManifest" />
-  <title value="IHE MHD Profile on DocumentManifest (SubmissionSet)" />
-  <status value="draft" />
-  <experimental value="false" />
-  <date value="2017-12-21" />
-  <publisher value="Integrating the Healthcare Enterprise (IHE)" />
-  <contact>
-    <name value="IHE" />
-    <telecom>
-      <system value="url" />
-      <value value="http://ihe.net" />
-    </telecom>
-  </contact>
-  <contact>
-    <name value="John Moehrke" />
-    <telecom>
-      <system value="email" />
-      <value value="JohnMoehrke@gmail.com" />
-    </telecom>
-  </contact>
-  <description value="Profile on DocumentManifest based on IHE IT Infrastructure Technical Framework Supplement - Mobile access to Health Documents (MHD) Rev. 2.3.  See http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)" />
-  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
-  <fhirVersion value="3.0.1" />
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="DocumentManifest" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentManifest" />
-  <derivation value="constraint" />
-  <differential>
-    <element id="DocumentManifest.masterIdentifier">
-      <path value="DocumentManifest.masterIdentifier" />
-      <min value="1" />
-    </element>
-    <element id="DocumentManifest.identifier">
-      <path value="DocumentManifest.identifier" />
-      <min value="1" />
-    </element>
-    <element id="DocumentManifest.status">
-      <path value="DocumentManifest.status" />
-      <comment value="approved -&gt; status=current&#xD;&#xA;deprecated -&gt; status=superseded" />
-    </element>
-    <element id="DocumentManifest.type">
-      <path value="DocumentManifest.type" />
-      <min value="1" />
-    </element>
-    <element id="DocumentManifest.subject">
-      <path value="DocumentManifest.subject" />
-      <comment value="Not a contained resource. URL Points to an existing Patient resource representing Affinity Domain Patient" />
-      <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-      </type>
-    </element>
-    <element id="DocumentManifest.created">
-      <path value="DocumentManifest.created" />
-      <min value="1" />
-    </element>
-    <element id="DocumentManifest.author">
-      <path value="DocumentManifest.author" />
-      <comment value="Contained author resource of type Practitioner with:&#xD;&#xA;* authorInstitution: Organization&#xD;&#xA;* authorPerson: Practitioner.identifier and Practitioner.name&#xD;&#xA;* authorRole:—Not supported in STU3&#xD;&#xA;* authorSpecialty: Practitioner.qualification&#xD;&#xA;* authorTelecommunication: Practitioner.telecom" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="DocumentManifest.source">
-      <path value="DocumentManifest.source" />
-      <min value="1" />
-    </element>
-    <element id="DocumentManifest.content.p[x]:pReference">
-      <path value="DocumentManifest.content.pReference" />
-      <sliceName value="pReference" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Comprehensive" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Minimal.DocumentReference" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Comprehensive.DocumentReference" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
-      </type>
-    </element>
-    <element id="DocumentManifest.related">
-      <path value="DocumentManifest.related" />
-      <comment value="These HL7 FHIR STU3 elements are not used in XDS, therefore would not be present. Document Consumers should be robust to these elements holding values." />
-      <max value="0" />
-    </element>
-  </differential>
+    IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>.
+	The IHE MHD Profile text is Normative, this conformance resource is Informative.</div>
+	</text>
+	<url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.DocumentManifest" />
+	<name value="IHE.MHD.DocumentManifest" />
+	<title value="IHE MHD Profile on DocumentManifest (SubmissionSet)" />
+	<status value="active" />
+	<experimental value="false" />
+	<date value="2018-04-14" />
+	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
+	<contact>
+		<name value="IHE" />
+		<telecom>
+			<system value="url" />
+			<value value="http://ihe.net" />
+		</telecom>
+	</contact>
+	<contact>
+		<name value="John Moehrke" />
+		<telecom>
+			<system value="email" />
+			<value value="JohnMoehrke@gmail.com" />
+		</telecom>
+	</contact>
+	<description value="Profile on DocumentManifest based on IHE IT Infrastructure Technical Framework Supplement - Mobile access to Health Documents (MHD) Rev. 2.3.  See http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)  The IHE MHD Profile text is Normative, this conformance resource is Informative."  />
+	<jurisdiction>
+		<coding>
+			<system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+			<code value="001"/>
+		</coding>
+	</jurisdiction>	
+	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+	<fhirVersion value="3.0.1" />
+	<kind value="resource" />
+	<abstract value="false" />
+	<type value="DocumentManifest" />
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentManifest" />
+	<derivation value="constraint" />
+	<differential>
+		<element id="DocumentManifest.text">
+			<path value="DocumentManifest.text" />
+			<mapping>
+				<identity value="XDS" />
+				<map value="SubmissionSet.comment" />
+			</mapping>
+		</element>
+		<element id="DocumentManifest.masterIdentifier">
+			<path value="DocumentManifest.masterIdentifier" />
+			<min value="1" />
+		</element>
+		<element id="DocumentManifest.identifier">
+			<path value="DocumentManifest.identifier" />
+			<min value="1" />
+		</element>
+		<element id="DocumentManifest.status">
+			<path value="DocumentManifest.status" />
+			<comment value="approved -&gt; status=current" />
+		</element>
+		<element id="DocumentManifest.type">
+			<path value="DocumentManifest.type" />
+			<min value="1" />
+		</element>
+		<element id="DocumentManifest.subject">
+			<path value="DocumentManifest.subject" />
+			<comment value="Not a contained resource. URL Points to an existing Patient resource representing Affinity Domain Patient" />
+			<min value="1" />
+			<type>
+				<code value="Reference" />
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+			</type>
+		</element>
+		<element id="DocumentManifest.created">
+			<path value="DocumentManifest.created" />
+			<min value="1" />
+		</element>
+		<element id="DocumentManifest.author">
+			<path value="DocumentManifest.author" />
+			<comment value="Contained resource of type Practitioner or Organization with:&#xD;&#xA;* authorInstitution: Organization&#xD;&#xA;For Practionioner, also with:&#xD;&#xA;* authorPerson: Practitioner.identifier and Practitioner.name&#xD;&#xA;* authorRole:—Not supported in STU3&#xD;&#xA;* authorSpecialty: Practitioner.qualification&#xD;&#xA;* authorTelecommunication: Practitioner.telecom" />
+			<type>
+				<code value="Reference" />
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+			</type>
+			<type>
+				<code value="Reference" />
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+			</type>
+			<mustSupport value="true" />
+		</element>
+		<element id="DocumentManifest.source">
+			<path value="DocumentManifest.source" />
+			<min value="1" />
+		</element>
+		<element id="DocumentManifest.content.pReference:pReference">
+			<path value="DocumentManifest.content.pReference" />
+			<sliceName value="pReference" />
+			<type>
+				<code value="Reference" />
+				<targetProfile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Minimal" />
+			</type>
+			<type>
+				<code value="Reference" />
+				<targetProfile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Comprehensive" />
+			</type>
+			<type>
+				<code value="Reference" />
+				<targetProfile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Minimal.DocumentReference" />
+			</type>
+			<type>
+				<code value="Reference" />
+				<targetProfile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Query.Comprehensive.DocumentReference" />
+			</type>
+			<type>
+				<code value="Reference" />
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+			</type>
+		</element>
+		<element id="DocumentManifest.content.pAttachment">
+			<path value="DocumentManifest.content.pAttachment" />
+			<comment value="These HL7 FHIR STU3 elements are not used in XDS, therefore would not be present. Document Consumers should be robust to these elements holding values." />
+			<max value="0" />
+		</element>
+		<element id="DocumentManifest.related">
+			<path value="DocumentManifest.related" />
+			<comment value="These HL7 FHIR STU3 elements are not used in XDS, therefore would not be present. Document Consumers should be robust to these elements holding values." />
+			<max value="0" />
+		</element>
+	</differential>
 </StructureDefinition>
