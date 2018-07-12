@@ -11,7 +11,7 @@
   <title value="IHE MHD profile on Provide Document Bundle (ITI-65) transaction with Minimal Metadata" />
   <status value="draft" />
   <experimental value="false" />
-  <date value="2017-12-18" />
+  <date value="2017-12-21" />
   <publisher value="Integrating the Healthcare Enterprise (IHE)" />
   <contact>
     <name value="IHE" />
@@ -36,6 +36,14 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
   <derivation value="constraint" />
   <differential>
+      <element id="Bundle.meta.profile">
+      <path value="Bundle.meta.profile" />
+      <short value="ITI-65" />
+      <definition value="IHE MHD Provide Document Bundle transaction" />
+      <min value="1" />
+      <max value="1" />
+      <fixedUri value="http://ihe.net/fhir/tag/iti-65" />
+    </element>
     <element id="Bundle.type">
       <path value="Bundle.type" />
       <short value="transaction" />

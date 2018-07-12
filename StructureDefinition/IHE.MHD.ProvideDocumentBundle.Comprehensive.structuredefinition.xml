@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="IHE.MHD.ProvideDocumentBundle.Comprehensive" />
-    <text>
+  <text>
     <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
 	StructureDefinition for Provide Document Bundle (ITI-65) transaction between the MHD Document Source and the MHD Document Recipient with Comprehensive (XDS-on-FHIR) metadata compliance in the 
-    IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a>
-	</div></text>
+    IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)">Mobile access to Health Documents (MHD) Rev. 2.3</a></div></text>
   <url value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.ProvideDocumentBundle.Comprehensive" />
   <name value="IHE.MHD.ProvideDocumentBundle.Comprehensive" />
   <title value="IHE MHD profile on Provide Document Bundle (ITI-65) transaction with Comprehensive Metadata" />
   <status value="draft" />
   <experimental value="false" />
-  <date value="2017-12-18" />
+  <date value="2017-12-21" />
   <publisher value="Integrating the Healthcare Enterprise (IHE)" />
   <contact>
     <name value="IHE" />
@@ -36,6 +35,14 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
   <derivation value="constraint" />
   <differential>
+    <element id="Bundle.meta.profile">
+      <path value="Bundle.meta.profile" />
+      <short value="ITI-65" />
+      <definition value="IHE MHD Provide Document Bundle transaction" />
+      <min value="1" />
+      <max value="1" />
+      <fixedUri value="http://ihe.net/fhir/tag/iti-65" />
+    </element>
     <element id="Bundle.type">
       <path value="Bundle.type" />
       <short value="transaction" />
@@ -89,7 +96,7 @@
       <min value="1" />
       <type>
         <code value="Resource" />
-        <profile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Provide.Minimal.DocumentReference" />
+        <profile value="http://ihe.net/fhir/StructureDefinition/IHE.MHD.Provide.Comprehensive.DocumentReference" />
       </type>
     </element>
     <element id="Bundle.entry:DocumentReference.request">
