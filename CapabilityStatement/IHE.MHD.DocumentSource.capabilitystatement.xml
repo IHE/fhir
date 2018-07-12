@@ -14,7 +14,7 @@
 	<title value="IHE ITI Mobile access to Health Documents (MHD) - Document Source (publisher)"/>
 	<status value="active" />
 	<experimental value="false"/>
-	<date value="2018-04-14" />
+	<date value="2018-05-12" />
 	<publisher value="IHE"/>
 	<contact> 
 		<name value="IHE"/> 
@@ -43,12 +43,9 @@
 	<acceptUnknown value="both" />
 	<format value="application/fhir+xml"/>
 	<format value="application/fhir+json"/>
-	<implementationGuide value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
 	<rest>
 		<mode value="client"/>
-		<documentation value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
 		<security>
-			<cors value="false"/>
 			<description value="Recommend IUA or SMART"/>
 		</security>
 		<interaction>

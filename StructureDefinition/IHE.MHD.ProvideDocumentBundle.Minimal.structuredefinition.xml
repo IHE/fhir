@@ -14,7 +14,7 @@
 	<title value="IHE MHD profile on Provide Document Bundle (ITI-65) transaction with Minimal Metadata" />
 	<status value="active" />
 	<experimental value="false" />
-	<date value="2018-04-14" />
+	<date value="2018-05-12" />
 	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
 	<contact>
 		<name value="IHE" />
@@ -62,8 +62,8 @@
 			<path value="Bundle.entry" />
 			<slicing>
 				<discriminator>
-					<type value="value" />
-					<path value="fullUrl" />
+					<type value="type" />
+					<path value="resource" />
 				</discriminator>
 				<rules value="open" />
 			</slicing>

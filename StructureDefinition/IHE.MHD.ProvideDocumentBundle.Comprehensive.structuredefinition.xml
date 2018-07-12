@@ -14,7 +14,7 @@
 	<title value="IHE MHD profile on Provide Document Bundle (ITI-65) transaction with Comprehensive Metadata" />
 	<status value="active" />
 	<experimental value="false" />
-	<date value="2018-04-14" />
+	<date value="2018-05-12" />
 	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
 	<contact>
 		<name value="IHE" />
@@ -33,10 +33,10 @@
 	<description value="Profile on Transaction Bundle based on IHE IT Infrastructure Technical Framework Supplement - Mobile access to Health Documents (MHD) Rev. 2.3.  See http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)   The IHE MHD Profile text is Normative, this conformance resource is Informative." />
 	<jurisdiction>
 		<coding>
-			<system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
-			<code value="001"/>
+			<system value="http://unstats.un.org/unsd/methods/m49/m49.htm" />
+			<code value="001" />
 		</coding>
-	</jurisdiction>	
+	</jurisdiction>
 	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
 	<fhirVersion value="3.0.1" />
 	<kind value="resource" />
@@ -62,8 +62,8 @@
 			<path value="Bundle.entry" />
 			<slicing>
 				<discriminator>
-					<type value="value" />
-					<path value="fullUrl" />
+					<type value="type" />
+					<path value="resource" />
 				</discriminator>
 				<rules value="open" />
 			</slicing>

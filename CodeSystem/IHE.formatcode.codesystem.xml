@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-	<id value="IHE.formatcode.cs"/>
-    <text>
-    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+	<id value="IHE.FormatCode.codesystem"/>
+	<text>
+		<status value="additional" />
+		<div xmlns="http://www.w3.org/1999/xhtml">
 	The IHE FormatCode code set is defined to be the set of <a href="http://wiki.ihe.net/index.php?title=IHE_Format_Codes">FormatCode(s) defined by IHE</a>. 
 	This code set additionally includes format codes <a href="http://wiki.hl7.org/index.php?title=CDA_Format_Codes_for_IHE_XDS">defined by the HL7 CDA</a>. 
 	The set was listed in HITSP C80 Table 2-153 Format Code Value Set Definition.   
@@ -10,7 +11,8 @@
 	The FormatCode is a further specialization more detailed than the mime-type. 
 	The FormatCode provides sufficient information to allow any potential document consumer to know if it can process and/or display by identifying a document encoding, structure and template. 
 	The actual list of codes is intended to be extensible.
-	</div></text>
+		</div>
+	</text>
 
 	<url value="http://ihe.net/fhir/CodeSystem/IHE.FormatCode.codesystem"/>
 	<identifier>
@@ -22,7 +24,7 @@
 	<title value="IHE Format Code set for use with Document Sharing"/>
 	<status value="active"/>
 	<experimental value="false"/>
-	<date value="2018-02-22"/>
+	<date value="2018-05-12"/>
 	<publisher value="IHE"/>
 	<contact> 
 		<name value="IHE"/> 
@@ -41,7 +43,7 @@
 
 	<description value="The IHE FormatCode code set is defined to be the set of FormatCode(s) defined by IHE http://wiki.ihe.net/index.php?title=IHE_Format_Codes. This code set additionally includes format codes defined by the HL7 CDA http://wiki.hl7.org/index.php?title=CDA_Format_Codes_for_IHE_XDS. The set was listed in HITSP C80 Table 2-153 Format Code Value Set Definition. The use of the FormatCode specifies the technical format of the document. The FormatCode is a further specialization more detailed than the mime-type. The FormatCode provides sufficient information to allow any potential document consumer to know if it can process and/or display by identifying a document encoding, structure and template. The actual list of codes is intended to be extensible. "/>
 
-	  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
 	<caseSensitive value="true"/> 
 	<content value="complete"/> 
 	<concept>
