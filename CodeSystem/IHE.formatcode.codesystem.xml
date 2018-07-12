@@ -11,6 +11,7 @@
 	The FormatCode is a further specialization more detailed than the mime-type. 
 	The FormatCode provides sufficient information to allow any potential document consumer to know if it can process and/or display by identifying a document encoding, structure and template. 
 	The actual list of codes is intended to be extensible.
+	Steve Moore edited this version directly in github as an example
 		</div>
 	</text>
 
