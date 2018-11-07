@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="IHE.NPFSm.classcode.cs"/>
+   
+    <url value="http://ihe.net/fhir/CodeSystem/IHE.NPFSm.classcode.cs"/>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+	    <value value="urn:ihe:iti:npfs:2017:classcodes"/>
+	</identifier>
+
+    <name value="IHE.NPFSm.classcode.cs"/>
+	<title value="IHE Class Code set for use with Non-Patient File Sharing"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2018-02-13"/>
+	<publisher value="IHE"/>
+	<contact> 
+		<name value="IHE"/> 
+		<telecom> 
+			<system value="url"/> 
+			<value value="http://ihe.net"/> 
+		</telecom> 
+	</contact> 
+	<contact>
+		<name value="Gregorio Canal" />
+		<telecom>
+			<system value="email" />
+			<value value="gcanal@consorzioarsenal.it" />
+		</telecom>
+	</contact>
+
+	<description value="The NPFSm Profile defines a Class Codes that can be used to communicate the kind of File that is being shared"/>
+
+	  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+	<caseSensitive value="true"/> 
+	<content value="complete"/> 
+	<concept>
+	    <code value="STYLESHEET"/>
+	    <display value="Code for Stylesheets"/>
+	</concept>
+	<concept>
+	    <code value="WORKFLOW_DEFINITION"/>
+	    <display value="Code for Workflow Definitions"/>
+	</concept>
+</CodeSystem>

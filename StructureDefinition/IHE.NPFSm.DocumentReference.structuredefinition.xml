@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.NPFSm.DocumentReference" />
+  <meta>
+    <lastUpdated value="2018-02-13T10:52:28.763+01:00" />
+  </meta>
+  <url value="StructureDefinition/IHE.NPFSm.DocumentReference" />
+  <name value="IHE.NPFSm.DocumentReference" />
+  <title value="Non-patient File Sharing" />
+  <status value="draft" />
+  <date value="2018-02-06T16:14:08.605+01:00" />
+  <publisher value="Integrating the Healthcare Enterprise (IHE)" />
+  <description value="see http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)" />
+  <purpose value="This supplement defines how to enable the sharing of non-patient files." />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DocumentReference" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DocumentReference.status">
+      <path value="DocumentReference.status" />
+      <fixedCode value="current" />
+    </element>
+    <element id="DocumentReference.class">
+      <path value="DocumentReference.class" />
+      <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="DocumentC80Class" />
+        </extension>
+        <strength value="preferred" />
+        <valueSetReference>
+          <reference value="http://ihe.net/fhir/ValueSet/IHE.NPFSm.classcode.vs" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="DocumentReference.subject">
+      <path value="DocumentReference.subject" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.created">
+      <path value="DocumentReference.created" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.author">
+      <path value="DocumentReference.author" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.content.attachment.contentType">
+      <path value="DocumentReference.content.attachment.contentType" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.content.attachment.language">
+      <path value="DocumentReference.content.attachment.language" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.attachment.data">
+      <path value="DocumentReference.content.attachment.data" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content.attachment.url">
+      <path value="DocumentReference.content.attachment.url" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.content.attachment.size">
+      <path value="DocumentReference.content.attachment.size" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.content.attachment.hash">
+      <path value="DocumentReference.content.attachment.hash" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.content.format">
+      <path value="DocumentReference.content.format" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.context.encounter">
+      <path value="DocumentReference.context.encounter" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.context.sourcePatientInfo">
+      <path value="DocumentReference.context.sourcePatientInfo" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.context.related">
+      <path value="DocumentReference.context.related" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

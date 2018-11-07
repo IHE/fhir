@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-11-28T03:40:57.625-05:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pa" />
+  </extension>
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.mCSD.PractitionerRole" />
+  <name value="mCSD PractitionerRole" />
+  <title value="IHE Mobile Care Services Discovery" />
+  <status value="draft" />
+  <date value="2017-11-28T03:21:18.6222947-05:00" />
+  <publisher value="Integrating the Health Enterprise (IHE)" />
+  <contact>
+    <name value="IHE" />
+    <telecom>
+      <system value="url" />
+      <value value="http://ihe.net" />
+    </telecom>
+  </contact>
+  <description value="See http://wiki.ihe.net/index.php/Mobile_Care_Services_Discovery_(mCSD)" />
+  <purpose value="Lightweight RESTful query interface for care services discovery." />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="PractitionerRole" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="PractitionerRole.code">
+      <path value="PractitionerRole.code" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

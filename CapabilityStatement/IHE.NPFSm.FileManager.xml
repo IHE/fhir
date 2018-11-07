@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+    <id value="IHE.NPFSm.FileManager"/>
+    <text>
+        <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+            CapabilityStatement for File Manager actor in the 
+            IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 1.1</a>
+        </div></text>
+    <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE.NPFSm.FileManager"/>
+    <name value="IHE.NPFSm.FileManager"/>
+    <title value="IHE ITI Non-patient File Sharing (NPFSm) - File Manager (server)"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2018-02-02"/>
+    <publisher value="Integrating the Healthcare Enterprise (IHE)"/>
+    <contact> 
+        <name value="IHE"/> 
+        <telecom> 
+            <system value="url"/> 
+            <value value="http://ihe.net"/> 
+        </telecom> 
+    </contact> 
+    <description value="see http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)"/>
+    <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+    <kind value="requirements"/>
+    <fhirVersion value="3.0.1"/>
+    <format value="application/fhir+xml"/>
+    <format value="application/fhir+json"/>
+    <profile>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.NPFSm.DocumentReference" />
+    </profile>
+    <rest><!--Interaction for create-->
+        <mode value="server"/>
+        <documentation value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+        <security>
+            <cors value="false" />
+            <description value="Recommend IUA" />
+        </security>
+        <interaction>
+            <code value="transaction"/>
+            <documentation value="http://ihe.net/fhir/StructureDefinition/IHE.NPFSm.SubmitFileBundle"/>
+        </interaction>
+    </rest>
+    <rest><!--Interaction for update DOcREF-->
+        <mode value="server"/>
+        <documentation value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+        <security>
+            <cors value="false" />
+            <description value="Recommend IUA" />
+        </security>
+        <resource>
+            <type value="DocumentReference"/>
+            <profile>
+                <reference value="http://ihe.net/fhir/StructureDefinition/IHE.NPFSm.DocumentReference"/>
+            </profile>
+            <interaction>
+                <code value="update"/>
+            </interaction>
+        </resource>
+    </rest>
+    <rest><!--Interaction for search-->
+        <mode value="server"/>
+        <documentation value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+        <security>
+            <cors value="false" />
+            <description value="Recommend IUA or SMART" />
+        </security>
+        <resource>
+            <type value="DocumentReference"/>
+            <profile>
+                <reference value="http://ihe.net/fhir/StructureDefinition/IHE.NPFSm.DocumentReference"/>
+            </profile>
+            <interaction>
+                <code value="read"/>
+            </interaction>
+            <interaction>
+                <code value="vread"/>
+            </interaction>
+            <searchParam>
+                <name value="patient"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-patient"/>
+                <type value="reference"/>
+                <documentation value="This parameter shall always be used to find resources that do not have the
+                    patient element valued. To achieve that, this parameter shall be used with the exists modifier
+                    (e.g., patient:exists=false)"/>
+            </searchParam>
+            <searchParam>
+                <name value="created"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-created"/>
+                <type value="date"/>
+                <documentation value="Document creation time"/>
+            </searchParam>
+            <searchParam>
+                <name value="indexed"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-indexed"/>
+                <type value="date"/>
+                <documentation value="When this File reference was indexed"/>
+            </searchParam>
+            <searchParam>
+                <name value="author.identifier"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-author"/>
+                <type value="token"/>
+                <documentation value="External identifier for Who and/or what authored the File"/>
+            </searchParam>
+            <searchParam>
+                <name value="format"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-format"/>
+                <type value="token"/>
+                <documentation value="Format/content rules for the File"/>
+            </searchParam>
+            <searchParam>
+                <name value="language"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-language"/>
+                <type value="token"/>
+                <documentation value="Human language of the content"/>
+            </searchParam>
+            <searchParam>
+                <name value="location"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-location"/>
+                <type value="uri"/>
+                <documentation value="Uri where the data can be found"/>
+            </searchParam>
+            <searchParam>
+                <name value="status"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-status"/>
+                <type value="token"/>
+                <documentation value="current | superseded | entered-in-error"/>
+            </searchParam>
+            <searchParam>
+                <name value="relatesto"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-period"/>
+                <type value="reference"/>
+                <documentation value="Target of the relationship"/>
+            </searchParam>
+            <searchParam>
+                <name value="relation"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-related-id"/>
+                <type value="token"/>
+                <documentation value="replaces | transforms | signs | appends"/>
+            </searchParam>
+            <searchParam>
+                <name value="relationship"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-related-ref"/>
+                <type value="composite"/>
+                <documentation value="Combination of relation and relatesTo"/>
+            </searchParam>
+            <searchParam>
+                <name value="identifier"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-securitylabel"/>
+                <type value="token"/>
+                <documentation value="Master Version Specific Identifier"/>
+            </searchParam>
+        </resource>
+        <interaction>
+            <code value="search-system" />
+        </interaction>
+    </rest>
+</CapabilityStatement>
