@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="ihe-mma-requestplacer"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>IHE-UBP Barcode Processor</h2><div><p>This is the FHIR capability statement for the IHE-MMA Administration Request Placer actor</p>
+</div></div>
+  </text>
+  <url value="http://ihe.net/fhir/profiles/mma/CapabilityStatement/ihe-mma-requestplacer"/>
+  <version value="2.0"/>
+  <name value="IHE-UBP Barcode Processor"/>
+  <title value="IHE Universal Barcode Processor Capability Statement"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2017-11-03"/>
+  <publisher value="IHE"/>
+  <contact>
+    <name value="ihe"/>
+    <telecom>
+      <system value="email"/>
+      <value value="ihe"/>
+    </telecom>
+  </contact>
+  <description value="This is the FHIR capability statement for the IHE-MMA Administration Request Placer actor "/>
+  <purpose value="Main EHR capability statement, published for contracting and operational support"/>
+  <copyright value="Copyright &#xA9; IHE"/>
+  <kind value="instance"/>
+  <fhirVersion value="3.0.1"/>
+  <implementationGuide value="https://ihe.net/fhir/ImplementationGuide/mma"/>
+</CapabilityStatement>

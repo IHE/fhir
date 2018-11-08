@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-08-07T11:33:44.685+02:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/StructureDefinition/AdministrationReport" />
+  <name value="Medication Administration Report" />
+  <status value="draft" />
+  <date value="2017-08-07T11:05:41.017+02:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationAdministration" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationAdministration" />
+  <derivation value="specialization" />
+</StructureDefinition>

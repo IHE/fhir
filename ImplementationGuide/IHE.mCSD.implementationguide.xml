@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+   <url value="http://ihe.net/fhir/ImplementationGuide/IHE.mCSD" /> 
+   <name value="mCSD" /> 
+ <status value="draft" />
+ <experimental value="false" />
+   <date value="2017-11-29T15:36:22.1438927-05:00" /> 
+ <publisher value="Integrating the Healthcare Enterprise (IHE)" />
+ <contact>
+   <name value="IHE" />
+   <telecom>
+     <system value="url" />
+     <value value="http://ihe.net" />
+   </telecom>
+ </contact>
+   <description value="Implementation Guide for IHE mCSD profile. See http://wiki.ihe.net/index.php/Mobile_Care_Services_Discovery_(mCSD)" />  
+ <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+ <fhirVersion value="3.0.1" />
+ <package>
+     <name value="mCSD" /> 
+     <description value="The Mobile Care Services Discovery (mCSD) Profile defines a lightweight RESTful interface to care services update and selective suppliers leveraging technologies readily available to mobile applications and lightweight browser based applications." />  
+   <resource>
+     <example value="false" />
+     <name value="Care Services Selective Consumer (HealthcareService Option)" /> 
+     <description value="Initiates query for a HealthcareService resource given query parameters" />  
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesSelectiveConsumer.HealthcareService" />  
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Selective Consumer (Location Option)" /> 
+     <description value="Initiates query for a Location resource given query parameters" />  
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesSelectiveConsumer.Location" />  
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Selective Consumer (Organization Option)" /> 
+     <description value="Initiates query for a Organization resource given query parameters" />  
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesSelectiveConsumer.Organization" />  
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Selective Consumer (Practitioner Option)" /> 
+     <description value="Initiates query for Practitioner or PractitionerRole resources given query parameters" />  
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesSelectiveConsumer.Practitioner" />  
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Selective Supplier (HealthcareService Option)" /> 
+     <description value="Responds to queries for HealthcareService resources" /> 
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesSelectiveSupplier.HealthcareService" /> 
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Selective Supplier (Location Option)" /> 
+     <description value="Responds to queries for Location resources" /> 
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesSelectiveSupplier.Location" /> 
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Selective Supplier (Organization Option)" /> 
+     <description value="Responds to queries for Organization resources" /> 
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesSelectiveSupplier.Organization" /> 
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Selective Supplier (Practitioner Option)" /> 
+     <description value="Responds to queries for Practitioner resources" /> 
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesSelectiveSupplier.Practitioner" /> 
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Update Consumer (HealthcareService Option)" /> 
+     <description value="Initiates history query for a HealthcareService resource given query parameters" />  
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesUpdateConsumer.HealthcareService" />  
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Update Consumer (Location Option)" /> 
+     <description value="Initiates history query for a Location resource given query parameters" />  
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesUpdateConsumer.Location" />  
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Update Consumer (Organization Option)" /> 
+     <description value="Initiates history query for a Organization resource given query parameters" />  
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesUpdateConsumer.Organization" />  
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Update Consumer (Practitioner Option)" /> 
+     <description value="Initiates history query for Practitioner or PractitionerRole resources given query parameters" />  
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesUpdateConsumer.Practitioner" />  
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Update Supplier (HealthcareService Option)" /> 
+     <description value="Responds to history queries for HealthcareService resources" /> 
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesUpdateSupplier.HealthcareService" /> 
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Update Supplier (Location Option)" /> 
+     <description value="Responds to history queries for Location resources" /> 
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesUpdateSupplier.Location" /> 
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Update Supplier (Organization Option)" /> 
+     <description value="Responds to history queries for Organization resources" /> 
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesUpdateSupplier.Organization" /> 
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Care Services Update Supplier (Practitioner Option)" /> 
+     <description value="Responds to history queries for Practitioner or PractitionerRole resources" /> 
+     <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesUpdateSupplier.Practitioner" /> 
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="HealthcareService profile" /> 
+     <description value="Constraints on HealthcareService resource" /> 
+     <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.mCSD.HealthcareService" />  
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Location profile" /> 
+     <description value="Constraints on Location resource" /> 
+     <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.mCSD.Location" />  
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Location profile (Distance Option)" /> 
+     <description value="Constraints on Location resource" /> 
+     <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.mCSD.Location.Distance" />  
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Organization profile" /> 
+     <description value="Constraints on Organization resource" /> 
+     <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.mCSD.Organization" />  
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="Practitioner profile" /> 
+     <description value="Constraints on Practitioner resource" /> 
+     <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.mCSD.Practitioner" />  
+   </resource>
+   <resource>
+     <example value="false" />
+     <name value="PractitionerRole profile" /> 
+     <description value="Constraints on PractitionerRole resource" /> 
+     <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.mCSD.PractitionerRole" />  
+   </resource>
+ </package>
+</ImplementationGuide>
