@@ -1,83 +1,60 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-<!-- This is not well formed, but is useful minimal text that I want displayed, but can't figure out how to get it displayed.
-  <text>
-    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml">Implementation Guide for IHE PDQm profile. 
-	See <a href="http://wiki.ihe.net/index.php/Patient_Demographics_Query_for_Mobile_(PDQm)">Patient Demographics Query or Mobile (PDQm)</a><p>
-The Patient Demographics Query for Mobile (PDQm) Profile defines a lightweight RESTful interface to a patient demographics supplier leveraging technologies readily available to mobile applications and lightweight browser based applications.
-	</p><p>
-The functionality is identical to the PDQ Profile described in the ITI TF-1:8. The differences are transport and messaging format of messages and queries. The profile leverages HTTP transport, and the JavaScript Object Notation (JSON), Simple-XML, and Representational State Transfer (REST). The payload format is defined by the HL7® FHIR® draft standard.
-	</p><p>
-Using these patterns, the PDQm Profile exposes the functionality of a patient demographics supplier to mobile applications and lightweight browser applications.
-	</p><p>
-The following list provides a few examples of how PDQm might be leveraged by implementers:
-	</p><p>
-A health portal securely exposing demographics data to browser based plugins
-	</p><p>
-Medical devices which need to access patient demographic information
-	</p><p>
-Mobile devices used by physicians (example bedside eCharts) which need to establish patient context by scanning a bracelet
-	</p><p>
-Web based EHR/EMR applications which wish to provide dynamic updates of patient demographic information such as a non-postback search, additional demographic detail, etc.
-	</p><p>
-Any low resource application which exposes patient demographic search functionality
-	</p><p>
-Any application using the MHD Profile to access documents may use PDQm to find an appropriate patient identifier
-	</p><p>
-This supplement is intended to be fully compliant with the HL7 FHIR specification, providing only use-case driven constraints to aid with interoperability, deterministic results, and compatibility with existing PDQ and PDQv3 Profiles.
-	</p><p>
-Currently the HL7® FHIR® standard is in “Standard for Test Use” (STU) and may experience a large amount of change during this phase. Readers are advised that, while the profiled components in this supplement may not accurately reflect the most recent version of the FHIR      
-   </p></div>
-   </text>
--->
-  <meta>
-    <lastUpdated value="2017-11-02T08:30:26.538-05:00" />
-  </meta>
-  <text>
-    <status value="generated" /><div xmlns="http://www.w3.org/1999/xhtml" /></text>
-  <url value="http://ihe.net/fhir/ImplementationGuide/IHE.PDQm" />
-  <name value="PDQm" />
-  <status value="draft" />
-  <experimental value="false" />
-  <date value="2017-11-02T08:30:26.5335975-05:00" />
-  <publisher value="Integrating the Healthcare Enterprise (IHE)" />
-  <contact>
-    <name value="IHE" />
-    <telecom>
-      <system value="url" />
-      <value value="http://ihe.net" />
-    </telecom>
-  </contact>
-  <contact>
-    <name value="John Moehrke" />
-    <telecom>
-      <system value="email" />
-      <value value="JohnMoehrke@gmail.com" />
-    </telecom>
-  </contact>
-  <description value="Implementation Guide for IHE PDQm profile. See http://wiki.ihe.net/index.php/Patient_Demographics_Query_for_Mobile_(PDQm)&#xD;&#xA;" />
-  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
-  <fhirVersion value="3.0.1" />
-  <package>
-    <name value="PDQm" />
-    <description value="The Patient Demographics Query for Mobile (PDQm) Profile defines a lightweight RESTful interface to a patient demographics supplier leveraging technologies readily available to mobile applications and lightweight browser based applications." />
-    <resource>
-      <example value="false" />
-      <name value="Consumer Actor" />
-      <description value="Initiates query for a Patient resource given query parameters" />
-      <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.PDQm.consumer" />
-    </resource>
-    <resource>
-      <example value="false" />
-      <name value="Supplier Actor" />
-      <description value="Responds to queries for Patient resource " />
-      <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.PDQm.supplier" />
-    </resource>
+	<id value="IHE.PDQm" />
+	<text>
+		<status value="additional" />
+		<div xmlns="http://www.w3.org/1999/xhtml">
+  Implementation Guide for IHE PDQm profile. 
+The <a href="http://wiki.ihe.net/index.php/Patient_Demographics_Query_for_Mobile_(PDQm)">Patient Demographics Query or Mobile (PDQm)</a> Profile defines a lightweight RESTful 
+interface to a patient demographics supplier leveraging technologies readily available to mobile applications and lightweight browser based applications.
+The IHE PDQm Profile text is Normative, this conformance resource is Informative.
+		</div>
+	</text>
+	<url value="http://ihe.net/fhir/ImplementationGuide/IHE.PDQm" />
+	<name value="IHE.PDQm" />
+	<status value="active" />
+	<experimental value="false" />
+	<date value="2018-04-13" />
+	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
+	<contact>
+		<name value="IHE" />
+		<telecom>
+			<system value="url" />
+			<value value="http://ihe.net" />
+		</telecom>
+	</contact>
+	<contact>
+		<name value="John Moehrke" />
+		<telecom>
+			<system value="email" />
+			<value value="JohnMoehrke@gmail.com" />
+		</telecom>
+	</contact>
+	<description value="Implementation Guide for IHE PDQm profile. See http://wiki.ihe.net/index.php/Patient_Demographics_Query_for_Mobile_(PDQm) . The IHE PDQm Profile text is Normative, this conformance resource is Informative." />
+	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+	<fhirVersion value="3.0.1" />
+	<package>
+		<name value="IHE.PDQm" />
+		<description value="The Patient Demographics Query for Mobile (PDQm) Profile defines a lightweight RESTful interface to a patient demographics supplier leveraging technologies readily available to mobile applications and lightweight browser based applications." />
+		<resource>
+			<example value="false" />
+			<name value="Consumer Actor" />
+			<description value="Initiates query for a Patient resource given query parameters" />
+			<sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.PDQm.consumer" />
+		</resource>
+		<resource>
+			<example value="false" />
+			<name value="Supplier Actor" />
+			<description value="Responds to queries for Patient resource " />
+			<sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.PDQm.supplier" />
+		</resource>
+		<!-- unnecessary and possibly problematic
     <resource>
       <example value="false" />
       <name value="Patient profile" />
-      <description value="Constraints on Patient resource" />
-      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.PDQm.Patient" />
+      <description value="any STU3 Patient resource" />
+      <sourceUri value="http://hl7.org/fhir/StructureDefinition/Patient" />
     </resource>
-  </package>
+	-->
+	</package>
 </ImplementationGuide>
