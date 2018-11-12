@@ -3,14 +3,14 @@
   <id value="IHE.NPFSm.FileSource"/>
     <text>
     <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
-	CapabilityStatement for File Source actor in the 
-	IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 1.1</a>
+      CapabilityStatement for File Source actor in the IHE IT Infrastructure Technical Framework Supplement- Non-Patient File Sharing profile (NPFSm).
+      This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 1.1</a>
 	</div></text>
   <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE.NPFSm.FileSource"/>
   <name value="IHE.NPFSm.FileSource"/>
   <title value="IHE ITI Non-patient File Sharing (NPFSm) - File Source (publisher)"/>
   <experimental value="false"/>
-  <date value="2018-01-10"/>
+  <date value="2018-02-13"/>
   <publisher value="Integrating the Healthcare Enterprise (IHE)"/>
 	<contact> 
 		<name value="IHE"/> 
@@ -18,18 +18,13 @@
 			<system value="url"/> 
 			<value value="http://ihe.net"/> 
 		</telecom> 
-	</contact> 
-	<contact>
-		<name value="Gregorio Canal" />
-		<telecom>
-			<system value="email" />
-			<value value="gcanal@cosnorzioarsenal.it" />
-		</telecom>
 	</contact>
-  <description value="see http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)"/>
+  <description value="CapabilityStatement for File Source actor in the IHE IT Infrastructure Technical Framework Supplement- Non-Patient File Sharing profile (NPFSm).
+    This conformance resource is Informative. The Normative content can be found through http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)"/>
   <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
   <kind value="requirements"/>
   <fhirVersion value="3.0.1"/>
+  <acceptUnknown value="both" />
   <format value="application/fhir+xml"/>
   <format value="application/fhir+json"/>
   <rest>
@@ -41,7 +36,7 @@
     </security>
     <interaction>
       <code value="transaction"/>
-      <documentation value="http://ihe.net/fhir/StructureDefinition/IHE.NPFSm.SubmitFileBundle"/>
+      <documentation value="http://ihe.net/fhir/StructureDefinition/IHE.NPFSm.SubmitFile"/>
     </interaction>
   </rest>
 </CapabilityStatement>
