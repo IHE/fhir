@@ -3,15 +3,15 @@
     <id value="IHE.NPFSm.FileManager"/>
     <text>
         <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
-            CapabilityStatement for File Manager actor in the 
-            IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 1.1</a>
+            CapabilityStatement for File Manager actor in the IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
+            This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 1.1</a>
         </div></text>
     <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE.NPFSm.FileManager"/>
     <name value="IHE.NPFSm.FileManager"/>
     <title value="IHE ITI Non-patient File Sharing (NPFSm) - File Manager (server)"/>
     <status value="draft"/>
     <experimental value="false"/>
-    <date value="2018-02-02"/>
+    <date value="2018-02-13"/>
     <publisher value="Integrating the Healthcare Enterprise (IHE)"/>
     <contact> 
         <name value="IHE"/> 
@@ -20,10 +20,12 @@
             <value value="http://ihe.net"/> 
         </telecom> 
     </contact> 
-    <description value="see http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)"/>
+    <description value="CapabilityStatement for File Manager actor in the IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
+        This conformance resource is Informative. The Normative content can be found through http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)"/>
     <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
     <kind value="requirements"/>
     <fhirVersion value="3.0.1"/>
+    <acceptUnknown value="both" />
     <format value="application/fhir+xml"/>
     <format value="application/fhir+json"/>
     <profile>
@@ -74,7 +76,7 @@
                 <code value="read"/>
             </interaction>
             <interaction>
-                <code value="vread"/>
+                <code value="search-type"/>
             </interaction>
             <searchParam>
                 <name value="patient"/>
@@ -150,6 +152,13 @@
                 <type value="token"/>
                 <documentation value="Master Version Specific Identifier"/>
             </searchParam>
+        </resource>
+        <resource>
+            <type value="Binary" />
+            <interaction>
+                <code value="read" />
+            </interaction>
+       
         </resource>
         <interaction>
             <code value="search-system" />

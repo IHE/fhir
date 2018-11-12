@@ -8,12 +8,12 @@
     </div> 
   </text> 
   <url value="http://ihe.net/fhir/CapabilityStatement/IHE.mCSD.CareServicesSelectiveSupplier.Organization"/> 
-  <version value="20171129"/> 
+  <version value="20180212"/> 
   <name value="IHE mCSD - Care Services Selective Supplier (Organization Option)"/> 
   <title value="IHE ITI Mobile Care Services Discovery (mCSD) - Care Services Selective Supplier"/>
   <status value="draft"/> 
   <experimental value="true"/> 
-  <date value="2017-11-29T03:45:00-0500"/> 
+  <date value="2018-02-12"/> 
   <publisher value="Integrating the Health Enterprise (IHE)"/>
   <contact> 
     <name value="IHE"/>
@@ -24,14 +24,14 @@
   </contact>
   <description value="See http://wiki.ihe.net/index.php/Mobile_Care_Services_Discovery_(mCSD)" />
   <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
-  <kind value="instance"/> 
+  <kind value="requirements"/> 
   <fhirVersion value="3.0.1"/> 
   <!--    this system accepts unknown content in the resources    -->
   <acceptUnknown value="no"/> 
   <!--    this system can do either xml or json. (Listing both implies full support for either,
    with interconversion)    -->
-  <format value="xml"/> 
-  <format value="json"/> 
+  <format value="application/fhir+xml"/> 
+  <format value="application/fhir+json"/> 
   <!--    this system supports the -->
   <implementationGuide value=""/> 
   <rest> 
@@ -99,7 +99,7 @@
     <searchParam> 
       <name value="_lastUpdated"/> 
       <type value="token"/> 
-      <documentation>The values for this shall support these prefixes: gt, lt, ge, le, sa, and eb</documentation>
+      <documentation value="The values for this shall support these prefixes: gt, lt, ge, le, sa, and eb" />
     </searchParam> 
   </rest> 
 </CapabilityStatement> 

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
 	<id value="IHE.NPFSm.classcode.cs"/>
-   
+	<text>
+		<status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+			Codesystem for the Class element based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
+			This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 1.1</a>
+		</div></text>
     <url value="http://ihe.net/fhir/CodeSystem/IHE.NPFSm.classcode.cs"/>
-	<identifier>
-		<system value="urn:ietf:rfc:3986"/>
-	    <value value="urn:ihe:iti:npfs:2017:classcodes"/>
-	</identifier>
-
     <name value="IHE.NPFSm.classcode.cs"/>
 	<title value="IHE Class Code set for use with Non-Patient File Sharing"/>
 	<status value="active"/>
@@ -21,16 +20,8 @@
 			<value value="http://ihe.net"/> 
 		</telecom> 
 	</contact> 
-	<contact>
-		<name value="Gregorio Canal" />
-		<telecom>
-			<system value="email" />
-			<value value="gcanal@consorzioarsenal.it" />
-		</telecom>
-	</contact>
-
-	<description value="The NPFSm Profile defines a Class Codes that can be used to communicate the kind of File that is being shared"/>
-
+	<description value="Codesystem for the Class element based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
+		This conformance resource is Informative. The Normative content can be found through http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)"/>
 	  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
 	<caseSensitive value="true"/> 
 	<content value="complete"/> 

@@ -2,15 +2,15 @@
 	<id value="IHE.NPFSm.FileConsumer.FileRetrieveOption" />
 	  <text>
     <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
-	CapabilityStatement for the File Consumer actor in the  
-	IHE IT Infrastructure Technical Framework Supplement <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 1.1</a>
+      CapabilityStatement for the File Consumer actor supporting the File Retrieve Option in the IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
+      This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 1.1</a>
 	</div></text>
-	<url value="http://www.ihe.net/fhir/CapabilityStatement/IHE.NPFSm.FileConsumer" />
-	<name value="IHE.NPFSm.FileConsumer" />
-	<title value="IHE ITI Non-patient File Sharing (NPFSm) - File Consumer (client)" />
+  <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE.NPFSm.FileConsumer.FileRetrieveOption" />
+  <name value="IHE.NPFSm.FileConsumer.FileRetrieveOption" />
+  <title value="IHE ITI Non-patient File Sharing (NPFSm) - File Consumer (client) supporting the File Retrieve Option" />
 	<status value="draft" />
 	<experimental value="false" />
-	<date value="2018-01-10" />
+	<date value="2018-02-13" />
   <publisher value="Integrating the Healthcare Enterprise (IHE)" />
 	<contact> 
 		<name value="IHE"/> 
@@ -18,18 +18,13 @@
 			<system value="url"/> 
 			<value value="http://ihe.net"/> 
 		</telecom> 
-	</contact> 
-	<contact>
-		<name value="Gregorio Canal" />
-		<telecom>
-			<system value="email" />
-			<value value="gcanal@consorzioarsenal.it" />
-		</telecom>
 	</contact>
-  <description value="see http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)" />
+  <description value="CapabilityStatement for the File Consumer actor supporting the File Retrieve Option in the IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
+    This conformance resource is Informative. The Normative content can be found through http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)" />
   <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
 	<kind value="requirements" />
-	<fhirVersion value="STU3" />
+  <fhirVersion value="3.0.1" />
+  <acceptUnknown value="both" />
 	<format value="application/fhir+xml" />
 	<format value="application/fhir+json" />
 	<profile>
@@ -45,16 +40,10 @@
       <interaction><!--for retrive option-->
         <code value="read"/>
       </interaction>
-      <interaction><!--for retrive option-->
-        <code value="vread"/>
-      </interaction>
       <interaction>
         <code value="search-type"/>
       </interaction>
-      <interaction>
-        <code value="history-type"/>
-      </interaction>
-      <searchParam><!-- To eDIT-->
+      <searchParam>
         <name value="patient"/>
         <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-patient"/>
         <type value="reference"/>
@@ -69,7 +58,7 @@
         <documentation value="Document creation time"/>
       </searchParam>
       <searchParam>
-        <name value="Indexed"/>
+        <name value="indexed"/>
         <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-indexed"/>
         <type value="date"/>
         <documentation value="When this File reference was indexed"/>
