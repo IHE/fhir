@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.PCS.Device" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.PCS.Device" />
+  <name value="IHE.PCS.Device" />
+  <title value="IHE PCS Device" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Integrating the Healthcare Enterprise (IHE) " />
+  <contact>
+    <name value="Integrating the Healthcare Enterprise (IHE) " />
+    <telecom>
+      <system value="email" />
+      <value value="secretary@ihe.net" />
+    </telecom>
+  </contact>
+  <description value="Any devices the patient may have on or in them. " />
+  <purpose value="For a healthcare professional to be informed of any devices the patient may have on or in them. " />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property " />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Device" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Device" />
+  <derivation value="constraint" />
+</StructureDefinition>

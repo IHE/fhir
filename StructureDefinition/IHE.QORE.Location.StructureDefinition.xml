@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.QORE.Location" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.QORE.Location" />
+  <version value="3.0.1" />
+  <name value="IHE.QORE.Location" />
+  <title value="IHE QORE Location" />
+  <status value="draft" />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property " />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Location" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Location" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Location">
+      <path value="Location" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Location.identifier">
+      <path value="Location.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Location.name">
+      <path value="Location.name" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Location.address">
+      <path value="Location.address" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Location.physicalType">
+      <path value="Location.physicalType" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Location.endpoint">
+      <path value="Location.endpoint" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

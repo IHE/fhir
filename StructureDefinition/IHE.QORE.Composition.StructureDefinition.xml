@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.QORE.Composition" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.QORE.Composition" />
+  <version value="3.0.1" />
+  <name value="IHE.QORE.Composition" />
+  <title value="IHE QORE Composition" />
+  <status value="draft" />
+  <publisher value="Integrating the Healthcare Enterprise" />
+  <description value="A set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. While a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained." />
+  <purpose value="A set of resources composed into a single coherent clinical statement with clinical attestation that will be sent to easures entities " />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property " />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Composition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Composition">
+      <path value="Composition" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.identifier">
+      <path value="Composition.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.type">
+      <path value="Composition.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.subject">
+      <path value="Composition.subject" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.encounter">
+      <path value="Composition.encounter" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.date">
+      <path value="Composition.date" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.author">
+      <path value="Composition.author" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.title">
+      <path value="Composition.title" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.custodian">
+      <path value="Composition.custodian" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.relatesTo">
+      <path value="Composition.relatesTo" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.event">
+      <path value="Composition.event" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
+      <path value="Composition.section" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

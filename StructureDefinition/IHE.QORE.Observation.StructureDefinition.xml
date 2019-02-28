@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.QORE.Observation" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.QORE.Observation" />
+  <version value="3.0.1" />
+  <name value="IHE.QORE.Observation" />
+  <status value="draft" />
+  <description value="Measurements and simple assertions made about a patient, device or other subject." />
+  <purpose value="Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as lab reports, etc." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.identifier">
+      <path value="Observation.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.status">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
+        <valueString value="default: final" />
+      </extension>
+      <path value="Observation.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.category">
+      <path value="Observation.category" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.context">
+      <path value="Observation.context" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.issued">
+      <path value="Observation.issued" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.comment">
+      <path value="Observation.comment" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.bodySite">
+      <path value="Observation.bodySite" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.specimen">
+      <path value="Observation.specimen" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.device">
+      <path value="Observation.device" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

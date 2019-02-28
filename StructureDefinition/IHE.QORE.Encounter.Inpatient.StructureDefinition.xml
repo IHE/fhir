@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.QORE.Encounter.Inpatient" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.QORE.Encounter.Inpatient" />
+  <name value="IHE.QORE.Encounter.Inpatient" />
+  <title value="IHE QORE Encounter Inpatient" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Integrating the Healthcare Enterprise" />
+  <description value="The inpatient emergency encounter. See URL" />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property " />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Encounter" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Encounter.period">
+      <path value="Encounter.period" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.length">
+      <path value="Encounter.length" />
+      <requirements value="Requireing admit and discharge dates " />
+    </element>
+    <element id="Encounter.hospitalization">
+      <path value="Encounter.hospitalization" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition">
+      <path value="Encounter.hospitalization.dischargeDisposition" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

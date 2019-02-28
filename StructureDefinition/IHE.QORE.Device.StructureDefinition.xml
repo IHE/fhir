@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.QORE.Device" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.QORE.Device" />
+  <version value="3.0.1" />
+  <name value="IHE.QORE.Device" />
+  <title value="IHE QORE Device" />
+  <status value="draft" />
+  <publisher value="Integrating the Healthcare Enterprise" />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property " />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Device" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Device" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Device">
+      <path value="Device" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Device.identifier">
+      <path value="Device.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Device.udi">
+      <path value="Device.udi" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Device.type">
+      <path value="Device.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Device.patient">
+      <path value="Device.patient" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Device.location">
+      <path value="Device.location" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

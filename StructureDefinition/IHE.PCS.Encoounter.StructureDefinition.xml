@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.PCS.Encounter" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.PCS.Encounter" />
+  <name value="IHE.PCS.Encounter" />
+  <status value="draft" />
+  <experimental value="false" />
+  <description value="Encounter constrained for Paramedicine Care Summary (PCS). " />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Encounter" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Encounter.identifier">
+      <path value="Encounter.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.identifier.type">
+      <path value="Encounter.identifier.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.identifier.period">
+      <path value="Encounter.identifier.period" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.statusHistory">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="StatusHistory" />
+      </extension>
+      <path value="Encounter.statusHistory" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Encounter.type">
+      <path value="Encounter.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.priority">
+      <path value="Encounter.priority" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period">
+      <path value="Encounter.period" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period.start">
+      <path value="Encounter.period.start" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period.end">
+      <path value="Encounter.period.end" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.reason">
+      <path value="Encounter.reason" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Diagnosis" />
+      </extension>
+      <path value="Encounter.diagnosis" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.location">
+      <path value="Encounter.location" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceProvider">
+      <path value="Encounter.serviceProvider" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

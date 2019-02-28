@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.QORE.DocumentReference" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.QORE.DocumentReference" />
+  <version value="3.0.1" />
+  <name value="IHE.QORE.DocumentReference" />
+  <title value="IHE QORE Document Reference" />
+  <status value="draft" />
+  <publisher value="Integrating the Healthcare Enterprise" />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property " />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DocumentReference" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DocumentReference">
+      <path value="DocumentReference" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.masterIdentifier">
+      <path value="DocumentReference.masterIdentifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.status">
+      <path value="DocumentReference.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.docStatus">
+      <path value="DocumentReference.docStatus" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type">
+      <path value="DocumentReference.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content">
+      <path value="DocumentReference.content" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

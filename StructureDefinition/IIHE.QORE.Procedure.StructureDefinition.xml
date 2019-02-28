@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.QORE.Procedure" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.QORE.Procedure" />
+  <version value="3.0.1" />
+  <name value="MyProcedure" />
+  <title value="IHE QORE Procedure" />
+  <status value="draft" />
+  <publisher value="Integrating the Healthcare Enterprise" />
+  <description value="th procedures that were done to the patient " />
+  <purpose value="to inform clinicians of what has already been done to the patient" />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property " />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Procedure" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Procedure">
+      <path value="Procedure" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.identifier">
+      <path value="Procedure.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.definition">
+      <path value="Procedure.definition" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.definition.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Procedure.definition.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.partOf">
+      <path value="Procedure.partOf" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.status">
+      <path value="Procedure.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.notDoneReason">
+      <path value="Procedure.notDoneReason" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.code">
+      <path value="Procedure.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.subject">
+      <path value="Procedure.subject" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.context">
+      <path value="Procedure.context" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.performed[x]">
+      <path value="Procedure.performed[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.location">
+      <path value="Procedure.location" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.reasonCode">
+      <path value="Procedure.reasonCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.bodySite">
+      <path value="Procedure.bodySite" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.outcome">
+      <path value="Procedure.outcome" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.complication">
+      <path value="Procedure.complication" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.complicationDetail">
+      <path value="Procedure.complicationDetail" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.focalDevice">
+      <path value="Procedure.focalDevice" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

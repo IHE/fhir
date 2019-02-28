@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.QORE.MedicationAdministration" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.QORE.MedicationAdministration" />
+  <version value="3.0.1" />
+  <name value="MyMedicationAdministration" />
+  <title value="IHE QORE Medication Administration" />
+  <status value="draft" />
+  <description value="the medications that were given to the patient" />
+  <purpose value="to inform care givers on the medications that the patient was given" />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property " />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationAdministration" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationAdministration" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationAdministration">
+      <path value="MedicationAdministration" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.identifier">
+      <path value="MedicationAdministration.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.identifier.value">
+      <path value="MedicationAdministration.identifier.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.identifier.period">
+      <path value="MedicationAdministration.identifier.period" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.status">
+      <path value="MedicationAdministration.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.medication[x]">
+      <path value="MedicationAdministration.medication[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.subject">
+      <path value="MedicationAdministration.subject" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.context">
+      <path value="MedicationAdministration.context" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.effective[x]">
+      <path value="MedicationAdministration.effective[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.device">
+      <path value="MedicationAdministration.device" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.dosage">
+      <path value="MedicationAdministration.dosage" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationAdministration.eventHistory">
+      <path value="MedicationAdministration.eventHistory" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>
