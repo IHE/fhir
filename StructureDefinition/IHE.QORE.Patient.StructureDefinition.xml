@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.QORE.Patient" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.QORE.Patient" />
+  <version value="3.0.1" />
+  <name value="IHE.QORE.Patient" />
+  <title value="IHE QORE Patient" />
+  <status value="draft" />
+  <publisher value="Integrating the Healthcare Enterprise" />
+  <description value="The patinet information used to generate a report. " />
+  <purpose value="The patient's personal information that will be used to generate a report. " />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient">
+      <path value="Patient" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier.use">
+      <path value="Patient.identifier.use" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Patient.identifier.type">
+      <path value="Patient.identifier.type" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier.value">
+      <path value="Patient.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier.assigner">
+      <path value="Patient.identifier.assigner" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.gender">
+      <path value="Patient.gender" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.deceased[x]">
+      <path value="Patient.deceased[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.managingOrganization">
+      <path value="Patient.managingOrganization" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

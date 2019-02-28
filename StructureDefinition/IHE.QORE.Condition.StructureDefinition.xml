@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.QORE.Condition" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.QORE.Condition" />
+  <version value="3.0.1" />
+  <name value="IHE QORE Condition" />
+  <title value="IHE QORE Condition" />
+  <status value="draft" />
+  <publisher value="Integrating the Healthcare Enterprise" />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Condition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Condition">
+      <path value="Condition" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.identifier">
+      <path value="Condition.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.clinicalStatus">
+      <path value="Condition.clinicalStatus" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.category">
+      <path value="Condition.category" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code">
+      <path value="Condition.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite">
+      <path value="Condition.bodySite" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.subject">
+      <path value="Condition.subject" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.context">
+      <path value="Condition.context" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.assertedDate">
+      <path value="Condition.assertedDate" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.evidence">
+      <path value="Condition.evidence" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

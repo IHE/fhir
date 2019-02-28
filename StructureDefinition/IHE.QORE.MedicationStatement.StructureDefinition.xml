@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.QORE.MedicationStatement" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.QORE.MedicationStatement" />
+  <version value="3.0.1" />
+  <name value="MyMedicationStatement" />
+  <title value="IHE QORE Medication Statement" />
+  <status value="draft" />
+  <publisher value="Integrating the Healthcare Enterprise" />
+  <description value="the patient's medications list" />
+  <purpose value="To inform clinicians on what medication the patient of interest is on." />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationStatement" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationStatement">
+      <path value="MedicationStatement" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.identifier">
+      <path value="MedicationStatement.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.status">
+      <path value="MedicationStatement.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.medication[x]">
+      <path value="MedicationStatement.medication[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dateAsserted">
+      <path value="MedicationStatement.dateAsserted" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.subject">
+      <path value="MedicationStatement.subject" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.taken">
+      <path value="MedicationStatement.taken" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.dosage">
+      <path value="MedicationStatement.dosage" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.QORE.ClinicalImpression" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.QORE.ClinicalImpression" />
+  <version value="3.0.1" />
+  <name value="MyClinicalImpression" />
+  <title value="IHE QORE Clinical Impression" />
+  <status value="draft" />
+  <publisher value="Integrating the Healthcare Enterprise" />
+  <description value="the impressions made by care providers based on the patient's condition" />
+  <purpose value="to report the conditions that have effeccted the patient. " />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ClinicalImpression" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ClinicalImpression">
+      <path value="ClinicalImpression" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.identifier">
+      <path value="ClinicalImpression.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.code">
+      <path value="ClinicalImpression.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.description">
+      <path value="ClinicalImpression.description" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.subject">
+      <path value="ClinicalImpression.subject" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.context">
+      <path value="ClinicalImpression.context" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.effective[x]">
+      <path value="ClinicalImpression.effective[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.date">
+      <path value="ClinicalImpression.date" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.assessor">
+      <path value="ClinicalImpression.assessor" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.problem">
+      <path value="ClinicalImpression.problem" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.prognosisCodeableConcept">
+      <path value="ClinicalImpression.prognosisCodeableConcept" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClinicalImpression.action">
+      <path value="ClinicalImpression.action" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

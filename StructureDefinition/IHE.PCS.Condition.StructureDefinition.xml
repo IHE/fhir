@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.PCS.Condition" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.PCS.Condition" />
+  <name value="IHE.PCS.Condition" />
+  <title value="IHE PCS Condition" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Integrating the Healthcare Enterprise (IHE) " />
+  <contact>
+    <name value="Integrating the Healthcare Enterprise (IHE) " />
+    <telecom>
+      <system value="email" />
+    </telecom>
+  </contact>
+  <description value="The problems and conditions of the patient. " />
+  <purpose value="For a healthcare professional to be informed of the patient problems and conditions." />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property " />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Condition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
+  <derivation value="constraint" />
+</StructureDefinition>

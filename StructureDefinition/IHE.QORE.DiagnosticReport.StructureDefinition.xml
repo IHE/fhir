@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.QORE.DiagnosticReport" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.QORE.DiagnosticReport" />
+  <version value="3.0.1" />
+  <name value="MyDiagnosticReport" />
+  <title value="IHE QORE Diagnostic Report" />
+  <status value="draft" />
+  <publisher value="Integrating the Healthcare Enterprise" />
+  <purpose value="to see the diagnoses of the patient" />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DiagnosticReport" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DiagnosticReport">
+      <path value="DiagnosticReport" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.identifier">
+      <path value="DiagnosticReport.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.status">
+      <path value="DiagnosticReport.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.category">
+      <path value="DiagnosticReport.category" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.code">
+      <path value="DiagnosticReport.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DiagnosticReport.codedDiagnosis">
+      <path value="DiagnosticReport.codedDiagnosis" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>
