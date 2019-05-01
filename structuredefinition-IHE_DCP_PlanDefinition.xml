@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="StructureDefinition-IHE_DCP_PlanDefinition" />
+  <name value="DCPPlanDefinition" />
+  <status value="draft" />
+  <date value="2019-04-30T12:43:04.043-04:00" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="PlanDefinition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/PlanDefinition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="PlanDefinition">
+      <path value="PlanDefinition" />
+      <short value="IHE DynamicCarePlanningPlanDefinitionProfile" />
+      <definition value="Contain action definition which describes an activity to be performed." />
+    </element>
+    <element id="PlanDefinition.url">
+      <path value="PlanDefinition.url" />
+      <comment value="This version of the profile requires url where the library of planDefinitions are stored." />
+      <min value="1" />
+    </element>
+    <element id="PlanDefinition.identifier">
+      <path value="PlanDefinition.identifier" />
+      <comment value="This version of the profile requires at least one identifier." />
+      <min value="1" />
+    </element>
+    <element id="PlanDefinition.version">
+      <path value="PlanDefinition.version" />
+      <comment value="This version of the profile requires specifying the version of this PlanDefinition." />
+      <min value="1" />
+    </element>
+    <element id="PlanDefinition.name">
+      <path value="PlanDefinition.name" />
+      <comment value="This version of the profile requires the name of the planDefinition" />
+      <min value="1" />
+    </element>
+    <element id="PlanDefinition.title">
+      <path value="PlanDefinition.title" />
+      <comment value="This version of the profile requires a title which is used in an UI." />
+      <min value="1" />
+    </element>
+    <element id="PlanDefinition.date">
+      <path value="PlanDefinition.date" />
+      <requirements value="This version of the profile requires a date for when the PlanDefinition was last changed" />
+      <min value="1" />
+    </element>
+    <element id="PlanDefinition.publisher">
+      <path value="PlanDefinition.publisher" />
+      <requirements value="Helps establish the &quot;authority/credibility&quot; of the plan definition.  May also allow for contact.&#xD;&#xA;This version of the profile requires the name of the PlanDefinition publisher." />
+      <min value="1" />
+    </element>
+    <element id="PlanDefinition.description">
+      <path value="PlanDefinition.description" />
+      <requirements value="This version of the profile requires a description of the PlanDefinition." />
+      <min value="1" />
+    </element>
+      <element id="PlanDefinition.useContext">
+      <path value="PlanDefinition.useContext" />
+      <requirements value="This version of the profile requires a useContext which is used to discover PlanDefinitions of similar useContext. Will be used to drive searches related to the patient’s condition." />
+      <min value="1" />
+    </element>
+    <element id="PlanDefinition.lastReviewDate">
+      <path value="PlanDefinition.lastReviewDate" />
+      <comment value="If specified, this is usually after the approval date.&#xD;&#xA;This version of the profile requires a date when the PlanDefinition was last reviewed. " />
+      <min value="1" />
+    </element>
+    <element id="PlanDefinition.goal.addresses">
+      <path value="PlanDefinition.goal.addresses" />
+      <requirements value="This version of the profile requires the concept the PlanDefinition.goal addresses" />
+      <min value="1" />
+    </element>
+    <element id="PlanDefinition.action">
+      <path value="PlanDefinition.action" />
+      <requirements value="This version of the profile requires action (activityDefinitions)." />
+      <min value="1" />
+    </element>
+    <element id="PlanDefinition.action.title">
+      <path value="PlanDefinition.action.title" />
+      <requirements value="This version of the profile requires a title of the action (activityDefinitions)." />
+      <min value="1" />
+    </element>
+    <element id="PlanDefinition.action.description">
+      <path value="PlanDefinition.action.description" />
+      <requirements value="This version of the profile requires a description of the action (activityDefinitions)." />
+      <min value="1" />
+    </element>
+    <element id="PlanDefinition.definition">
+      <path value="PlanDefinition.definition" />
+      <requirements value="This version of the profile requires ActivityDefinitions referenced by the PlanDefinition" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
