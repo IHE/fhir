@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="StructureDefinition/MyTask" />
-  <name value="MyTask" />
+  <url value="StructureDefinition-IHE_DCP_Task" />
+  <name value="DCPTask" />
   <status value="draft" />
-  <date value="2018-04-30T20:24:38.792-04:00" />
-  <fhirVersion value="3.0.1" />
+  <date value="2019-04-30T20:24:38.792-04:00" />
+  <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Task" />
@@ -16,9 +16,9 @@
       <requirements value="This version of the profile requires at least one identifier." />
       <min value="1" />
     </element>
-    <element id="Task.definition[x]">
-      <path value="Task.definition[x]" />
-      <requirements value="Enables a formal definition of how he task is to be performed (e.g. using BPMN, BPEL, XPDL or other formal notation) to be associated with a task, enabling automation.&#xD;&#xA;This version of the profile requires at least one definition." />
+    <element id="Task.instantiatesCanonical">
+      <path value="Task.instantiatesCanonical" />
+      <requirements value="Formal definition of task. This version of the profile requires at least one definition." />
       <min value="1" />
     </element>
     <element id="Task.code">

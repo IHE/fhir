@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="StructureDefinition/MyPlanDefinition" />
-  <name value="MyPlanDefinition" />
+  <url value="StructureDefinition-IHE_DCP_PlanDefinition" />
+  <name value="DCPPlanDefinition" />
   <status value="draft" />
-  <date value="2018-04-11T12:43:04.043-04:00" />
-  <fhirVersion value="3.0.1" />
+  <date value="2019-04-30T12:43:04.043-04:00" />
+  <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="PlanDefinition" />
@@ -41,10 +41,6 @@
       <comment value="This version of the profile requires a title which is used in an UI." />
       <min value="1" />
     </element>
-    <element id="PlanDefinition.status">
-      <path value="PlanDefinition.status" />
-      <requirements value="This version of the profile requires an effectivePeriod of period.start when the PlanDefinition status value is active " />
-    </element>
     <element id="PlanDefinition.date">
       <path value="PlanDefinition.date" />
       <requirements value="This version of the profile requires a date for when the PlanDefinition was last changed" />
@@ -60,19 +56,14 @@
       <requirements value="This version of the profile requires a description of the PlanDefinition." />
       <min value="1" />
     </element>
+      <element id="PlanDefinition.useContext">
+      <path value="PlanDefinition.useContext" />
+      <requirements value="This version of the profile requires a useContext which is used to discover PlanDefinitions of similar useContext. Will be used to drive searches related to the patient’s condition." />
+      <min value="1" />
+    </element>
     <element id="PlanDefinition.lastReviewDate">
       <path value="PlanDefinition.lastReviewDate" />
       <comment value="If specified, this is usually after the approval date.&#xD;&#xA;This version of the profile requires a date when the PlanDefinition was last reviewed. " />
-      <min value="1" />
-    </element>
-    <element id="PlanDefinition.effectivePeriod.start">
-      <path value="PlanDefinition.effectivePeriod.start" />
-      <requirements value="This version of the profile requires an effectivePeriod of period.start when the PlanDefinition status value is active " />
-      <min value="1" />
-    </element>
-    <element id="PlanDefinition.useContext">
-      <path value="PlanDefinition.useContext" />
-      <requirements value="Assist in searching for appropriate content.&#xD;&#xA;This version of the profile requires a useContext which is used to discover planDefinitions of similar useContext. Will be used to drive searches related to the patient’s condition. " />
       <min value="1" />
     </element>
     <element id="PlanDefinition.goal.addresses">
@@ -93,6 +84,11 @@
     <element id="PlanDefinition.action.description">
       <path value="PlanDefinition.action.description" />
       <requirements value="This version of the profile requires a description of the action (activityDefinitions)." />
+      <min value="1" />
+    </element>
+    <element id="PlanDefinition.definition">
+      <path value="PlanDefinition.definition" />
+      <requirements value="This version of the profile requires ActivityDefinitions referenced by the PlanDefinition" />
       <min value="1" />
     </element>
   </differential>

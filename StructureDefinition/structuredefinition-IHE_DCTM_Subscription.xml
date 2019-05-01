@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="StructureDefinition-IHE_DCP_Subscription" />
-  <name value="DCPSubscription" />
+  <url value="StructureDefinition-IHE_DCTM_Subscription" />
+  <name value="DCTMSubscription" />
   <status value="draft" />
   <date value="2019-04-30T20:36:53.16-04:00" />
   <fhirVersion value="4.0.0" />
