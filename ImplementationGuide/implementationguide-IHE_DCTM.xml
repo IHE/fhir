@@ -1,0 +1,55 @@
+
+<ImplementationGuide>
+    <id value="IHE.DCP" />
+    <url value="http://ihe.net/fhir/ImplementationGuide/IHE_DCTM" />
+    <name value="IHE.DCTM" />
+    <status value="active" />
+    <experimental value="false" />
+    <date value="2019-04-28T12:00:00-06:00" />
+    <publisher value="Integrating the Healthcare Enterprise (IHE)" />
+    <contact>
+        <name value="IHE" />
+        <telecom>
+            <system value="url" />
+            <value value="http://ihe.net" />
+        </telecom>
+    </contact>
+    <contact>
+        <name value="Emma Jones" />
+        <telecom>
+            <system value="email" />
+            <value value="emma.jones@allscripts.com" />
+        </telecom>
+    </contact>
+    <description value="Implementation Guide for IHE DCTM profile. See https://wiki.ihe.net/index.php/Dynamic_Care_Team_Management" />
+    <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+    <fhirVersion value="4.0.0" />
+    <package>
+        <name value="IHE.DCTM" />
+        <description value="The Dynamic Care Team Management (DCTM) Profile provides the means for sharing care team information about a patient’s care teams that meet the needs of many users, such as providers, patients and payers."/>
+        <resource>
+            <example value="false" />
+            <name value="CareTeamContributor Actor" />
+            <description value="Reads, creates and updates CareTeam resources hosted by a Care Team Service " />
+            <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.DCTM.careTeamContributor" />
+        </resource>
+		<resource>
+            <example value="false" />
+            <name value="CareTeamService Actor" />
+            <description value="Manages Care Team Updates." />
+            <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.DCTM.careTeamService" />
+        </resource>
+        <resource>
+            <example value="false" />
+            <name value="CareTeam profile" />
+            <description value="Constraints on CareTeam resource" />
+            <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.DCTM.careTeam" />
+        </resource>
+        <resource>
+            <example value="false" />
+            <name value="Subscription profile" />
+            <description value="Constraints on Subscription resource" />
+            <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.DCTM.subscription" />
+        </resource>
+    </package>
+</ImplementationGuide>

@@ -1,0 +1,79 @@
+
+<ImplementationGuide>
+    <id value="IHE.DCP" />
+    <url value="http://ihe.net/fhir/ImplementationGuide/IHE_DCP" />
+    <name value="IHE.DCP" />
+    <status value="active" />
+    <experimental value="false" />
+    <date value="2018-03-28T12:00:00-06:00" />
+    <publisher value="Integrating the Healthcare Enterprise (IHE)" />
+    <contact>
+        <name value="IHE" />
+        <telecom>
+            <system value="url" />
+            <value value="http://ihe.net" />
+        </telecom>
+    </contact>
+    <contact>
+        <name value="Emma Jones" />
+        <telecom>
+            <system value="email" />
+            <value value="emma.jones@allscripts.com" />
+        </telecom>
+    </contact>
+    <description value="Implementation Guide for IHE DCP profile. See http://wiki.ihe.net/index.php/Dynamic_Care_Planning" />
+    <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+    <fhirVersion value="3.0.1" />
+    <package>
+        <name value="IHE.DCP" />
+        <description value="The Dynamic Care Planning (DCP) Profile provides the structures and transactions for care planning, sharing Care Plans that meet the needs of many, such as providers, patients and payers."/>
+        <resource>
+            <example value="false" />
+            <name value="CarePlanContributor Actor" />
+            <description value="Creates and updates the care plan. Also actions the request resources as part of the care planning process." />
+            <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.DCP.carePlanContributor" />
+        </resource>
+        <resource>
+            <example value="false" />
+            <name value="CarePlanGuidanceService Actor" />
+            <description value="Manages Plan Definitions that are used for order sets, protocols, clinical practice guidelines, etc. ." />
+            <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.DCP.carePlanGuidanceService" />
+        </resource>
+		<resource>
+            <example value="false" />
+            <name value="CarePlanService Actor" />
+            <description value="Manages patient specific Care Plans." />
+            <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.DCP.carePlanService" />
+        </resource>
+        <resource>
+            <example value="false" />
+            <name value="CarePlan profile" />
+            <description value="Constraints on CarePlan resource" />
+            <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.DCP.carePlan" />
+        </resource>
+        <resource>
+            <example value="false" />
+            <name value="Subscription profile" />
+            <description value="Constraints on Subscription resource" />
+            <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.DCP.subscription" />
+        </resource>
+        <resource>
+            <example value="false" />
+            <name value="PlanDefinition profile" />
+            <description value="Constraints on PlanDefinition resource" />
+            <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.DCP.planDefinition" />
+        </resource>
+        <resource>
+            <example value="false" />
+            <name value="ActivityDefinition profile" />
+            <description value="Constraints on ActivityDefinition resource" />
+            <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.DCP.activityDefinition" />
+        </resource>
+        <resource>
+            <example value="false" />
+            <name value="Task profile" />
+            <description value="Constraints on Task resource" />
+            <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.DCP.task" />
+        </resource>
+    </package>
+</ImplementationGuide>
