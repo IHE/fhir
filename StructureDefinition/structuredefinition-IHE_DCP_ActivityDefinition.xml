@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="StructureDefinition/IHE.DCP.ActivityDefinition/>
-  <name value="MyActivityDefinition" />
+  <url value="structureddefinition-IHE_DCP_ActivityDefinition"/>
+  <name value="DCPActivityDefinition" />
   <status value="draft" />
-  <date value="2018-04-11T12:54:02.586-04:00" />
-  <fhirVersion value="3.0.1" />
+  <date value="2019-04-30T12:54:02.586-04:00" />
+  <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="ActivityDefinition" />
@@ -55,19 +55,14 @@
       <requirements value="This version of the profile requires a description of the ActivityDefinition." />
       <min value="1" />
     </element>
+     <element id="ActivityDefinition.useContext">
+      <path value="ActivityDefinition.useContext" />
+      <requirements value="Assist in searching for appropriate content.&#xD;&#xA;This version of the profile requires a useContext which is used to discover activityDefinitions of similar useContext. " />
+      <min value="1" />
+    </element>
     <element id="ActivityDefinition.lastReviewDate">
       <path value="ActivityDefinition.lastReviewDate" />
       <requirements value="Gives a sense of how &quot;current&quot; the content is.  Resources that have not been reviewed in a long time may have a risk of being less appropriate/relevant.&#xD;&#xA;This version of the profile requires a date when the ActivityDefinition was last reviewed. " />
-      <min value="1" />
-    </element>
-    <element id="ActivityDefinition.effectivePeriod.start">
-      <path value="ActivityDefinition.effectivePeriod.start" />
-      <requirements value="This version of the profile requires an effectivePeriod of period.start when the ActivityDefinition status value is active" />
-      <min value="1" />
-    </element>
-    <element id="ActivityDefinition.useContext">
-      <path value="ActivityDefinition.useContext" />
-      <requirements value="Assist in searching for appropriate content.&#xD;&#xA;This version of the profile requires a useContext which is used to discover activityDefinitions of similar useContext. " />
       <min value="1" />
     </element>
     <element id="ActivityDefinition.kind">
