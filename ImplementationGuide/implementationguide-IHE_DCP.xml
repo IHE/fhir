@@ -1,7 +1,7 @@
 
 <ImplementationGuide>
     <id value="IHE.DCP" />
-    <url value="http://ihe.net/fhir/ImplementationGuide/IHE.DCP" />
+    <url value="http://ihe.net/fhir/ImplementationGuide-IHE_DCP" />
     <name value="IHE.DCP" />
     <status value="active" />
     <experimental value="false" />
