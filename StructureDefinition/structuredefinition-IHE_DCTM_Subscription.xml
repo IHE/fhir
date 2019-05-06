@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE_DCTM_Subscription" />
+  <name value="DCTMSubscription" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Subscription" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Subscription" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Subscription.channel.type">
+      <path value="Subscription.channel.type" />
+      <short value="rest-hook " />
+      <requirements value="This version of the profile constrains the channel type to rest-hook." />
+      <fixedCode value="rest-hook" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Subscription.channel.endpoint">
+      <path value="Subscription.channel.endpoint" />
+      <requirements value="This version of the profile constrains the channel type to rest-hook, the endpoint must be a valid URL for the Provide Care Team [PCC-49] transaction." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Subscription.channel.payload">
+      <path value="Subscription.channel.payload" />
+      <requirements value="This version of the profile constrains the channel payload to a non-blank value - the CareTeam resource must be the payload." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

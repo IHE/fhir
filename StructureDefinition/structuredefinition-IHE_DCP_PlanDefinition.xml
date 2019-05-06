@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE_DCP_PlanDefinition" />
+  <name value="DCPPlanDefinition" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="PlanDefinition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/PlanDefinition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="PlanDefinition.url">
+      <path value="PlanDefinition.url" />
+      <requirements value="Allows the plan definition to be referenced by a single globally unique identifier. This version of the profile requires url where the library of PlanDefinitions are stored." />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.identifier">
+      <path value="PlanDefinition.identifier" />
+      <requirements value="Allows externally provided and/or usable business identifiers to be easily associated with the module. This version of the profile requires at least one identifier." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.version">
+      <path value="PlanDefinition.version" />
+      <comment value="MUST follow Major.Minor.Patch version format based on FHIR versioning guidance" />
+      <requirements value="This version of the profile requires specifying the version of this PlanDefinition. This version of the profile requires specifying the version of this PlanDefinition. MUST follow Major.Minor.Patch version format based on FHIR versioning guidance" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.name">
+      <path value="PlanDefinition.name" />
+      <requirements value="Support human navigation and code generation. This version of the profile requires the name of the PlanDefinition" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.title">
+      <path value="PlanDefinition.title" />
+      <requirements value="This version of the profile requires a title which is used in an UI." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.status">
+      <path value="PlanDefinition.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.date">
+      <path value="PlanDefinition.date" />
+      <requirements value="This version of the profile requires a date for when the PlanDefinition was last changed" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.description">
+      <path value="PlanDefinition.description" />
+      <requirements value="This version of the profile requires a description of the PlanDefinition." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.useContext">
+      <path value="PlanDefinition.useContext" />
+      <requirements value="Assist in searching for appropriate content. This version of the profile requires a useContext which is used to discover. PlanDefinitions of similar useContext. Will be used to drive searches related to the patient’s condition." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.lastReviewDate">
+      <path value="PlanDefinition.lastReviewDate" />
+      <comment value="If specified, this date follows the original approval date. This version of the profile requires a date when the PlanDefinition was last reviewed." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.relatedArtifact">
+      <path value="PlanDefinition.relatedArtifact" />
+      <comment value="If url is not specified, there must be one relatedArtifact with type iderivedFrom" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.relatedArtifact.type">
+      <path value="PlanDefinition.relatedArtifact.type" />
+      <requirements value="type of derived-from must be used when the planDefinition.url is not specifid" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.goal.addresses">
+      <path value="PlanDefinition.goal.addresses" />
+      <requirements value="This version of the profile requires the concept the PlanDefinition.goal addresses." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action">
+      <path value="PlanDefinition.action" />
+      <requirements value="This version of the profile requires action. An action may have in-line details or reference an ActivityDefinition of a PlanDefinition." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action.title">
+      <path value="PlanDefinition.action.title" />
+      <requirements value="This version of the profile requires a title of the action (ActivityDefinitions)." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action.description">
+      <path value="PlanDefinition.action.description" />
+      <requirements value="This version of the profile requires a description of the action (ActivityDefinitions)." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action.participant">
+      <path value="PlanDefinition.action.participant" />
+      <requirements value="Action without a" />
+    </element>
+    <element id="PlanDefinition.action.participant.type">
+      <path value="PlanDefinition.action.participant.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action.participant.role">
+      <path value="PlanDefinition.action.participant.role" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action.participant.role.coding.system">
+      <path value="PlanDefinition.action.participant.role.coding.system" />
+      <short value="SNOMEDCT" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="preferred" />
+        <description value="Participant role function on the care team" />
+        <valueSet value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.27/expansion" />
+      </binding>
+    </element>
+    <element id="PlanDefinition.action.definition[x]">
+      <path value="PlanDefinition.action.definition[x]" />
+      <requirements value="This version of the profile requires ActivityDefinitions referenced by the PlanDefinition" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PlanDefinition.action.action.participant">
+      <path value="PlanDefinition.action.action.participant" />
+      <mustSupport value="false" />
+    </element>
+    <element id="PlanDefinition.action.action.participant.role">
+      <path value="PlanDefinition.action.action.participant.role" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

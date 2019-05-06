@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE_DCP_ActivityDefinition" />
+  <name value="DCPActivityDefinition" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ActivityDefinition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ActivityDefinition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ActivityDefinition.url">
+      <path value="ActivityDefinition.url" />
+      <comment value="This version of the profile requires url where the library of ActivityDefinitions are stored." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ActivityDefinition.identifier">
+      <path value="ActivityDefinition.identifier" />
+      <comment value="This version of the profile requires at least one identifier." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ActivityDefinition.version">
+      <path value="ActivityDefinition.version" />
+      <comment value="This version of the profile requires specifying the version of this ActivityDefinition." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ActivityDefinition.title">
+      <path value="ActivityDefinition.title" />
+      <requirements value="This version of the profile requires a title which is used in an UI." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ActivityDefinition.status">
+      <path value="ActivityDefinition.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ActivityDefinition.date">
+      <path value="ActivityDefinition.date" />
+      <requirements value="This version of the profile requires a date for when the ActivityDefinition was last changed" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ActivityDefinition.publisher">
+      <path value="ActivityDefinition.publisher" />
+      <requirements value="Helps establish the &quot;authority/credibility&quot; of the activity definition.  May also allow for contact.&#xD;&#xA;This version of the profile requires the name of the ActivityDefinition publisher." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ActivityDefinition.description">
+      <path value="ActivityDefinition.description" />
+      <requirements value="This version of the profile requires a description of the ActivityDefinition." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ActivityDefinition.useContext">
+      <path value="ActivityDefinition.useContext" />
+      <requirements value="Assist in searching for appropriate content. This version of the profile requires a useContext which is used to discover ActivityDefinitions of similar useContext." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ActivityDefinition.lastReviewDate">
+      <path value="ActivityDefinition.lastReviewDate" />
+      <requirements value="This version of the profile requires a date when the ActivityDefinition was last reviewed. ." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ActivityDefinition.kind">
+      <path value="ActivityDefinition.kind" />
+      <comment value="May determine what types of extensions are permitted. This version of the profile requires kind which is used to generate the request resources." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ActivityDefinition.code">
+      <path value="ActivityDefinition.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ActivityDefinition.participant.type">
+      <path value="ActivityDefinition.participant.type" />
+      <requirements value="Used as a component for creating or updating CareTeam" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ActivityDefinition.participant.role">
+      <path value="ActivityDefinition.participant.role" />
+      <requirements value="Used as a component for creating or updating CareTeam" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ActivityDefinition.participant.role.coding.system">
+      <path value="ActivityDefinition.participant.role.coding.system" />
+      <short value="SNOMEDCT" />
+      <requirements value="Participant role function on the care team" />
+      <binding>
+        <strength value="preferred" />
+        <description value="Participant role function on the care team" />
+        <valueSet value="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.27/expansion" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
