@@ -1,0 +1,474 @@
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <text> 
+    <status value="generated"/> 
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p> The Server supports the following transactions : search-type</p>
+         
+    </div> 
+  </text> 
+  <url value="http://ihe.net/fhir/CapabilityStatement/IHE_mCSD_CareServicesSelectiveSupplier"/> 
+  <version value="20190619"/> 
+  <name value="IHE mCSD - Care Services Selective Supplier"/> 
+  <title value="IHE ITI Mobile Care Services Discovery (mCSD) - Care Services Selective Supplier"/> 
+  <status value="draft"/> 
+  <experimental value="true"/> 
+  <date value="2019-06-19"/> 
+  <publisher value="Integrating the Health Enterprise (IHE)"/> 
+	<contact> 
+		<name value="IHE"/> 
+		<telecom> 
+			<system value="url"/> 
+			<value value="http://ihe.net"/> 
+		</telecom> 
+	</contact>
+  <description value="See http://wiki.ihe.net/index.php/Mobile_Care_Services_Discovery_(mCSD)" />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+  <kind value="requirements"/> 
+  <fhirVersion value="4.0.0"/> 
+  <!--    this system accepts unknown content in the resources    -->
+  <acceptUnknown value="no"/> 
+  <!--    this system can do either xml or json. (Listing both implies full support for either,
+   with interconversion)    -->
+  <format value="application/fhir+xml"/> 
+  <format value="application/fhir+json"/> 
+  <!--    this system supports the -->
+  <implementationGuide value=""/> 
+  <rest> 
+    <mode value="server"/> 
+    <documentation value="IHE ITI mCSD ITI-90 endpoint"/> 
+    <resource> 
+      <type value="HealthcareService"/> 
+      <profile> 
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_mCSD_HealthcareService"/> 
+      </profile> 
+      <documentation value="."/> 
+      <interaction> 
+        <code value="search-type"/> 
+      </interaction> 
+      <!--<searchInclude value=""/> -->
+      <searchParam> 
+        <name value="active"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location"/> 
+        <type value="reference"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization"/> 
+        <type value="reference"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="type"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.active"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location.status"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location.identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location.name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location.name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location.name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+    </resource> 
+    <resource> 
+      <type value="Location"/> 
+      <profile> 
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_mCSD_Location"/> 
+      </profile> 
+      <supportedProfile>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_mCSD_FacilityLocation"/> 
+      </supportedProfile>
+      <documentation value="."/> 
+      <interaction> 
+        <code value="search-type"/> 
+      </interaction> 
+      <!--<searchInclude value=""/> -->
+      <searchParam> 
+        <name value="identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization"/> 
+        <type value="reference"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="partof"/> 
+        <type value="reference"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="type"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="status"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="partof.identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="partof.name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="partof.name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="partof.name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.active"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+    </resource> 
+    <resource> 
+      <type value="Organization"/> 
+      <profile> 
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_mCSD_Organization"/> 
+      </profile> 
+      <supportedProfile>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_mCSD_FacilityOrganization"/> 
+      </supportedProfile>
+      <documentation value="."/> 
+      <interaction> 
+        <code value="search-type"/> 
+      </interaction> 
+      <!--<searchInclude value=""/> -->
+      <searchParam> 
+        <name value="active"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="partof"/> 
+        <type value="reference"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="type"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="partof.identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="partof.name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="partof.name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="partof.name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+    </resource> 
+    <resource> 
+      <type value="Practitioner"/> 
+      <profile> 
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_mCSD_Practitioner"/> 
+      </profile> 
+      <documentation value="."/> 
+      <interaction> 
+        <code value="search-type"/> 
+      </interaction> 
+      <!--<searchInclude value=""/> -->
+      <searchParam> 
+        <name value="active"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="given"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="given:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="given:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="family"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="family:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="family:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+    </resource> 
+    <resource> 
+      <type value="PractitionerRole"/> 
+      <profile> 
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_mCSD_PractitionerRole"/> 
+      </profile> 
+      <documentation value="."/> 
+      <interaction> 
+        <code value="search-type"/> 
+      </interaction> 
+      <searchInclude value="Practitioner"/> 
+      <searchParam> 
+        <name value="active"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location"/> 
+        <type value="reference"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization"/> 
+        <type value="reference"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization"/> 
+        <type value="reference"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="role"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="service"/> 
+        <type value="reference"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="specialty"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="practitioner.identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="practitioner.name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="practitioner.name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="practitioner.name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="practitioner.given"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="practitioner.given:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="practitioner.given:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="practitioner.family"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="practitioner.family:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="practitioner.family:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.active"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="organization.name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location.status"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location.identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location.name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location.name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="location.name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="service.active"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="service.identifier"/> 
+        <type value="token"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="service.location"/> 
+        <type value="reference"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="service.name"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="service.name:contains"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="service.name:exact"/> 
+        <type value="string"/> 
+      </searchParam> 
+      <searchParam> 
+        <name value="service.organization"/> 
+        <type value="reference"/> 
+      </searchParam> 
+    </resource> 
+    <searchParam> 
+      <name value="_id"/> 
+      <type value="token"/> 
+    </searchParam> 
+    <searchParam> 
+      <name value="_lastUpdated"/> 
+      <type value="token"/> 
+      <documentation value="The values for this shall support these prefixes: gt, lt, ge, le, sa, and eb" />
+    </searchParam> 
+  </rest> 
+</CapabilityStatement> 
