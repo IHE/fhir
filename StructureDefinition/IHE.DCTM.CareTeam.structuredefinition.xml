@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE_DCTM_CareTeam" />
+  <name value="DCTMCareTeam" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="CareTeam" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="CareTeam.identifier">
+      <path value="CareTeam.identifier" />
+      <requirements value="Allows identification of the care team as it is known by various participating systems and in a way that remains consistent across servers. This version of the profile requires at least one identifier." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.identifier.value">
+      <path value="CareTeam.identifier.value" />
+      <slicing>
+        <description value="External Id value for this team" />
+        <rules value="open" />
+      </slicing>
+      <requirements value="This version of the profile requires an ID identifying this profile as an IHE PCC Dynamic Care Team" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.identifier.value:sliceValue">
+      <path value="CareTeam.identifier.value" />
+      <sliceName value="sliceValue" />
+      <requirements value="ID identifying this profile as an IHE PCC Dynamic Care Team" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.status">
+      <path value="CareTeam.status" />
+      <requirements value="This version of the profile requires the status of the care team." />
+      <min value="1" />
+      <mustSupport value="true" />
+      <isModifierReason value="This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid." />
+    </element>
+    <element id="CareTeam.name">
+      <path value="CareTeam.name" />
+      <requirements value="This version of the profile requires the name of the care team." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.subject">
+      <path value="CareTeam.subject" />
+      <definition value="Identifies the patient whose intended care is handled by the team." />
+      <requirements value="Allows for an organization to designate a team such as the PICC line team. For this version of the profile, the use of group is not supported." />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.encounter">
+      <path value="CareTeam.encounter" />
+      <comment value="This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.&#xD;&#xA;&#xD;&#xA;This profile allows for CareTeam creation outside of the context of an encounter or episode." />
+    </element>
+    <element id="CareTeam.period">
+      <path value="CareTeam.period" />
+      <requirements value="Allows tracking what team(s) are in effect at a particular time. This version of the profile requires period for the CareTeam." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.period.start">
+      <path value="CareTeam.period.start" />
+      <requirements value="This version of the profile requires at least a start time for the CareTeam." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.participant">
+      <path value="CareTeam.participant" />
+      <comment value="It is possible for a care team to be set up with roles specified only, before actual participants are invited into or identified as team members" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.participant.member">
+      <path value="CareTeam.participant.member" />
+      <requirements value="Need to know who the member is if participant is specified.&#xD;&#xA;This version of the profile requires that a DynamicCareTeam be referenced when the member is a care team." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.participant.period">
+      <path value="CareTeam.participant.period" />
+      <requirements value="This version of the profile requires period to indicate how current the participant is." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>
