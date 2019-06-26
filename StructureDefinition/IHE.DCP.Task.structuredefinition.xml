@@ -1,10 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="StructureDefinition/MyTask" />
-  <name value="MyTask" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE_DCP_Task" />
+  <name value="DCPTask" />
   <status value="draft" />
-  <date value="2018-04-30T20:24:38.792-04:00" />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Task" />
@@ -15,41 +14,48 @@
       <path value="Task.identifier" />
       <requirements value="This version of the profile requires at least one identifier." />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
-    <element id="Task.definition[x]">
-      <path value="Task.definition[x]" />
-      <requirements value="Enables a formal definition of how he task is to be performed (e.g. using BPMN, BPEL, XPDL or other formal notation) to be associated with a task, enabling automation.&#xD;&#xA;This version of the profile requires at least one definition." />
-      <min value="1" />
+    <element id="Task.instantiatesCanonical">
+      <path value="Task.instantiatesCanonical" />
+      <requirements value="Enables a formal definition of how he task is to be performed, enabling automation.&#xD;&#xA;This version of the profile requires at least one definition." />
+      <mustSupport value="true" />
     </element>
     <element id="Task.code">
       <path value="Task.code" />
       <requirements value="This version of the profile requires a code." />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Task.description">
       <path value="Task.description" />
       <requirements value="This version of the profile requires a description." />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Task.authoredOn">
       <path value="Task.authoredOn" />
-      <requirements value="Most often used along with lastUpdated to track duration of task to supporting monitoring and management.&#xD;&#xA;This version of the profile requires an authoredOn." />
+      <requirements value="Most often used along with lastUpdated to track duration of task to supporting monitoring and management. This version of the profile requires an authoredOn." />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Task.lastModified">
       <path value="Task.lastModified" />
-      <requirements value="Used along with history to track task activity and time in a particular task state.  This enables monitoring and management.&#xD;&#xA;This version of the profile requires a lastModified." />
+      <requirements value="Used along with history to track task activity and time in a particular task state.  This enables monitoring and management. This version of the profile requires a lastModified." />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Task.requester">
       <path value="Task.requester" />
-      <requirements value="Identifies who created this task.  May be used by access control mechanisms (e.g., to ensure that only the creator can cancel a task).&#xD;&#xA;This version of the profile requires a requester." />
+      <requirements value="This version of the profile requires a requester." />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Task.owner">
       <path value="Task.owner" />
-      <requirements value="Identifies who is expected to perform this task.&#xD;&#xA;This version of the profile requires an owner." />
+      <requirements value="Identifies who is expected to perform this task. This version of the profile requires an owner." />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
