@@ -67,8 +67,8 @@
 				<documentation value="Who and/or what authored the document"/>
 			</searchParam>
 			<searchParam>
-				<name value="class"/>
-				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-class"/>
+				<name value="category"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-category"/>
 				<type value="token"/>
 				<documentation value="Categorization of document"/>
 			</searchParam>
@@ -91,10 +91,16 @@
 				<documentation value="Format/content rules for the document"/>
 			</searchParam>
 			<searchParam>
-				<name value="indexed"/>
-				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-indexed"/>
+				<name value="date"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-date"/>
 				<type value="date"/>
 				<documentation value="When this document reference was created"/>
+			</searchParam>
+			<searchParam>
+				<name value="identifier"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-identifier"/>
+				<type value="token"/>
+				<documentation value="The identifier for this DocumentReference"/>
 			</searchParam>
 			<searchParam>
 				<name value="patient"/>
@@ -109,20 +115,14 @@
 				<documentation value="Time of service that is being documented"/>
 			</searchParam>
 			<searchParam>
-				<name value="related-id"/>
-				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-related-id"/>
-				<type value="token"/>
-				<documentation value="Identifier of related objects or events"/>
-			</searchParam>
-			<searchParam>
-				<name value="related-ref"/>
-				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-related-ref"/>
+				<name value="related"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-related"/>
 				<type value="reference"/>
 				<documentation value="Related Resource"/>
 			</searchParam>
 			<searchParam>
-				<name value="securitylabel"/>
-				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-securitylabel"/>
+				<name value="security-label"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-security-label"/>
 				<type value="token"/>
 				<documentation value="Document security-tags"/>
 			</searchParam>
