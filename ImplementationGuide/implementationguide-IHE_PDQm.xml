@@ -4,7 +4,7 @@
 		<status value="additional" />
 		<div xmlns="http://www.w3.org/1999/xhtml">
   Implementation Guide for IHE PDQm profile. 
-The <a href="http://wiki.ihe.net/index.php/Patient_Demographics_Query_for_Mobile_(PDQm)">Patient Demographics Query or Mobile (PDQm)</a> Profile defines a lightweight RESTful 
+The <a href="http://wiki.ihe.net/index.php/Patient_Demographics_Query_for_Mobile_(PDQm)">Patient Demographics Query for Mobile (PDQm)</a> Profile defines a lightweight RESTful 
 interface to a patient demographics supplier leveraging technologies readily available to mobile applications and lightweight browser based applications.
 The IHE PDQm Profile text is Normative, this conformance resource is Informative.
 		</div>
@@ -37,12 +37,12 @@ The IHE PDQm Profile text is Normative, this conformance resource is Informative
 		<rendering value="http://wiki.ihe.net/index.php/Patient_Demographics_Query_for_Mobile_(PDQm)" />
 		<resource>
 			<reference>
-			<reference value="http://ihe.net/fhir/CapabilityStatement/IHE.PDQm.consumer" />
+			<reference value="http://ihe.net/fhir/CapabilityStatement/IHE_PDQm_consumer" />
 			</reference>
 		</resource>
 		<resource>
 			<reference>
-			<reference value="http://ihe.net/fhir/CapabilityStatement/IHE.PDQm.supplier" />
+			<reference value="http://ihe.net/fhir/CapabilityStatement/IHE_PDQm_supplier" />
 			</reference>
 		</resource>
 	</manifest>
