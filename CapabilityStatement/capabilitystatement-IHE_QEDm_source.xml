@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">CapabilityStatement for Source Actor in the IHE IT Infrastructure Technical Framework Supplement 
+      <a href="http://wiki.ihe.net/index.php/QEDm">Query for Existing Data for Mobile (QEDm)</a>. The IHE QEDm Profile text is Normative, this conformance resource is Informative. </div>
+  </text>
+  <url value="http://ihe.net/fhir/CapabilityStatement/IHE_QEDm_source"/>
+  <name value="IHE_QEDm_source"/>
+  <title value="IHE ITI Query for Existing Data for Mobile - Source (server)"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2019-07-05"/>
+  <publisher value="Integrating the Healthcare Enterprise (IHE)"/>
+  <contact>
+    <name value="IHE"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://ihe.net"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="John Moehrke"/>
+    <telecom>
+      <system value="email"/>
+      <value value="JohnMoehrke@gmail.com"/>
+    </telecom>
+  </contact>
+  <description value="CapabilityStatement for Source Actor in the IHE IT Infrastructure Technical Framework Supplement IHE QEDm. See http://wiki.ihe.net/index.php/QEDm. The IHE QEDm Profile text is Normative, this conformance resource is Informative."/>
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+  <kind value="requirements"/>
+  <fhirVersion value="4.0.0"/>
+  <format value="application/fhir+xml"/>
+  <format value="application/fhir+json"/>
+  <rest>
+    <mode value="server"/>
+    <documentation value="QEDm server provides capability to query for a set of resources matching a sub-set of the FHIR core resource query parameters"/>
+    <security>
+      <cors value="false"/>
+      <description value="None mandated by IHE, encouraged IHE-IUA or SMART-on-FHIR"/>
+    </security>
+    <resource>
+      <type value="Observation"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+	  <referencePolicy value="resolves" />
+	  <searchRevInclude value="Provenance:target" />
+      <searchParam>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-category"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-code"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-patient"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="AllergyIntolerance"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+	  <referencePolicy value="resolves" />
+	  <searchRevInclude value="Provenance:target" />
+      <searchParam>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-_lastUpdated"/>
+        <type value="quantity"/>
+        <documentation value="When the resource version last changed"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-patient"/>
+        <type value="reference"/>
+        <documentation value="Who the sensitivity is for"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Condition"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+	  <referencePolicy value="resolves" />
+	  <searchRevInclude value="Provenance:target" />
+      <searchParam>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-_id"/>
+        <type value="date"/>
+        <documentation value="Logical id of this artifact"/>
+      </searchParam>
+      <searchParam>
+        <name value="category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-category"/>
+        <type value="date"/>
+        <documentation value="The category of the condition"/>
+      </searchParam>
+      <searchParam>
+        <name value="clinical-status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-clinical-status"/>
+        <type value="date"/>
+        <documentation value="The clinical status of the condition"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Condition-patient"/>
+        <type value="reference"/>
+        <documentation value="Who has the condition?"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="DiagnosticReport"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+	  <referencePolicy value="resolves" />
+	  <searchRevInclude value="Provenance:target" />
+      <searchParam>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-_id"/>
+        <type value="date"/>
+        <documentation value="Logical id of this artifact"/>
+      </searchParam>
+      <searchParam>
+        <name value="category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-category"/>
+        <type value="date"/>
+        <documentation value="Which diagnostic discipline/department created the report"/>
+      </searchParam>
+      <searchParam>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-code"/>
+        <type value="date"/>
+        <documentation value="The code for the report as a whole, as opposed to codes for the atomic results, which are the names on the observation resource referred to from the result"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-date"/>
+        <type value="quantity"/>
+        <documentation value="The clinically relevant time of the report"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-patient"/>
+        <type value="reference"/>
+        <documentation value="The subject of the report if a patient"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Encounter"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+	  <referencePolicy value="resolves" />
+	  <searchRevInclude value="Provenance:target" />
+      <searchParam>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Encounter-_id"/>
+        <type value="date"/>
+        <documentation value="Logical id of this artifact"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Encounter-date"/>
+        <type value="quantity"/>
+        <documentation value="A date within the period the Encounter lasted"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Encounter-patient"/>
+        <type value="reference"/>
+        <documentation value="The patient ro group present at the encounter"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Immunization"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+	  <referencePolicy value="resolves" />
+	  <searchRevInclude value="Provenance:target" />
+      <searchParam>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Immunization-_id"/>
+        <type value="date"/>
+        <documentation value="Logical id of this artifact"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Immunization-patient"/>
+        <type value="reference"/>
+        <documentation value="The patient for the vaccination record"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="MedicationRequest"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+	  <referencePolicy value="resolves" />
+	  <searchRevInclude value="Provenance:target" />
+      <searchParam>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-_id"/>
+        <type value="date"/>
+        <documentation value="Logical id of this artifact"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-patient"/>
+        <type value="reference"/>
+        <documentation value="Returns prescriptions for a specific patient"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="MedicationStatement"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+	  <referencePolicy value="resolves" />
+	  <searchRevInclude value="Provenance:target" />
+      <searchParam>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/MedicationStatement-_id"/>
+        <type value="date"/>
+        <documentation value="Logical id of this artifact"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/MedicationStatement-patient"/>
+        <type value="reference"/>
+        <documentation value="Returns statements for a specific patient."/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Procedure"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+	  <referencePolicy value="resolves" />
+	  <searchRevInclude value="Provenance:target" />
+      <searchParam>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Procedure-_id"/>
+        <type value="date"/>
+        <documentation value="Logical id of this artifact"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Procedure-date"/>
+        <type value="quantity"/>
+        <documentation value="Date/Period the procedure was performed"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Procedure-patient"/>
+        <type value="reference"/>
+        <documentation value="Search by subject - a patient"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Provenance"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+	  <referencePolicy value="resolves" />
+	  <searchRevInclude value="Provenance:target" />
+      <searchParam>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Provenance-_id"/>
+        <type value="date"/>
+        <documentation value="Logical id of this artifact"/>
+      </searchParam>
+    </resource>
+    <interaction>
+      <code value="search-system"/>
+    </interaction>
+  </rest>
+</CapabilityStatement>

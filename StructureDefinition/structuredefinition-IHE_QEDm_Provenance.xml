@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE_QEDm_Provenance" />
+  <name value="IHE_QEDm_Provenance" />
+  <title value="QEDm Provenance" />
+  <status value="draft" />
+  <date value="2019-07-05" />
+  <publisher value="Integrating the Healthcare Enterprise (IHE)" />
+  <contact>
+    <name value="IHE" />
+    <telecom>
+      <system value="url" />
+      <value value="http://ihe.net" />
+    </telecom>
+  </contact>
+  <contact>
+    <name value="John Moehrke" />
+    <telecom>
+      <system value="email" />
+      <value value="JohnMoehrke@gmail.com" />
+    </telecom>
+  </contact>
+  <description value="Provenance profile for use in QEDm when the data-elements (Resources pointed to by target) come from an XDS or MHD document. See [Profile Description](http://wiki.ihe.net/index.php/Query_for_Existing_Data_for_Mobile)" />
+  <copyright value="IHE [Intellectual Property rules/rights](http://www.ihe.net/Governance/#Intellectual_Property)" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Provenance" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Provenance" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Provenance.policy">
+      <path value="Provenance.policy" />
+      <min value="1" />
+      <max value="1" />
+      <fixedUri value="urn:ihe:pcc:qedm:2017:document-provenance-policy" />
+    </element>
+    <element id="Provenance.activity">
+      <path value="Provenance.activity" />
+      <code>
+        <system value="http://hl7.org/fhir/w3c-provenance-activity-type" />
+        <code value="Derivation" />
+      </code>
+      <min value="1" />
+    </element>
+    <element id="Provenance.agent">
+      <path value="Provenance.agent" />
+      <label value="assembler" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type" />
+        </discriminator>
+        <description value="Assembler of the FHIR Resources" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Provenance.agent.type.coding.system">
+      <path value="Provenance.agent.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.org/fhir/v3/ParticipationFunction" />
+    </element>
+    <element id="Provenance.agent.type.coding.code">
+      <path value="Provenance.agent.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="assembler" />
+    </element>
+    <element id="Provenance.agent:theAssembler">
+      <path value="Provenance.agent" />
+      <sliceName value="theAssembler" />
+      <code>
+        <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type" />
+        <code value="assembler" />
+      </code>
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Provenance.agent:theAssembler.who">
+      <path value="Provenance.agent.who" />
+      <short value="Service identity" />
+      <definition value="Device Resource identifying the extraction device. This should be by reference to a known Device Resource by may be a contained resource or an identifier." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <aggregation value="contained" />
+        <aggregation value="referenced" />
+      </type>
+    </element>
+    <element id="Provenance.agent:theAssembler.who.reference">
+      <path value="Provenance.agent.who.reference" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.entity">
+      <path value="Provenance.entity" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Provenance.entity.role">
+      <path value="Provenance.entity.role" />
+      <fixedCode value="source" />
+    </element>
+    <element id="Provenance.entity.agent">
+      <path value="Provenance.entity.agent" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

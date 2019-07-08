@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+	<text>
+		<status value="additional" />
+		<div xmlns="http://www.w3.org/1999/xhtml">
+  Implementation Guide for IHE PDQm profile. 
+The <a href="http://wiki.ihe.net/index.php/QEDm">Query for Existing Data for Mobile (PDQm)</a> Profile defines a lightweight RESTful 
+interface to a data supplier leveraging technologies readily available to mobile applications and lightweight browser based applications.
+The IHE QEDm Profile text is Normative, this conformance resource is Informative.
+		</div>
+	</text>
+	<url value="http://ihe.net/fhir/ImplementationGuide/IHE_QEDm" />
+	<name value="IHE_QEDm" />
+	<status value="active" />
+	<experimental value="false" />
+	<date value="2019-07-05" />
+	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
+	<contact>
+		<name value="IHE" />
+		<telecom>
+			<system value="url" />
+			<value value="http://ihe.net" />
+		</telecom>
+	</contact>
+	<contact>
+		<name value="John Moehrke" />
+		<telecom>
+			<system value="email" />
+			<value value="JohnMoehrke@gmail.com" />
+		</telecom>
+	</contact>
+	<description value="Implementation Guide for IHE QEDm profile. See http://wiki.ihe.net/index.php/QEDm . The IHE QEDm Profile text is Normative, this conformance resource is Informative." />
+	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+	<packageId value="ihe.QEDm.fhir" />
+	<fhirVersion value="4.0.0" />
+	<manifest>
+		<rendering value="http://wiki.ihe.net/index.php/QEDm" />
+		<resource>
+			<reference>
+			<reference value="http://ihe.net/fhir/CapabilityStatement/IHE_QED_consumer" />
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+			<reference value="http://ihe.net/fhir/CapabilityStatement/IHE_QEDm_source" />
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+			<reference value="http://ihe.net/fhir/CapabilityStatement/IHE_QEDm_Provenance" />
+			</reference>
+		</resource>
+	</manifest>
+</ImplementationGuide>
