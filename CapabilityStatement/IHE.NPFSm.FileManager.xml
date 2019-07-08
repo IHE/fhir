@@ -1,77 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir">
-    <id value="IHE.NPFSm.FileManager"/>
+    <id value="IHE_NPFSm_FileManager"/>
     <text>
-        <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
-            CapabilityStatement for File Manager actor in the IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
-            This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 1.1</a>
-        </div></text>
-    <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE.NPFSm.FileManager"/>
-    <name value="IHE.NPFSm.FileManager"/>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml"> CapabilityStatement for File Manager actor in the
+            IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile
+            (NPFSm). This conformance resource is Informative. The Normative content can be found
+            through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)"
+                >Non-patient File Sharing (NPFSm) Rev. 3.0</a>
+        </div>
+    </text>
+    <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE_NPFSm_FileManager"/>
+    <name value="IHE_NPFSm_FileManager"/>
     <title value="IHE ITI Non-patient File Sharing (NPFSm) - File Manager (server)"/>
     <status value="draft"/>
     <experimental value="false"/>
-    <date value="2018-02-13"/>
+    <date value="2019-07-03"/>
     <publisher value="Integrating the Healthcare Enterprise (IHE)"/>
-    <contact> 
-        <name value="IHE"/> 
-        <telecom> 
-            <system value="url"/> 
-            <value value="http://ihe.net"/> 
-        </telecom> 
-    </contact> 
-    <description value="CapabilityStatement for File Manager actor in the IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
+    <contact>
+        <name value="IHE"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://ihe.net"/>
+        </telecom>
+    </contact>
+    <description
+        value="CapabilityStatement for File Manager actor in the IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
         This conformance resource is Informative. The Normative content can be found through http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)"/>
     <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
     <kind value="requirements"/>
-    <fhirVersion value="3.0.1"/>
-    <acceptUnknown value="both" />
+    <fhirVersion value="4.0.0"/>
     <format value="application/fhir+xml"/>
     <format value="application/fhir+json"/>
-    <profile>
-        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.NPFSm.DocumentReference" />
-    </profile>
-    <rest><!--Interaction for create-->
+    <rest>
+        <!--Interaction for create-->
         <mode value="server"/>
         <documentation value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
         <security>
-            <cors value="false" />
-            <description value="Recommend IUA" />
-        </security>
-        <interaction>
-            <code value="transaction"/>
-            <documentation value="http://ihe.net/fhir/StructureDefinition/IHE.NPFSm.SubmitFileBundle"/>
-        </interaction>
-    </rest>
-    <rest><!--Interaction for update DOcREF-->
-        <mode value="server"/>
-        <documentation value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
-        <security>
-            <cors value="false" />
-            <description value="Recommend IUA" />
+            <cors value="false"/>
+            <description value="Recommend IUA"/>
         </security>
         <resource>
             <type value="DocumentReference"/>
-            <profile>
-                <reference value="http://ihe.net/fhir/StructureDefinition/IHE.NPFSm.DocumentReference"/>
-            </profile>
+            <profile value="http://www.ihe.net/fhir/StructureDefinition/IHE_NPFSm_DocumentReference"/>
             <interaction>
                 <code value="update"/>
             </interaction>
-        </resource>
-    </rest>
-    <rest><!--Interaction for search-->
-        <mode value="server"/>
-        <documentation value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
-        <security>
-            <cors value="false" />
-            <description value="Recommend IUA or SMART" />
-        </security>
-        <resource>
-            <type value="DocumentReference"/>
-            <profile>
-                <reference value="http://ihe.net/fhir/StructureDefinition/IHE.NPFSm.DocumentReference"/>
-            </profile>
             <interaction>
                 <code value="read"/>
             </interaction>
@@ -82,19 +56,15 @@
                 <name value="patient"/>
                 <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-patient"/>
                 <type value="reference"/>
-                <documentation value="This parameter shall always be used to find resources that do not have the
+                <documentation
+                    value="This parameter shall always be used to find resources that do not have the
                     patient element valued. To achieve that, this parameter shall be used with the exists modifier
-                    (e.g., patient:exists=false)"/>
+                    (e.g., patient:exists=false)"
+                />
             </searchParam>
             <searchParam>
-                <name value="created"/>
-                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-created"/>
-                <type value="date"/>
-                <documentation value="Document creation time"/>
-            </searchParam>
-            <searchParam>
-                <name value="indexed"/>
-                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-indexed"/>
+                <name value="date"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-date"/>
                 <type value="date"/>
                 <documentation value="When this File reference was indexed"/>
             </searchParam>
@@ -142,26 +112,31 @@
             </searchParam>
             <searchParam>
                 <name value="relationship"/>
-                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-related-ref"/>
+                <definition
+                    value="http://hl7.org/fhir/SearchParameter/DocumentReference-related-ref"/>
                 <type value="composite"/>
                 <documentation value="Combination of relation and relatesTo"/>
             </searchParam>
             <searchParam>
                 <name value="identifier"/>
-                <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-securitylabel"/>
+                <definition
+                    value="http://hl7.org/fhir/SearchParameter/DocumentReference-securitylabel"/>
                 <type value="token"/>
                 <documentation value="Master Version Specific Identifier"/>
             </searchParam>
         </resource>
         <resource>
-            <type value="Binary" />
+            <type value="Binary"/>
             <interaction>
-                <code value="read" />
+                <code value="read"/>
             </interaction>
-       
         </resource>
         <interaction>
-            <code value="search-system" />
+            <code value="transaction"/>
+            <documentation value="http://www.ihe.net/fhir/StructureDefinition/IHE_NPFSm_SubmitFile"/>
+        </interaction>
+        <interaction>
+            <code value="search-system"/>
         </interaction>
     </rest>
 </CapabilityStatement>

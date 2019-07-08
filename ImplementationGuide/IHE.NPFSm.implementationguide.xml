@@ -1,84 +1,124 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="IHE.NPFSm" />
+  <id value="IHE_NPFSm"/>
   <text>
-    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
-      ImplementationGuide for IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm) Rev. 1.1.
-      This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 1.1</a>
-    </div></text>
-  <url value="http://ihe.net/fhir/ImplementationGuide/IHE.NPFSm" />
-  <name value="IHE.NPFSm" />
-  <status value="draft" />
-  <experimental value="false" />
-  <date value="2018-02-13" />
-  <publisher value="Integrating the Healthcare Enterprise (IHE)" />
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml"> ImplementationGuide for IHE IT Infrastructure
+      Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm) Rev. 3.0. This
+      conformance resource is Informative. The Normative content can be found through <a
+        href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File
+        Sharing (NPFSm) Rev. 3.0</a>
+    </div>
+  </text>
+  <url value="http://ihe.net/fhir/ImplementationGuide/IHE_NPFSm"/>
+  <name value="IHE_NPFSm"/>
+  <title value="IHE NPFSm"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2019-07-03"/>
+  <publisher value="Integrating the Healthcare Enterprise (IHE)"/>
   <contact>
-    <name value="IHE" />
+    <name value="IHE"/>
     <telecom>
-      <system value="url" />
-      <value value="http://ihe.net" />
+      <system value="url"/>
+      <value value="http://ihe.net"/>
     </telecom>
   </contact>
-  <description value="Implementation Guide for IHE Non-patient File Sharing (NPFSm)  Rev. 1.1. See  https://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)" />
-  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
-  <fhirVersion value="3.0.1" />
-  <package>
-    <name value="NPFSm" />
-    <description value="ImplementationGuide for IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm) Rev. 1.1. 
-      This conformance resource is Informative. The Normative content can be found through https://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)" />
+  <description
+    value="Implementation Guide for IHE Non-patient File Sharing (NPFSm)  Rev. 3.0. See  https://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)"/>
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+  <packageId value="npfsmIg"/>
+  <fhirVersion value="4.0.0"/>
+  <definition>
+    <grouping>
+      <name value="NPFSm"/>
+      <description
+        value="ImplementationGuide for IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm) Rev. 3.0. 
+        This conformance resource is Informative. The Normative content can be found through https://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)"
+      />
+    </grouping>
     <resource>
-      <example value="false" />
-      <name value="DocumentReference" />
-      <description value="Constraints on DocumentReference resource for a Non-patient File" />
-      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.NPFSm.DocumentReference" />
+      <reference>
+        <reference value="http://www.ihe.net/fhir/StructureDefinition/IHE_NPFSm_DocumentReference"/>
+      </reference>
+      <name value="DocumentReference"/>
+      <description value="Constraints on DocumentReference resource for a Non-patient File"/>
+      <exampleBoolean value="false"/>
+      <groupingid value="1"/>
     </resource>
     <resource>
-      <example value="false" />
-      <name value="Submit File Transaction" />
-      <description value="Publishes a set of Files and metadata" />
-      <sourceUri value="http://ihe.net/fhir/StructureDefinition/IHE.NPFSm.SubmitFile" />
+      <reference>
+        <reference value="http://www.ihe.net/fhir/StructureDefinition/IHE_NPFSm_SubmitFile"/>
+      </reference>
+      <name value="Submit File Transaction"/>
+      <description value="Publishes a set of Files and metadata"/>
+      <exampleBoolean value="false"/>
+      <groupingid value="1"/>
     </resource>
     <resource>
-      <example value="false" />
-      <name value="File Manager" />
-      <description value="File Manager" />
-      <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.NPFSm.FileManager" />
+      <reference>
+        <reference value="http://www.ihe.net/fhir/CapabilityStatement/IHE_NPFSm_FileManager"/>
+      </reference>
+      <name value="File Manager"/>
+      <description value="File Manager"/>
+      <exampleBoolean value="false"/>
+      <groupingid value="1"/>
     </resource>
     <resource>
-      <example value="false" />
-      <name value="File Source" />
-      <description value="File Source" />
-      <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.NPFSm.FileSource" />
+      <reference>
+        <reference value="http://www.ihe.net/fhir/CapabilityStatement/IHE_NPFSm_FileSource"/>
+      </reference>
+      <name value="File Source"/>
+      <description value="File Source"/>
+      <exampleBoolean value="false"/>
+      <groupingid value="1"/>
     </resource>
     <resource>
-      <example value="false" />
-      <name value="File Source supporting Update File metadata Option" />
-      <description value="File Source supporting Update File metadata Option" />
-      <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.NPFSm.FileSource.UpdateFileMetadataOption" />
-    </resource>
-  <resource>
-    <example value="false" />
-    <name value="File Consumer" />
-    <description value="File Consumer" />
-    <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.NPFSm.FileConsumer" />
-  </resource>
-  <resource>
-    <example value="false" />
-    <name value="File Consumer supporting File Retrieve Option" />
-    <description value="File Consumer supporting File Retrieve Option" />
-    <sourceUri value="http://ihe.net/fhir/CapabilityStatement/IHE.NPFSm.FileConsumer.FileRetrieveOption" />
-  </resource>
-    <resource>
-      <example value="false" />
-      <name value="NPFSm valueSet for Class codes" />
-      <description value="ValueSet resource of Class codes defined for NPFSm" />
-      <sourceUri value="http://ihe.net/fhir/ValueSet/IHE.NPFSm.classcode.vs" />
+      <reference>
+        <reference value="http://www.ihe.net/fhir/CapabilityStatement/IHE_NPFSm_FileSource_UpdateFileMetadataOption"/>
+      </reference>
+      <name value="File Source supporting Update File metadata Option"/>
+      <description value="File Source supporting Update File metadata Option"/>
+      <exampleBoolean value="false"/>
+      <groupingid value="1"/>
     </resource>
     <resource>
-      <example value="false" />
-      <name value="NPFSm codesystem for Class codes" />
-      <description value="CodeSystem resource for defined Class codes" />
-      <sourceUri value="http://ihe.net/fhir/CodeSystem/IHE.NPFSm.classcode.cs" />
+      <reference>
+        <reference value="http://www.ihe.net/fhir/CapabilityStatement/IHE_NPFSm_FileConsumer"/>
+      </reference>
+      <name value="File Consumer"/>
+      <description value="File Consumer"/>
+      <exampleBoolean value="false"/>
+      <groupingid value="1"/>
     </resource>
-  </package>
+    <resource>
+      <reference>
+        <reference
+          value="http://www.ihe.net/fhir/StructureDefinition/IHE_NPFSm_DocumentReference"
+        />
+      </reference>
+      <name value="File Consumer supporting File Retrieve Option"/>
+      <description value="File Consumer supporting File Retrieve Option"/>
+      <exampleBoolean value="false"/>
+      <groupingid value="1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://www.ihe.net/fhir/ValueSet/IHE_NPFSm_classcode_vs"/>
+      </reference>
+      <name value="NPFSm valueSet for Class codes"/>
+      <description value="ValueSet resource of Class codes defined for NPFSm"/>
+      <exampleBoolean value="false"/>
+      <groupingid value="1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://www.ihe.net/fhir/CodeSystem/IHE_NPFSm_classcode_cs"/>
+      </reference>
+      <name value="NPFSm codesystem for Class codes"/>
+      <description value="CodeSystem resource for defined Class codes"/>
+      <exampleBoolean value="false"/>
+      <groupingid value="1"/>
+    </resource>
+  </definition>
 </ImplementationGuide>

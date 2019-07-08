@@ -1,16 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="IHE.NPFSm.DocumentReference" />
+  <id value="IHE_NPFSm_DocumentReference" />
   <text>
-    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+    <status value="additional" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
       DocumentReference resource for File's metadata based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
-      This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 1.1</a>
-    </div></text>
-  <url value="http://www.ihe.net/fhir/StructureDefinition/IHE.NPFSm.DocumentReference" />
-  <name value="IHE.NPFSm.DocumentReference" />
+      This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 3.0</a></div>
+  </text>
+  <url value="http://www.ihe.net/fhir/StructureDefinition/IHE_NPFSm_DocumentReference" />
+  <name value="IHENPFSmDocumentReference" />
   <title value="Non-patient File Sharing" />
   <status value="draft" />
-  <date value="2018-02-13" />
+  <date value="2019-07-03" />
   <publisher value="Integrating the Healthcare Enterprise (IHE)" />
   <contact>
     <name value="IHE" />
@@ -19,11 +20,10 @@
       <value value="http://ihe.net" />
     </telecom>
   </contact>
-  <description value="DocumentReference resource for File's metadata based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
-    This conformance resource is Informative. The Normative content can be found through  http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)" />
+  <description value="DocumentReference resource for File's metadata based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).     This conformance resource is Informative. The Normative content can be found through  http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)" />
   <purpose value="This supplement defines how to enable the sharing of non-patient files." />
   <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="DocumentReference" />
@@ -34,25 +34,21 @@
       <path value="DocumentReference.status" />
       <fixedCode value="current" />
     </element>
-    <element id="DocumentReference.class">
-      <path value="DocumentReference.class" />
+    <element id="DocumentReference.category">
+      <path value="DocumentReference.category" />
       <min value="1" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="DocumentC80Class" />
-        </extension>
         <strength value="preferred" />
-        <valueSetReference>
-          <reference value="http://ihe.net/fhir/ValueSet/IHE.NPFSm.classcode.vs" />
-        </valueSetReference>
+        <valueSet value="http://ihe.net/fhir/ValueSet/IHE_NPFSm_classcode_vs" />
       </binding>
     </element>
     <element id="DocumentReference.subject">
       <path value="DocumentReference.subject" />
       <max value="0" />
     </element>
-    <element id="DocumentReference.created">
-      <path value="DocumentReference.created" />
+    <element id="DocumentReference.date">
+      <path value="DocumentReference.date" />
+      <short value="When this document reference was indexed" />
       <mustSupport value="true" />
     </element>
     <element id="DocumentReference.author">

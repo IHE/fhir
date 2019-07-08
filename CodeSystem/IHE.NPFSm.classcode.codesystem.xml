@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-	<id value="IHE.NPFSm.classcode.cs"/>
+	<id value="IHE_NPFSm_classcode_cs"/>
 	<text>
 		<status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
-			Codesystem for the Class element based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
-			This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 1.1</a>
+			Codesystem for the category element based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
+			This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 3.0</a>
 		</div></text>
-    <url value="http://ihe.net/fhir/CodeSystem/IHE.NPFSm.classcode.cs"/>
-    <name value="IHE.NPFSm.classcode.cs"/>
-	<title value="IHE Class Code set for use with Non-Patient File Sharing"/>
+	<url value="http://www.ihe.net/fhir/CodeSystem/IHE_NPFSm_classcode_cs"/>
+    <name value="IHE_NPFSm_classcode_cs"/>
+	<title value="IHE Category (Class) Code set for use with Non-Patient File Sharing"/>
 	<status value="active"/>
 	<experimental value="false"/>
-	<date value="2018-02-13"/>
+	<date value="2019-07-03"/>
 	<publisher value="IHE"/>
 	<contact> 
 		<name value="IHE"/> 
@@ -20,7 +20,7 @@
 			<value value="http://ihe.net"/> 
 		</telecom> 
 	</contact> 
-	<description value="Codesystem for the Class element based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
+	<description value="Codesystem for the ctegory element based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
 		This conformance resource is Informative. The Normative content can be found through http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)"/>
 	  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
 	<caseSensitive value="true"/> 
