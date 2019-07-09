@@ -19,8 +19,12 @@
       <path value="Extension" />
       <short value="Optional Extensions Element" />
       <definition value="Optional Extension Element - found in all resources." />
+      <min value="0" />
+      <max value="*" />
       <base>
         <path value="Extension" />
+        <min value="0" />
+        <max value="*" />
       </base>
       <constraint>
         <key value="ext-1" />
@@ -706,6 +710,8 @@
       <definition value="Optional Extension Element - found in all resources." />
       <base>
         <path value="Extension" />
+        <min value="0" />
+        <max value="*" />
       </base>
       <constraint>
         <key value="ext-1" />
