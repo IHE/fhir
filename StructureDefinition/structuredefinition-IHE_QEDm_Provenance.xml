@@ -4,7 +4,7 @@
   <name value="IHE_QEDm_Provenance" />
   <title value="QEDm Provenance" />
   <status value="draft" />
-  <date value="2019-07-05" />
+  <date value="2019-07-09" />
   <publisher value="Integrating the Healthcare Enterprise (IHE)" />
   <contact>
     <name value="IHE" />
@@ -29,6 +29,11 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Provenance" />
   <derivation value="constraint" />
   <differential>
+    <element id="Provenance">
+      <path value="Provenance" />
+      <min value="1" />
+      <max value="1" />
+    </element>
     <element id="Provenance.policy">
       <path value="Provenance.policy" />
       <min value="1" />
@@ -48,34 +53,30 @@
       <label value="assembler" />
       <slicing>
         <discriminator>
-          <type value="value" />
+          <type value="pattern" />
           <path value="type" />
         </discriminator>
         <description value="Assembler of the FHIR Resources" />
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Provenance.agent.type.coding.system">
-      <path value="Provenance.agent.type.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://hl7.org/fhir/v3/ParticipationFunction" />
-    </element>
-    <element id="Provenance.agent.type.coding.code">
-      <path value="Provenance.agent.type.coding.code" />
-      <min value="1" />
-      <fixedCode value="assembler" />
-    </element>
     <element id="Provenance.agent:theAssembler">
       <path value="Provenance.agent" />
-      <sliceName value="theAssembler" />
-      <code>
-        <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type" />
-        <code value="assembler" />
-      </code>
+      <sliceName value="theAssembler"/>
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Provenance.agent:theAssembler.who">
+    <element id="Provenance.agent.type:theAssembler">
+      <path value="Provenance.agent.type" />
+      <min value="1"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+          <code value="assembler"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Provenance.agent.who:theAssembler">
       <path value="Provenance.agent.who" />
       <short value="Service identity" />
       <definition value="Device Resource identifying the extraction device. This should be by reference to a known Device Resource by may be a contained resource or an identifier." />
@@ -86,7 +87,7 @@
         <aggregation value="referenced" />
       </type>
     </element>
-    <element id="Provenance.agent:theAssembler.who.reference">
+    <element id="Provenance.agent.who.reference:theAssembler">
       <path value="Provenance.agent.who.reference" />
       <min value="1" />
     </element>
