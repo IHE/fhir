@@ -39,6 +39,10 @@
 	<baseDefinition value="http://ihe.net/fhir/StructureDefinition/IHE_MHD_Minimal_List" />
 	<derivation value="constraint" />
 	<differential>
+		<element id="List.title">
+			<path value="List.title" />
+			<min value="1" />
+		</element>
 		<element id="List.code">
 			<path value="List.code" />
 			<comment value="code is Required." />
