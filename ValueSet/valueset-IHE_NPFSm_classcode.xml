@@ -23,7 +23,6 @@
         This conformance resource is Informative. The Normative content can be found through http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)."/>
     <immutable value="false"/>
     <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
-    <extensible value="false"/>
     <compose>
         <include>
             <system value="http://ihe.net/fhir/CodeSystem/IHE_NPFSm_classcode_cs"/>
