@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <text>
+    <status value="additional" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      DocumentReference resource for File's metadata based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
+      This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 3.0</a></div>
+  </text>
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE_NPFSm_DocumentReference" />
+  <name value="IHENPFSmDocumentReference" />
+  <title value="Non-patient File Sharing" />
+  <status value="draft" />
+  <date value="2019-07-03" />
+  <publisher value="Integrating the Healthcare Enterprise (IHE)" />
+  <contact>
+    <name value="IHE" />
+    <telecom>
+      <system value="url" />
+      <value value="http://ihe.net" />
+    </telecom>
+  </contact>
+  <description value="DocumentReference resource for File's metadata based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).     This conformance resource is Informative. The Normative content can be found through  http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)" />
+  <purpose value="This supplement defines how to enable the sharing of non-patient files." />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DocumentReference" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DocumentReference.category">
+      <path value="DocumentReference.category" />
+      <min value="1" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://ihe.net/fhir/ValueSet/IHE_NPFSm_classcode_vs" />
+      </binding>
+    </element>
+    <element id="DocumentReference.subject">
+      <path value="DocumentReference.subject" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.date">
+      <path value="DocumentReference.date" />
+      <short value="When this document reference was indexed" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.author">
+      <path value="DocumentReference.author" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.content.attachment.contentType">
+      <path value="DocumentReference.content.attachment.contentType" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.content.attachment.language">
+      <path value="DocumentReference.content.attachment.language" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.attachment.data">
+      <path value="DocumentReference.content.attachment.data" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content.attachment.url">
+      <path value="DocumentReference.content.attachment.url" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.content.attachment.size">
+      <path value="DocumentReference.content.attachment.size" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.content.attachment.hash">
+      <path value="DocumentReference.content.attachment.hash" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.content.format">
+      <path value="DocumentReference.content.format" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.context.encounter">
+      <path value="DocumentReference.context.encounter" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.context.sourcePatientInfo">
+      <path value="DocumentReference.context.sourcePatientInfo" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.context.related">
+      <path value="DocumentReference.context.related" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
