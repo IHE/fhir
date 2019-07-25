@@ -98,15 +98,15 @@
       <path value="Bundle.entry.request.method" />
       <fixedCode value="POST" />
     </element>
-    <element id="Bundle.entry:DocumentReference replaced">
+    <element id="Bundle.entry:DocumentReference-previous">
       <path value="Bundle.entry" />
-      <sliceName value="DocumentReference replaced" />
+      <sliceName value="DocumentReference-previous" />
     </element>
-    <element id="Bundle.entry:DocumentReference replaced.fullUrl">
+    <element id="Bundle.entry:DocumentReference-previous.fullUrl">
       <path value="Bundle.entry.fullUrl" />
       <min value="1" />
     </element>
-    <element id="Bundle.entry:DocumentReference replaced.resource">
+    <element id="Bundle.entry:DocumentReference-previous.resource">
       <path value="Bundle.entry.resource" />
       <min value="1" />
       <type>
@@ -114,11 +114,11 @@
         <profile value="http://ihe.net/fhir/StructureDefinition/IHE_NPFSm_DocumentReference" />
       </type>
     </element>
-    <element id="Bundle.entry:DocumentReference replaced.request">
+    <element id="Bundle.entry:DocumentReference-previous.request">
       <path value="Bundle.entry.request" />
       <min value="1" />
     </element>
-    <element id="Bundle.entry:DocumentReference replaced.request.method">
+    <element id="Bundle.entry:DocumentReference-previous.request.method">
       <path value="Bundle.entry.request.method" />
       <fixedCode value="PUT" />
     </element>
