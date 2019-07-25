@@ -37,7 +37,17 @@
     </resource>
     <resource>
       <reference>
-        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_NPFSm_SubmitFile"/>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_NPFSm_SubmitFile_Create"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_NPFSm_SubmitFile_Update"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_NPFSm_SubmitFile_Replace"/>
       </reference>
     </resource>
     <resource>

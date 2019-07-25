@@ -29,10 +29,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
   <derivation value="constraint" />
   <differential>
-    <element id="DocumentReference.status">
-      <path value="DocumentReference.status" />
-      <fixedCode value="current" />
-    </element>
     <element id="DocumentReference.category">
       <path value="DocumentReference.category" />
       <min value="1" />
