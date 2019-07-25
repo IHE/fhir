@@ -1,11 +1,10 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir">
-	<id value="IHE_NPFSm_FileConsumer_FileRetrieveOption" />
 	  <text>
     <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
       CapabilityStatement for the File Consumer actor supporting the File Retrieve Option in the IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
       This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 3.0</a>
 	</div></text>
-  <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE_NPFSm_FileConsumer_FileRetrieveOption" />
+  <url value="http://ihe.net/fhir/CapabilityStatement/IHE_NPFSm_FileConsumer_FileRetrieveOption" />
   <name value="IHE_NPFSm_FileConsumer_FileRetrieveOption" />
   <title value="IHE ITI Non-patient File Sharing (NPFSm) - File Consumer (client) supporting the File Retrieve Option" />
 	<status value="draft" />
@@ -31,7 +30,7 @@
     <mode value="client"/>
     <resource>
       <type value="DocumentReference"/>
-    	<profile value="http://www.ihe.net/fhir/StructureDefinition/IHE_NPFSm_DocumentReference"/>
+    	<profile value="http://ihe.net/fhir/StructureDefinition/IHE_NPFSm_DocumentReference"/>
       <interaction><!--for retrive option-->
         <code value="read"/>
       </interaction>

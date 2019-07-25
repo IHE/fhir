@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="IHE_NPFSm_DocumentReference" />
   <text>
     <status value="additional" />
     <div xmlns="http://www.w3.org/1999/xhtml">
       DocumentReference resource for File's metadata based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
       This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 3.0</a></div>
   </text>
-  <url value="http://www.ihe.net/fhir/StructureDefinition/IHE_NPFSm_DocumentReference" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE_NPFSm_DocumentReference" />
   <name value="IHENPFSmDocumentReference" />
   <title value="Non-patient File Sharing" />
   <status value="draft" />
@@ -30,10 +29,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
   <derivation value="constraint" />
   <differential>
-    <element id="DocumentReference.status">
-      <path value="DocumentReference.status" />
-      <fixedCode value="current" />
-    </element>
     <element id="DocumentReference.category">
       <path value="DocumentReference.category" />
       <min value="1" />

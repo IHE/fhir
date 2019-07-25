@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir">
-    <id value="IHE_NPFSm_FileManager"/>
     <text>
         <status value="additional"/>
         <div xmlns="http://www.w3.org/1999/xhtml"> CapabilityStatement for File Manager actor in the
@@ -10,7 +9,7 @@
                 >Non-patient File Sharing (NPFSm) Rev. 3.0</a>
         </div>
     </text>
-    <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE_NPFSm_FileManager"/>
+    <url value="http://ihe.net/fhir/CapabilityStatement/IHE_NPFSm_FileManager"/>
     <name value="IHE_NPFSm_FileManager"/>
     <title value="IHE ITI Non-patient File Sharing (NPFSm) - File Manager (server)"/>
     <status value="draft"/>
@@ -42,7 +41,7 @@
         </security>
         <resource>
             <type value="DocumentReference"/>
-            <profile value="http://www.ihe.net/fhir/StructureDefinition/IHE_NPFSm_DocumentReference"/>
+            <profile value="http://ihe.net/fhir/StructureDefinition/IHE_NPFSm_DocumentReference"/>
             <interaction>
                 <code value="update"/>
             </interaction>
@@ -133,7 +132,7 @@
         </resource>
         <interaction>
             <code value="transaction"/>
-            <documentation value="http://www.ihe.net/fhir/StructureDefinition/IHE_NPFSm_SubmitFile"/>
+            <documentation value="http://ihe.net/fhir/StructureDefinition/IHE_NPFSm_SubmitFile"/>
         </interaction>
         <interaction>
             <code value="search-system"/>
