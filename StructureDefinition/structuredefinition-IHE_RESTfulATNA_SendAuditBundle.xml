@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <text>
+    <status value="additional" />
+    <div xmlns="http://www.w3.org/1999/xhtml"> Profile on Transaction Bundle based on IHE ITI
+            Infrastructure Technical Framework Supplement - RESTful ATNA Query and Feed. This
+            conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Add_RESTful_Query_to_ATNA"> Add RESTful ATNA Query and Feed Rev. 4.0</a></div>
+  </text>
+  <url value="http://www.ihe.net/fhir/StructureDefinition/IHE_RESTfulATNA_Send_Audit_Bundle" />
+  <name value="IHE_RESTfulATNA_Send_Audit_Bundle" />
+  <title value="IHE RESTfulATNA ATNA (Query and Feed) profile on Send Audit Bundle interaction" />
+  <status value="draft" />
+  <experimental value="false" />
+  <date value="2019-07-25" />
+  <publisher value="Integrating the Healthcare Enterprise (IHE)" />
+  <contact>
+    <name value="IHE" />
+    <telecom>
+      <system value="url" />
+      <value value="http://ihe.net" />
+    </telecom>
+  </contact>
+  <description value="Profile on Transaction Bundle based on IHE ITI Infrastructure Technical Framework Supplement - RESTful ATNA Query and Feed.         This conformance resource is Informative. The Normative content can be found through" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Bundle" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Bundle.type">
+      <path value="Bundle.type" />
+      <fixedCode value="transaction" />
+    </element>
+    <element id="Bundle.entry">
+      <path value="Bundle.entry" />
+      <min value="1" />
+    </element>
+    <element id="Bundle.entry.resource">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <type>
+        <code value="Resource" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/AuditEvent" />
+      </type>
+    </element>
+    <element id="Bundle.entry.request">
+      <path value="Bundle.entry.request" />
+      <min value="1" />
+    </element>
+    <element id="Bundle.entry.request.method">
+      <path value="Bundle.entry.request.method" />
+      <fixedCode value="POST" />
+    </element>
+  </differential>
+</StructureDefinition>

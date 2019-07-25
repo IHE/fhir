@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml"> ImplementationGuide for IHE IT Infrastructure
+      Technical Framework Supplement - Add RESTful ATNA (Query and Feed). This conformance resource
+      is Informative. The Normative content can be found through <a
+        href="http://wiki.ihe.net/index.php/Add_RESTful_Query_to_ATNA"> - Add RESTful ATNA (Query
+        and Feed) Rev. 4.0</a>
+    </div>
+  </text>
+  <url value="http://ihe.net/fhir/ImplementationGuide/IHE_RESTfulATNA"/>
+  <name value="IHE_RESTfulATNA"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2019-07-25"/>
+  <publisher value="Integrating the Healthcare Enterprise (IHE)"/>
+  <contact>
+    <name value="IHE"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://ihe.net"/>
+    </telecom>
+  </contact>
+  <description
+    value="Implementation Guide for IHE Add RESTful ATNA (Query and Feed)  Rev. 4.0. This conformance resource
+    is Informative. See  http://wiki.ihe.net/index.php/Add_RESTful_Query_to_ATNA"/>
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+  <packageId value="ihe.restful.atna.fhir"/>
+  <fhirVersion value="4.0.0"/>
+  <manifest>
+    <rendering value="http://wiki.ihe.net/index.php/Add_RESTful_Query_to_ATNA"/>
+    <resource>
+      <reference>
+        <reference value="http://www.ihe.net/fhir/CapabilityStatement/IHE_RESTfulATNA_AuditConsumer"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://www.ihe.net/fhir/CapabilityStatement/IHE_RESTfulATNA_AuditRecordRepository_FullOption"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://www.ihe.net/fhir/CapabilityStatement/IHE_RESTfulATNA_AuditRecordRepository_RetriveAuditMessageOption"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://www.ihe.net/fhir/CapabilityStatement/IHE_RESTfulATNA_AuditRecordRepository_FHIRFeedOption"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://www.ihe.net/fhir/CapabilityStatement/IHE_RESTfulATNA_SA_SN"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://www.ihe.net/fhir/StructureDefinition/IHE_RESTfulATNA_Send_Audit_Bundle"/>
+      </reference>
+    </resource>
+  </manifest>
+</ImplementationGuide>

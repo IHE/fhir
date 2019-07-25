@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+     <text><!--fix-->
+        <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+            CapabilityStatement for AuditRecordRepository actor supporting both, retieve and FHIR Feed, Audit Message Options in the IHE IT Infrastructure Technical Framework Supplement - RESTful ATNA Query and Feed.
+            This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Add_RESTful_Query_to_ATNA"> RESTful ATNA Query and Feed Rev. 3.0</a>
+        </div></text>
+    <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE_RESTfulATNA_AuditRecordRepository_FullOption"/>
+    <name value="IHE_RESTfulATNA_AuditRecordRepository_FullOption"/>
+    <title value="IHE ITI RESTful ATNA Query and Feed - Audit Record Repository - Both Option"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2019-07-25"/>
+    <publisher value="Integrating the Healthcare Enterprise (IHE)"/>
+    <contact> 
+        <name value="IHE"/> 
+        <telecom> 
+            <system value="url"/> 
+            <value value="http://ihe.net"/> 
+        </telecom> 
+    </contact> <!--fix-->
+    <description value="CapabilityStatement for AuditRecordRepository actor supporting both, retieve and FHIR Feed, Audit Message Options in the IHE IT Infrastructure Technical Framework Supplement - RESTful ATNA Query and Feed.
+        This conformance resource is Informative. The Normative content can be found through http://wiki.ihe.net/index.php/Add_RESTful_Query_to_ATNA"/>
+    <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+    <kind value="requirements"/>
+    <fhirVersion value="4.0.0"/>
+    <format value="application/fhir+xml"/>
+    <format value="application/fhir+json"/>
+    <rest><!--Interaction for search-->
+        <mode value="server"/>
+        <documentation value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+        <security>
+            <cors value="false" />
+            <description value="Recommend IUA" />
+        </security>
+        <resource>
+            <type value="AuditEvent"/>
+            <profile value="http://hl7.org/fhir/StructureDefinition/AuditEvent"/>
+            <interaction>
+                <code value="create"/>
+            </interaction>
+            <interaction>
+                <code value="read"/>
+            </interaction>
+            <interaction>
+                <code value="search-type"/>
+            </interaction>
+            <searchParam>
+                <name value="patient.identifier"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/AuditEvent-patient"/>
+                <type value="token"/>
+                <documentation value="Identifier of the patient involved in the event either as a participant or as a user"/>
+            </searchParam>
+            <searchParam>
+                <name value="agent.identifier"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/AuditEvent-agent"/>
+                <type value="token"/>
+                <documentation value="Identifier of the user that participated in the event that originates the audit record"/>
+            </searchParam>
+            <searchParam>
+                <name value="date"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/AuditEvent-date"/>
+                <type value="date"/>
+                <documentation value="Time when the event occurred on source"/>
+            </searchParam>
+            <searchParam>
+                <name value="address"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/AuditEvent-address"/>
+                <type value="string"/>
+                <documentation value="Identifier for the network access point of the user device"/>
+            </searchParam>
+            <searchParam>
+                <name value="entity.identifier"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/AuditEvent-entity"/>
+                <type value="token"/>
+                <documentation value="Identifies the unique identifier for the object instance of object"/>
+            </searchParam>
+            <searchParam>
+                <name value="entity-type"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/AuditEvent-entity-type"/>
+                <type value="token"/>
+                <documentation value="Type of entity involved"/>
+            </searchParam>
+            <searchParam>
+                <name value="entity-role"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/AuditEvent-entity-role"/>
+                <type value="token"/>
+                <documentation value="What role the entity played"/>
+            </searchParam>
+            <searchParam>
+                <name value="source.identifier"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/AuditEvent-source"/>
+                <type value="token"/>
+                <documentation value="The identity of source detecting the event"/>
+            </searchParam>
+            <searchParam>
+                <name value="type"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/AuditEvent-type"/>
+                <type value="token"/>
+                <documentation value="Type/identifier of event"/>
+            </searchParam>
+            <searchParam>
+                <name value="subtype"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/AuditEvent-subtype"/>
+                <type value="token"/>
+                <documentation value="More specific type/id for the event"/>
+            </searchParam>
+            <searchParam>
+                <name value="outcome"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/AuditEvent-outcome"/>
+                <type value="token"/>
+                <documentation value="Whether the event succeeded or failed	"/>
+            </searchParam>
+        </resource>
+        <interaction>
+            <code value="search-system" />
+        </interaction>
+        <interaction>
+            <code value="transaction" />
+            <documentation value="http://www.ihe.net/fhir/StructureDefinition/IHE_RESTfulATNA_Send_Audit_Bundle"/> <!--inserire canonical del bundle-->
+        </interaction>
+    </rest>
+</CapabilityStatement>
