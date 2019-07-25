@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+
+	<text>
+		<status value="additional"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+		CapabilityStatement for Consumer Actor in the IHE IT Infrastructure Technical Framework Supplement 
+			<a href="http://wiki.ihe.net/index.php/Patient_Demographics_Query_for_Mobile_(PDQm)">Patient Demographics Query or Mobile (PDQm)</a>
+		The IHE PDQm Profile text is Normative, this conformance resource is Informative.
+		</div>
+	</text>
+	<url value="http://ihe.net/fhir/CapabilityStatement/IHE_PDQm_consumer"/>
+	<name value="IHE_PDQm_consumer"/>
+	<title value="IHE ITI Patient Demographics Query for Mobile (PDQm) - consumer (client)"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2018-04-13" />
+	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
+	<contact>
+		<name value="IHE"/>
+		<telecom>
+			<system value="url"/>
+			<value value="http://ihe.net"/>
+		</telecom>
+	</contact>
+	<contact>
+		<name value="John Moehrke"/>
+		<telecom>
+			<system value="email"/>
+			<value value="JohnMoehrke@gmail.com"/>
+		</telecom>
+	</contact>
+	<description value="CapabilityStatement for Consumer Actor in the IHE IT Infrastructure Technical Framework Supplement IHE PDQm. See http://wiki.ihe.net/index.php/Patient_Demographics_Query_for_Mobile_(PDQm). The IHE PDQm Profile text is Normative, this conformance resource is Informative." />
+	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+	<kind value="requirements"/>
+	<fhirVersion value="4.0.0"/>
+	<format value="application/fhir+xml"/>
+	<format value="application/fhir+json"/>
+	<rest>
+		<mode value="client"/>
+		<documentation value="PDQm client will query for Patient resources matching a sub-set of the FHIR core Patient resource query parameters"/>
+		<security>
+			<cors value="false"/>
+			<description value="None mandated by IHE, encouraged IHE-IUA or SMART-on-FHIR"/>
+		</security>
+		<resource>
+			<type value="Patient"/>
+			<interaction>
+				<code value="read"/>
+			</interaction>
+			<interaction>
+				<code value="search-type"/>
+			</interaction>
+			<searchParam>
+				<name value="_id"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Patient-_id"/>
+				<type value="token"/>
+				<documentation value="Logical id of this artifact"/>
+			</searchParam>
+			<searchParam>
+				<name value="active"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Patient-active"/>
+				<type value="token"/>
+				<documentation value="Whether the patient record is active"/>
+			</searchParam>
+			<searchParam>
+				<name value="address-city"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Patient-address-city"/>
+				<type value="string"/>
+				<documentation value="A city specified in an address"/>
+			</searchParam>
+			<searchParam>
+				<name value="address-country"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Patient-address-country"/>
+				<type value="string"/>
+				<documentation value="A country specified in an address"/>
+			</searchParam>
+			<searchParam>
+				<name value="address-postalcode"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Patient-address-postalcode"/>
+				<type value="string"/>
+				<documentation value="A postalCode specified in an address"/>
+			</searchParam>
+			<searchParam>
+				<name value="address-state"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Patient-address-state"/>
+				<type value="string"/>
+				<documentation value="A state specified in an address"/>
+			</searchParam>
+			<searchParam>
+				<name value="birthdate"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Patient-birthdate"/>
+				<type value="date"/>
+				<documentation value="The patient's date of birth"/>
+			</searchParam>
+			<searchParam>
+				<name value="family"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Patient-family"/>
+				<type value="string"/>
+				<documentation value="A portion of the family name of the patient"/>
+			</searchParam>
+			<searchParam>
+				<name value="gender"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Patient-gender"/>
+				<type value="token"/>
+				<documentation value="Gender of the patient"/>
+			</searchParam>
+			<searchParam>
+				<name value="given"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Patient-given"/>
+				<type value="string"/>
+				<documentation value="A portion of the given name of the patient"/>
+			</searchParam>
+			<searchParam>
+				<name value="identifier"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Patient-identifier"/>
+				<type value="token"/>
+				<documentation value="A patient identifier"/>
+			</searchParam>
+			<searchParam>
+				<name value="telecom"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Patient-telecom"/>
+				<type value="token"/>
+				<documentation value="The value in any kind of telecom details of the patient"/>
+			</searchParam>
+			<searchParam>
+				<name value="_lastUpdated"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Patient-_lastUpdated"/>
+				<type value="date"/>
+				<documentation value="When the resource version last changed"/>
+			</searchParam>
+		</resource>
+		<interaction>
+			<code value="search-system"/>
+		</interaction>
+	</rest>
+</CapabilityStatement>
