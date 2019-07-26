@@ -1,0 +1,48 @@
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <text>
+    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+      CapabilityStatement for the Secure Node, Secure Application or Audit Record Forwarder actor, supporting the FHIR Feed Option, in the IHE IT Infrastructure Technical Framework Supplement - RESTful ATNA Query and Feed.
+      This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Add_RESTful_Query_to_ATNA"> RESTful ATNA Query and Feed Rev. 3.0</a>
+	</div></text>
+  <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE_RESTfulATNA_SA_SN" />
+  <name value="IHE_RESTfulATNA_SA_SN" />
+  <title value="IHE ITI RESTful ATNA Query and Feed - Secure Node or Secure Application (client)" />
+	<status value="draft" />
+	<experimental value="false" />
+	<date value="2019-07-25" />
+  <publisher value="Integrating the Healthcare Enterprise (IHE)" />
+	<contact> 
+		<name value="IHE"/> 
+		<telecom> 
+			<system value="url"/> 
+			<value value="http://ihe.net"/> 
+		</telecom> 
+	</contact><!--fix-->
+  <description value="CapabilityStatement for the the Secure Node, Secure Application or Audit Record Forwarder actor, supporting the FHIR Feed Option,  in the IHE IT Infrastructure Technical Framework Supplement - Add RESTful Query to ATNA.
+    This conformance resource is Informative. The Normative content can be found through http://wiki.ihe.net/index.php/Add_RESTful_Query_to_ATNA" />
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+	<kind value="requirements" />
+  <fhirVersion value="4.0.0" />
+
+	<format value="application/fhir+xml" />
+	<format value="application/fhir+json" />
+  <rest>
+    <mode value="client"/>
+    <documentation value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+    <security>
+      <cors value="false" />
+      <description value="Recommend IUA" />
+    </security>
+    <resource>
+      <type value="AuditEvent"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/AuditEvent"/>
+      <interaction>
+        <code value="create"/>
+      </interaction>
+    </resource>
+    <interaction>
+      <code value="transaction" />
+      <documentation value="http://www.ihe.net/fhir/StructureDefinition/IHE_RESTfulATNA_Send_Audit_Bundle"/> 
+    </interaction>
+	</rest>
+</CapabilityStatement>
