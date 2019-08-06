@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+    <id value="IHE.mRFD.ImplementationGuide" />
+    <text>
+        <status value="additional" />
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            ImplementationGuide for IHE Quality Research and Public Health Profile - Mobile Retrieve Form for Data Capture (mRFD).
+            This conformance resource is Informative. The Normative content can be found through <a href="https://wiki.ihe.net/index.php/Mobile_Retrieve_Form_for_Data_Capture">Mobile Retrieve Form for Data Capture</a>
+        </div>
+    </text>
+    <url value="http://ihe.net/fhir/ImplementationGuide/IHE.mRFD.ImplementationGuide" />
+    <name value="IHE.mRFD.ImplementationGuide" />
+    <status value="draft" />
+    <experimental value="false" />
+    <date value="2019-03-19" />
+    <publisher value="Integrating the Healthcare Enterprise (IHE)" />
+    <contact>
+        <name value="IHE" />
+        <telecom>
+            <system value="url" />
+            <value value="http://ihe.net" />
+        </telecom>
+    </contact>
+    <contact>
+        <name value="John Stamm" />
+        <telecom>
+            <system value="email" />
+            <value value="JStamm@epic.com" />
+        </telecom>
+    </contact>
+    <description value="ImplementationGuide for IHE Quality Research and Public Health Profile - Mobile Retrieve Form for Data Capture (mRFD).
+        This conformance resource is Informative. The Normative content can be found through https://wiki.ihe.net/index.php/Mobile_Retrieve_Form_for_Data_Capture" />
+    <jurisdiction>
+        <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+        </coding>
+    </jurisdiction>	
+    <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+    <fhirVersion value="4.0.0" />
+    <package>
+        <name value="mRFD" />
+        <description value="IHE Mobile Retrieve Form for Data Capture.  https://wiki.ihe.net/index.php/Mobile_Retrieve_Form_for_Data_Capture" />
+    </package>
+</ImplementationGuide>
