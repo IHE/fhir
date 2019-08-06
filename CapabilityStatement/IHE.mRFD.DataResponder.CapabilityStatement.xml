@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+    <id value="IHE.mRFD.DataResponder.CapabilityStatement"/>
+    <text>
+        <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+            CapabilityStatement for Data Responder actor in the IHE Quality Research and Public Health Profile - Mobile Retrieve Form for Data Capture (mRFD).
+            This conformance resource is Informative. The Normative content can be found through <a href="https://wiki.ihe.net/index.php/Mobile_Retrieve_Form_for_Data_Capture">Mobile Retrieve Form for Data Capture</a>
+        </div></text>
+    <url value="http://www.ihe.net/fhir/CapabilityStatement/IHE.mRFD.DataResponder.CapabilityStatement"/>
+    <name value="IHE.mRFD.DataResponder.CapabilityStatement"/>
+    <title value="IHE QRPH Mobile Retrieve Form for Data Capture (mRFD) - Data Responder"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2019-03-19"/>
+    <publisher value="Integrating the Healthcare Enterprise (IHE)"/>
+    <contact> 
+        <name value="IHE"/> 
+        <telecom> 
+            <system value="url"/> 
+            <value value="http://ihe.net"/> 
+        </telecom> 
+    </contact> 
+    <description value="CapabilityStatement for Data Responder actor in the IHE Quality Research and Public Health Profile - Mobile Retrieve Form for Data Capture (mRFD).
+        This conformance resource is Informative. The Normative content can be found through https://wiki.ihe.net/index.php/Mobile_Retrieve_Form_for_Data_Capture."/>
+    <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+    <kind value="requirements"/>
+    <fhirVersion value="4.0.0"/>
+    <acceptUnknown value="both" />
+    <format value="application/fhir+xml"/>
+    <format value="application/fhir+json"/>
+    <implementationGuide value="http://ihe.net/fhir/ImplementationGuide/IHE.mRFD.ImplementationGuide"/>
+    <rest><!--Interaction for search-->
+        <mode value="server"/>
+        <documentation value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+        <security>
+            <cors value="false" />
+            <description value="Recommend IUA or SMART" />
+        </security>
+        <resource>
+            <type value="CapabilityStatement"/>
+            <profile>
+                <reference value="http://www.hl7.org/fhir/capabilitystatement.html"/>
+            </profile>
+            <searchParam>
+                <name value="identifier"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/capabilitystatement"/>
+                <type value="token"/>
+                <documentation value="Master Version Specific Identifier"/>
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="Binary" />
+            <interaction>
+                <code value="read" />
+            </interaction>
+        </resource>
+    </rest>
+</CapabilityStatement>
