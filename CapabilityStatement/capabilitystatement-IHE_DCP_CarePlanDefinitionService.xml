@@ -165,6 +165,10 @@
 				<type value="token"/>
 			</searchParam>
 			<searchParam>
+				<name value="kind"/>
+				<type value="token"/>
+			</searchParam>
+			<searchParam>
 				<name value="status"/>
 				<type value="token"/>
 			</searchParam>
