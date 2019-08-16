@@ -25,7 +25,7 @@
 	<description value="see http://wiki.ihe.net/index.php/Dynamic_Care_Planning"/>
 	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
 	<kind value="requirements"/>
-	<fhirVersion value="3.0.1"/>
+	<fhirVersion value="4.0.0"/>
 	<format value="application/fhir+xml"/>
 	<format value="application/fhir+json"/>
 	<profile>
