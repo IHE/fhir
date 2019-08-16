@@ -77,14 +77,6 @@
 				<type value="date"/>
 			</searchParam>
 			<searchParam>
-				<name value="encounter"/>
-				<type value="reference"/>
-			</searchParam>
-			<searchParam>
-				<name value="identifier"/>
-				<type value="token"/>
-			</searchParam>
-			<searchParam>
 				<name value="participant"/>
 				<type value="reference"/>
 			</searchParam>

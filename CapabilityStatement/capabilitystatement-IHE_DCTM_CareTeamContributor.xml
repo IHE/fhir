@@ -1,11 +1,11 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir">
-	<id value="IHE_DCP_CarePlanService"/>
-	<url value="http://ihe.net/fhir/CapabilityStatement/IHE_DCP_CarePlanService"/>
-	<name value="IHR_DCP_CarePlanService_CapabilityStatement.xml"/>
-	<title value="IHE PCC Dynamic Care Planning (DCP) - CarePlanService (server)"/>
+	<id value="IHE_DCTM_CareTeamContributor"/>
+	<url value="http://ihe.net/fhir/CapabilityStatement/IHE_DCTM_CareTeamContributor"/>
+	<name value="IHE_DCTM_CareTeamContributor"/>
+	<title value="IHE PCC Dynamic Care Team Management (DCTM) - CareTeamContributor (client)"/>
 	<status value="draft"/>
 	<experimental value="false"/>
-	<date value="2019-04-30T12:00:00-06:00"/>
+	<date value="2019-04-30T12:00:06-06:00"/>
 	<publisher value="Integrating the Healthcare Enterprise (IHE)"/>
 	<contact>
 		<name value="IHE"/>
@@ -21,36 +21,37 @@
 			<value value="emma.jones@allscripts.com"/>
 		</telecom>
 	</contact>
-	<description value="see http://wiki.ihe.net/index.php/Dynamic_Care_Planning"/>
+	<description value="see https://wiki.ihe.net/index.php/Dynamic_Care_Team_Management"/>
+	<jurisdiction>
+		<coding>
+			<system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+			<code value="001"/>
+		</coding>
+	</jurisdiction>
 	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
 	<kind value="requirements"/>
 	<fhirVersion value="4.0.0"/>
+	 <acceptUnknown value="both" />
 	<format value="application/fhir+xml"/>
 	<format value="application/fhir+json"/>
 	<profile>
-        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.DCP.Query.CarePlan" />
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.DCTM.Query.CareTeam" />
     </profile>
     <profile>
-        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.DCP.Query.Subscription" />
-    </profile>
-    <profile>
-        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.DCP.Apply.ActivityDefinition" />
-    </profile>
-    <profile>
-        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.DCP.Apply.PlanDefinition" />
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.DCTM.Query.Subscription" />
     </profile>
 	<rest>
-		<mode value="server"/>
-		<documentation value="DCP Care Plan Service server provides capability to query for CarePlan resources matching a sub-set of the FHIR core CarePlan resource query parameters"/>
+		<mode value="client"/>
+		<documentation value="DCTM client will query for CareTeam resources matching a sub-set of the FHIR core CareTeam resource query parameters"/>
 		<security>
 			<cors value="false"/>
 			<description value="None mandated by IHE, encouraged IHE-IUA or SMART-on-FHIR"/>
 		</security>
-		<!--resource block for CarePlan-->
+		<!--resource block for CareTeam-->
 		<resource>
-			<type value="CarePlan"/>
+			<type value="CareTeam"/>
 			<profile>
-				<reference value="http://ihe.net/fhir/StructureDefinition/IHE.DCP.Query.CarePlan"/>
+				<reference value="http://ihe.net/fhir/StructureDefinition/IHE.DCTM.Query.CareTeam"/>
 			</profile>
 			<interaction>
 				<code value="create"/>
@@ -73,77 +74,21 @@
 			<interaction>
 				<code value="history-type"/>
 			</interaction>
-			<!--CarePlan search parameters-->
-			<searchParam>
-				<name value="activity-code"/>
-				<type value="token"/>
-			</searchParam>
-			<searchParam>
-				<name value="activity-date"/>
-				<type value="date"/>
-			</searchParam>
-			<searchParam>
-				<name value="activity-reference"/>
-				<type value="reference"/>
-			</searchParam>
-			<searchParam>
-				<name value="based-on"/>
-				<type value="reference"/>
-			</searchParam>
-			<searchParam>
-				<name value="care-team"/>
-				<type value="reference"/>
-			</searchParam>
+			<!--CareTeam search parameters-->
 			<searchParam>
 				<name value="category"/>
 				<type value="token"/>
-			</searchParam>
-			<searchParam>
-				<name value="condition"/>
-				<type value="reference"/>
 			</searchParam>
 			<searchParam>
 				<name value="date"/>
 				<type value="date"/>
 			</searchParam>
 			<searchParam>
-				<name value="encounter"/>
-				<type value="reference"/>
-			</searchParam>
-			<searchParam>
-				<name value="goal"/>
-				<type value="reference"/>
-			</searchParam>
-			<searchParam>
-				<name value="identifier"/>
-				<type value="token"/>
-			</searchParam>
-			<searchParam>
-				<name value="instantiates-canonical"/>
-				<type value="token"/>
-			</searchParam>
-			<searchParam>
-				<name value="instantiates-uri"/>
-				<type value="token"/>
-			</searchParam>
-			<searchParam>
-				<name value="intent"/>
-				<type value="token"/>
-			</searchParam>
-			<searchParam>
-				<name value="part-of"/>
+				<name value="participant"/>
 				<type value="reference"/>
 			</searchParam>
 			<searchParam>
 				<name value="patient"/>
-				<type value="reference"/>
-			</searchParam>
-			<searchParam>
-				<name value="performer"/>
-				<type value="reference"/>
-			</searchParam>
-			<searchParam>
-				<name value="replaces"/>
 				<type value="reference"/>
 			</searchParam>
 			<searchParam>
@@ -207,26 +152,6 @@
 				<name value="uri"/>
 				<type value="uri"/>
 			</searchParam>
-		</resource>
-		<!--ActivityDefinition $apply operation-->
-		<resource>
-			<type value="ActivityDefinition"/>
-			<profile>
-				<reference value="http://ihe.net/fhir/StructureDefinition/IHE.DCP.Apply.ActivityDefinition"/>
-			</profile>
-			<interaction>
-                <code value="create" />
-            </interaction>
-		</resource>
-		<!--ActivityDefinition $apply operation-->
-		<resource>
-			<type value="PlanDefinition"/>
-			<profile>
-				<reference value="http://ihe.net/fhir/StructureDefinition/IHE.DCP.Apply.PlanDefinition"/>
-			</profile>
-			<interaction>
-                <code value="create" />
-            </interaction>
 		</resource>
 		<interaction>
 			<code value="batch"/>
