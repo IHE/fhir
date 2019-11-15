@@ -6,8 +6,8 @@
       DocumentReference resource for File's metadata based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
       This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 3.0</a></div>
   </text>
-  <url value="http://ihe.net/fhir/StructureDefinition/IHE_NPFSm_DocumentReference" />
-  <name value="IHENPFSmDocumentReference" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE_NPFS_DocumentReference" />
+  <name value="IHENPFSDocumentReference" />
   <title value="Non-patient File Sharing" />
   <status value="draft" />
   <date value="2019-07-03" />
@@ -34,7 +34,7 @@
       <min value="1" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="http://ihe.net/fhir/ValueSet/IHE_NPFSm_classcode_vs" />
+        <valueSet value="http://ihe.net/fhir/ValueSet/IHE_NPFS_classcode_vs" />
       </binding>
     </element>
     <element id="DocumentReference.subject">
