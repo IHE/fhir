@@ -4,14 +4,14 @@
         <status value="additional"/>
         <div xmlns="http://www.w3.org/1999/xhtml"> CapabilityStatement for File Manager actor in the
             IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile
-            (NPFSm). This conformance resource is Informative. The Normative content can be found
-            through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)"
-                >Non-patient File Sharing (NPFSm) Rev. 3.0</a>
+            (NPFS). This conformance resource is Informative. The Normative content can be found
+            through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFS)"
+                >Non-patient File Sharing (NPFS) Rev. 3.0</a>
         </div>
     </text>
-    <url value="http://ihe.net/fhir/CapabilityStatement/IHE_NPFSm_FileManager"/>
-    <name value="IHE_NPFSm_FileManager"/>
-    <title value="IHE ITI Non-patient File Sharing (NPFSm) - File Manager (server)"/>
+    <url value="http://ihe.net/fhir/CapabilityStatement/IHE_NPFS_FileManager"/>
+    <name value="IHE_NPFS_FileManager"/>
+    <title value="IHE ITI Non-patient File Sharing (NPFS) - File Manager (server)"/>
     <status value="draft"/>
     <experimental value="false"/>
     <date value="2019-07-03"/>
@@ -41,7 +41,7 @@
         </security>
         <resource>
             <type value="DocumentReference"/>
-            <profile value="http://ihe.net/fhir/StructureDefinition/IHE_NPFSm_DocumentReference"/>
+            <profile value="http://ihe.net/fhir/StructureDefinition/IHE_NPFS_DocumentReference"/>
             <interaction>
                 <code value="update"/>
             </interaction>
@@ -132,7 +132,7 @@
         </resource>
         <interaction>
             <code value="transaction"/>
-            <documentation value="http://ihe.net/fhir/StructureDefinition/IHE_NPFSm_SubmitFile"/>
+            <documentation value="http://ihe.net/fhir/StructureDefinition/IHE_NPFS_SubmitFile"/>
         </interaction>
         <interaction>
             <code value="search-system"/>
