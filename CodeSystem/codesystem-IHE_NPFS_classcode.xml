@@ -2,11 +2,11 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
 	<text>
 		<status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
-			Codesystem for the category element based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
-			This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 3.0</a>
+			Codesystem for the category element based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFS).
+			This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFS)">Non-patient File Sharing (NPFS) Rev. 3.0</a>
 		</div></text>
-	<url value="http://ihe.net/fhir/CodeSystem/IHE_NPFSm_classcode_cs"/>
-    <name value="IHE_NPFSm_classcode_cs"/>
+	<url value="http://ihe.net/fhir/CodeSystem/IHE_NPFS_classcode_cs"/>
+    <name value="IHE_NPFS_classcode_cs"/>
 	<title value="IHE Category (Class) Code set for use with Non-Patient File Sharing"/>
 	<status value="active"/>
 	<experimental value="false"/>
@@ -19,8 +19,8 @@
 			<value value="http://ihe.net"/> 
 		</telecom> 
 	</contact> 
-	<description value="Codesystem for the ctegory element based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm).
-		This conformance resource is Informative. The Normative content can be found through http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)"/>
+	<description value="Codesystem for the ctegory element based on IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFS).
+		This conformance resource is Informative. The Normative content can be found through http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFS)"/>
 	  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
 	<caseSensitive value="true"/> 
 	<content value="complete"/> 
