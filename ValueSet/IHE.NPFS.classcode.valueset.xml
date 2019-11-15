@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="IHE_NPFSm_classcode_vs"/>
+    <id value="IHE_NPFS_classcode_vs"/>
     <text>
         <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
             ValueSet that rappresent the set of ClassCode(s) for a Non-patient file as defined in IHE IT Infrastructure Technical Framework Supplement - Non-Patient File Sharing profile (NPFSm). The actual list of codes is intended to be extensible.
             This conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Non-patient_File_Sharing_(NPFSm)">Non-patient File Sharing (NPFSm) Rev. 3.0</a>
         </div></text>
-    <url value="http://www.ihe.net/fhir/ValueSet/IHE_NPFSm_classcode_vs"/>
-    <name value="IHE_NPFSm_ClassCode_vs"/>
+    <url value="http://www.ihe.net/fhir/ValueSet/IHE_NPFS_classcode_vs"/>
+    <name value="IHE_NPFS_ClassCode_vs"/>
     <title value="IHE ValueSet of Class Codes for use with Non-Patient File Sharing"/>
     <status value="active"/>
     <experimental value="false"/>
@@ -27,7 +27,7 @@
     <extensible value="false"/>
     <compose>
         <include>
-            <system value="http://www.ihe.net/fhir/CodeSystem/IHE_NPFSm_classcode_cs"/>
+            <system value="http://www.ihe.net/fhir/CodeSystem/IHE_NPFS_classcode_cs"/>
         </include>
         <include>
             <system value="https://loinc.org/"/>
