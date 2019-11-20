@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+
+	<text>
+		<status value="additional"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+CapabilityStatement for Alert Aggregator Actor in the IHE IT Infrastructure Technical Framework Supplement  
+<a href="https://wiki.ihe.net/index.php/Mobile_Alert_Communication_Management(mACM)">Mobile Alert Communication Management (mACM)</a>. 
+The IHE mACM Profile text is Normative, this conformance resource is Informative.
+		</div>
+	</text>
+	<url value="http://ihe.net/fhir/CapabilityStatement/IHE_mACM_AlertAggregator"/>
+	<name value="IHE_mACM_AlertAggregator"/>
+	<title value="IHE ITI Mobile Alert Communication Management (mACM) - Alert Aggregator (server)"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2019-11-20" />
+	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
+	<contact>
+		<name value="IHE"/>
+		<telecom>
+			<system value="url"/>
+			<value value="http://ihe.net"/>
+		</telecom>
+	</contact>
+	<description value="CapabilityStatement for Alert Aggregator Actor in the IHE IT Infrastructure Technical Framework Supplement IHE mACM. See https://wiki.ihe.net/index.php/Mobile_Alert_Communication_Management(mACM). The IHE mACM Profile text is Normative, this conformance resource is Informative."/>
+	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+	<kind value="requirements"/>
+	<fhirVersion value="4.0.0"/>
+	<format value="application/fhir+xml"/>
+	<format value="application/fhir+json"/>
+	<rest>
+		<mode value="server"/>
+		<documentation value="mACM server provides capability to create CommunicationRequest resources and query for CommunicationRequest and Communcation resources"/>
+		<security>
+			<cors value="false"/>
+			<description value="None mandated by IHE, encouraged IHE-IUA or SMART-on-FHIR"/>
+		</security>
+		<resource>
+			<type value="CommunicationRequest"/>
+			<interaction>
+				<code value="read"/>
+			</interaction>
+			<interaction>
+				<code value="create"/>
+			</interaction>
+			<interaction>
+				<code value="search-type"/>
+			</interaction>
+			<searchParam>
+				<name value="_id"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-_id"/>
+				<type value="token"/>
+				<documentation value="Logical id of this artifact"/>
+			</searchParam>
+			<searchParam>
+				<name value="_lastUpdated"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-_lastUpdated"/>
+				<type value="date"/>
+				<documentation value="When the resource version last changed"/>
+			</searchParam>
+			<searchParam>
+				<name value="authored"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-authored"/>
+				<type value="date"/>
+				<documentation value="When request transitioned to being actionable"/>
+			</searchParam>
+			<searchParam>
+				<name value="based-on"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-based-on"/>
+				<type value="reference"/>
+				<documentation value="Fulfills plan or proposal"/>
+			</searchParam>
+			<searchParam>
+				<name value="category"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-category"/>
+				<type value="token"/>
+				<documentation value="Message category"/>
+			</searchParam>
+			<searchParam>
+				<name value="encounter"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-encounter"/>
+				<type value="reference"/>
+				<documentation value="Encounter created as part of"/>
+			</searchParam>
+			<searchParam>
+				<name value="group-identifier"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-group-identifier"/>
+				<type value="token"/>
+				<documentation value="Composite request this is part of"/>
+			</searchParam>
+			<searchParam>
+				<name value="identifier"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-identifier"/>
+				<type value="token"/>
+				<documentation value="Unique identifier"/>
+			</searchParam>
+			<searchParam>
+				<name value="medium"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-medium"/>
+				<type value="token"/>
+				<documentation value="A channel of communication"/>
+			</searchParam>
+			<searchParam>
+				<name value="occurrence"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-occurrence"/>
+				<type value="date"/>
+				<documentation value="When scheduled"/>
+			</searchParam>
+			<searchParam>
+				<name value="patient"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-patient"/>
+				<type value="reference"/>
+				<documentation value="Focus of message"/>
+			</searchParam>
+			<searchParam>
+				<name value="priority"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-priority"/>
+				<type value="token"/>
+				<documentation value="routine | urgent | asap | stat"/>
+			</searchParam>
+			<searchParam>
+				<name value="recipient"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-recipient"/>
+				<type value="reference"/>
+				<documentation value="Message recipient"/>
+			</searchParam>
+			<searchParam>
+				<name value="replaces"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-replaces"/>
+				<type value="reference"/>
+				<documentation value="Request(s) replaced by this request"/>
+			</searchParam>
+			<searchParam>
+				<name value="requester"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-requester"/>
+				<type value="reference"/>
+				<documentation value="Who/what is requesting service"/>
+			</searchParam>
+			<searchParam>
+				<name value="sender"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-sender"/>
+				<type value="reference"/>
+				<documentation value="Message sender"/>
+			</searchParam>
+			<searchParam>
+				<name value="status"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-status"/>
+				<type value="token"/>
+				<documentation value="draft | active | on-hold | revoked | completed | entered-in-error | unknown"/>
+			</searchParam>
+			<searchParam>
+				<name value="subject"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-subject"/>
+				<type value="reference"/>
+				<documentation value="Focus of message"/>
+			</searchParam>
+
+		</resource>
+		<resource>
+			<type value="Communication"/>
+			<interaction>
+				<code value="read"/>
+			</interaction>
+			<interaction>
+				<code value="search-type"/>
+			</interaction>
+			<searchParam>
+				<name value="_id"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-_id"/>
+				<type value="token"/>
+				<documentation value="Logical id of this artifact"/>
+			</searchParam>
+			<searchParam>
+				<name value="_lastUpdated"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-_lastUpdated"/>
+				<type value="date"/>
+				<documentation value="When the resource version last changed"/>
+			</searchParam>
+			<searchParam>
+				<name value="based-on"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-based-on"/>
+				<type value="reference"/>
+				<documentation value="Request fulfilled by this communication"/>
+			</searchParam>
+			<searchParam>
+				<name value="category"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-category"/>
+				<type value="token"/>
+				<documentation value="Message category"/>
+			</searchParam>
+			<searchParam>
+				<name value="encounter"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-encounter"/>
+				<type value="reference"/>
+				<documentation value="Encounter created as part of"/>
+			</searchParam>
+			<searchParam>
+				<name value="identifier"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-identifier"/>
+				<type value="token"/>
+				<documentation value="Unique identifier"/>
+			</searchParam>
+			<searchParam>
+				<name value="instantiates-canonical"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-instantiates-canonical"/>
+				<type value="reference"/>
+				<documentation value="Instantiates FHIR protocol or definition"/>
+			</searchParam>
+			<searchParam>
+				<name value="instantiates-uri"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-instantiates-uri"/>
+				<type value="uri"/>
+				<documentation value="Instantiates external protocol or definition"/>
+			</searchParam>
+			<searchParam>
+				<name value="medium"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-medium"/>
+				<type value="token"/>
+				<documentation value="A channel of communication"/>
+			</searchParam>
+			<searchParam>
+				<name value="part-of"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-part-of"/>
+				<type value="reference"/>
+				<documentation value="Part of this action"/>
+			</searchParam>
+			<searchParam>
+				<name value="patient"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-patient"/>
+				<type value="reference"/>
+				<documentation value="Focus of message"/>
+			</searchParam>
+			<searchParam>
+				<name value="received"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-received"/>
+				<type value="date"/>
+				<documentation value="When received"/>
+			</searchParam>
+			<searchParam>
+				<name value="recipient"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-recipient"/>
+				<type value="reference"/>
+				<documentation value="Message recipient"/>
+			</searchParam>
+			<searchParam>
+				<name value="sender"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-sender"/>
+				<type value="reference"/>
+				<documentation value="Message sender"/>
+			</searchParam>
+			<searchParam>
+				<name value="sent"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-sent"/>
+				<type value="date"/>
+				<documentation value="When sent"/>
+			</searchParam>
+			<searchParam>
+				<name value="status"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-status"/>
+				<type value="token"/>
+				<documentation value="preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"/>
+			</searchParam>
+			<searchParam>
+				<name value="subject"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Communication-subject"/>
+				<type value="reference"/>
+				<documentation value="Focus of message"/>
+			</searchParam>
+		</resource>
+		<interaction>
+			<code value="search-system"/>
+		</interaction>
+	</rest>
+</CapabilityStatement>
