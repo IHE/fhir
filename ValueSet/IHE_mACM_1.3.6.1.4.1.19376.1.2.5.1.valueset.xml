@@ -9,7 +9,7 @@
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:oid:1.3.6.1.4.1.19376.1.2.5.1"/>
   </identifier>
-  <name value="IHE_mACM_1.3.6.1.4.1.19376.1.2.5.1"/>
+  <name value="IHE_mACM_1_3_6_1_4_1_19376_1_2_5_1"/>
   <title value="IHE ValueSet of Codes for use with mACM Alert Category"/>
   <status value="active"/>
   <experimental value="false"/>
@@ -23,10 +23,9 @@
 		</telecom> 
 	</contact> 
 
-  <description value=""/>
+  <description value="IHE ValueSet of Codes for use with mACM Alert Category"/>
   <immutable value="false"/>
   <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
-  <extensible value="true"/>
   <compose>
     <include>
       <system value="urn:oid:1.3.6.1.4.1.19376.1.2.5.1"/>
