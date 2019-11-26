@@ -4111,55 +4111,6 @@ StructureDefinition for Communication resource constraints in the IHE IT Infrast
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Communication.basedOn:sliceBasedOn">
-      <path value="Communication.basedOn" />
-      <sliceName value="sliceBasedOn" />
-      <short value="Request fulfilled by this communication" />
-      <definition value="An order, proposal or plan fulfilled in whole or in part by this Communication." />
-      <comment value="This must point to some sort of a 'Request' resource, such as CarePlan, CommunicationRequest, ServiceRequest, MedicationRequest, etc." />
-      <alias value="fulfills" />
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="Communication.basedOn" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() or (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-        <source value="Element" />
-      </constraint>
-      <constraint>
-        <key value="ref-1" />
-        <severity value="error" />
-        <human value="SHALL have a contained resource if a local reference is provided" />
-        <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
-        <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="Reference" />
-      </constraint>
-      <isSummary value="true" />
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)" />
-      </mapping>
-      <mapping>
-        <identity value="workflow" />
-        <map value="Event.basedOn" />
-      </mapping>
-    </element>
     <element id="Communication.partOf">
       <path value="Communication.partOf" />
       <short value="Part of this action" />
@@ -8425,55 +8376,6 @@ StructureDefinition for Communication resource constraints in the IHE IT Infrast
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Communication.inResponseTo:mACMInResponseTo.reference.basedOn:sliceBasedOn">
-      <path value="Communication.inResponseTo.reference.basedOn" />
-      <sliceName value="sliceBasedOn" />
-      <short value="Request fulfilled by this communication" />
-      <definition value="An order, proposal or plan fulfilled in whole or in part by this Communication." />
-      <comment value="This must point to some sort of a 'Request' resource, such as CarePlan, CommunicationRequest, ServiceRequest, MedicationRequest, etc." />
-      <alias value="fulfills" />
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="Communication.basedOn" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() or (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-        <source value="Element" />
-      </constraint>
-      <constraint>
-        <key value="ref-1" />
-        <severity value="error" />
-        <human value="SHALL have a contained resource if a local reference is provided" />
-        <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
-        <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="Reference" />
-      </constraint>
-      <isSummary value="true" />
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)" />
-      </mapping>
-      <mapping>
-        <identity value="workflow" />
-        <map value="Event.basedOn" />
-      </mapping>
-    </element>
     <element id="Communication.inResponseTo:mACMInResponseTo.reference.partOf">
       <path value="Communication.inResponseTo.reference.partOf" />
       <short value="Part of this action" />
@@ -9658,49 +9560,6 @@ StructureDefinition for Communication resource constraints in the IHE IT Infrast
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Communication.inResponseTo:sliceInResponseTo">
-      <path value="Communication.inResponseTo" />
-      <sliceName value="sliceInResponseTo" />
-      <short value="Reply to" />
-      <definition value="Prior communication that this communication is in response to." />
-      <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="Communication.inResponseTo" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Communication" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() or (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-        <source value="Element" />
-      </constraint>
-      <constraint>
-        <key value="ref-1" />
-        <severity value="error" />
-        <human value="SHALL have a contained resource if a local reference is provided" />
-        <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
-        <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="Reference" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)" />
-      </mapping>
-    </element>
     <element id="Communication.status">
       <path value="Communication.status" />
       <short value="preparation | in-progress | not-done | suspended | aborted | completed | entered-in-error" />
@@ -10728,10 +10587,6 @@ StructureDefinition for Communication resource constraints in the IHE IT Infrast
         <rules value="open" />
       </slicing>
       <min value="1" />
-    </element>
-    <element id="Communication.inResponseTo:sliceInResponseTo">
-      <path value="Communication.inResponseTo" />
-      <sliceName value="sliceInResponseTo" />
     </element>
   </differential>
 </StructureDefinition>

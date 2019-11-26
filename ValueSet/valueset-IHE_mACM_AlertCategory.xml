@@ -4,12 +4,12 @@
     <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
 	</div></text>
 
-  <url value="http://ihe.net/fhir/ValueSet/IHE_mACM_1.3.6.1.4.1.19376.1.2.5.1"/>
+  <url value="http://ihe.net/fhir/ValueSet/IHE_mACM_AlertCategory"/>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:oid:1.3.6.1.4.1.19376.1.2.5.1"/>
   </identifier>
-  <name value="IHE_mACM_1_3_6_1_4_1_19376_1_2_5_1"/>
+  <name value="IHE_mACM_AlertCategory"/>
   <title value="IHE ValueSet of Codes for use with mACM Alert Category"/>
   <status value="active"/>
   <experimental value="false"/>
@@ -28,7 +28,7 @@
   <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
   <compose>
     <include>
-      <system value="urn:oid:1.3.6.1.4.1.19376.1.2.5.1"/>
+      <system value="http://ihe.net/fhir/CodeSystem/IHE_mACM_AlertCategory"/>
     </include>
   </compose>
 </ValueSet>
