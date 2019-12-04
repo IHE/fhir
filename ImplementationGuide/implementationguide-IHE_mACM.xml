@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+	<text>
+		<status value="additional" />
+		<div xmlns="http://www.w3.org/1999/xhtml">
+  Implementation Guide for IHE mACM profile. 
+The <a href="https://wiki.ihe.net/index.php/Mobile_Alert_Communication_Management(mACM)">Mobile Alert Communication Management(mACM)</a> Profile defines a lightweight RESTful 
+interface for Communication and CommunicationRequest resources.
+The IHE mACM Profile text is Normative, this conformance resource is Informative.
+		</div>
+	</text>
+	<url value="http://ihe.net/fhir/ImplementationGuide/IHE_mACM" />
+	<name value="IHE_mACM" />
+	<status value="active" />
+	<experimental value="false" />
+	<date value="2019-11-20" />
+	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
+	<contact>
+		<name value="IHE" />
+		<telecom>
+			<system value="url" />
+			<value value="http://ihe.net" />
+		</telecom>
+	</contact>
+	<description value="Implementation Guide for IHE mACM profile. See https://wiki.ihe.net/index.php/Mobile_Alert_Communication_Management(mACM) . The IHE mACM Profile text is Normative, this conformance resource is Informative." />
+	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+	<packageId value="ihe.mACM.fhir" />
+	<fhirVersion value="4.0.0" />
+	<manifest>
+		<rendering value="https://wiki.ihe.net/index.php/Mobile_Alert_Communication_Management(mACM)" />
+		<resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/CapabilityStatement/IHE_mACM_AlertAggregator"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/CapabilityStatement/IHE_mACM_AlertReporter"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_AlertCategory"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_AbnormalType"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_AlertSource"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_AlertState"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_EventPhase"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_InactivationState"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/ImplementationGuide/IHE_mACM" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_mACM_Communication_Disseminate" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_mACM_CommunicationRequest_Disseminate" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_mACM_CommunicationRequest" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_mACM_Communication_Response" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_mACM_Communication" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/ValueSet/IHE_mACM_AlertCategory"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/ValueSet/IHE_mACM_Characteristic"/>
+      </reference>
+    </resource>
+	</manifest>
+</ImplementationGuide>

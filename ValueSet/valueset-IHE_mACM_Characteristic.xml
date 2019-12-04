@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+   <text>
+    <status value="additional" /><div xmlns="http://www.w3.org/1999/xhtml">
+	</div></text>
+
+  <url value="http://ihe.net/fhir/ValueSet/IHE_mACM_Characteristic"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:1.3.6.1.4.1.19376.1.2.5.3"/>
+  </identifier>
+  <name value="IHE_mACM_Characteristic"/>
+  <title value="IHE ValueSet of Codes for use with mACM Report Characteristics"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2019-11-20"/>
+  <publisher value="IHE"/>
+  	<contact> 
+		<name value="IHE"/> 
+		<telecom> 
+			<system value="url"/> 
+			<value value="http://ihe.net"/> 
+		</telecom> 
+	</contact> 
+
+  <description value="IHE ValueSet of Codes for use with mACM Report Characteristics"/>
+  <immutable value="false"/>
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+  <compose>
+    <include>
+      <system value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_AbnormalType"/>
+    </include>
+    <include>
+      <system value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_EventPhase"/>
+    </include>
+    <include>
+      <system value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_AlertSource"/>
+    </include>
+    <include>
+      <system value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_InactivationState"/>
+    </include>
+    <include>
+      <system value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_AlertState"/>
+    </include>
+  </compose>
+</ValueSet>
