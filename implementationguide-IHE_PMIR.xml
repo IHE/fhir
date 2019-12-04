@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+	<text>
+		<status value="additional" />
+		<div xmlns="http://www.w3.org/1999/xhtml">
+  Implementation Guide for IHE PMIR profile. 
+The <a href="https://wiki.ihe.net/index.php/Patient_Master_Identity_Registry_(PMIR)">Patient Master Identity Registry (PMIR)</a> Profile defines a lightweight RESTful 
+interface for Subscription resources as well as messaging for a patient identity feed.
+The IHE PMIR Profile text is Normative, this conformance resource is Informative.
+		</div>
+	</text>
+	<url value="http://ihe.net/fhir/ImplementationGuide/IHE_PMIR" />
+	<name value="IHE_PMIR" />
+	<status value="active" />
+	<experimental value="false" />
+	<date value="2019-11-20" />
+	<publisher value="Integrating the Healthcare Enterprise (IHE)" />
+	<contact>
+		<name value="IHE" />
+		<telecom>
+			<system value="url" />
+			<value value="http://ihe.net" />
+		</telecom>
+	</contact>
+	<description value="Implementation Guide for IHE PMIR profile. See https://wiki.ihe.net/index.php/Patient_Master_Identity_Registry_(PMIR). The IHE PMIR Profile text is Normative, this conformance resource is Informative." />
+	<copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property" />
+	<packageId value="ihe.PMIR.fhir" />
+	<fhirVersion value="4.0.0" />
+	<manifest>
+		<rendering value="https://wiki.ihe.net/index.php/Patient_Master_Identity_Registry_(PMIR)" />
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/ImplementationGuide/IHE_PMIR" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/CapabilityStatement/IHE_PMIR_PatientIdentityManager" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/CapabilityStatement/IHE_PMIR_PatientIdentitySubscriber" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_PMIR_MessageHeader" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_PMIR_Bundle" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_PMIR_Patient_Merge" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_PMIR_Patient_RelatedPerson" />
+      </reference>
+    </resource>
+	</manifest>
+</ImplementationGuide>
