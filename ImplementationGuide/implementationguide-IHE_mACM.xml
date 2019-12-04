@@ -29,16 +29,6 @@ The IHE mACM Profile text is Normative, this conformance resource is Informative
 	<manifest>
 		<rendering value="https://wiki.ihe.net/index.php/Mobile_Alert_Communication_Management(mACM)" />
 		<resource>
-			<reference>
-			  <reference value="http://ihe.net/fhir/CapabilityStatement/IHE_PDQm_consumer" />
-			</reference>
-		</resource>
-		<resource>
-			<reference>
-			  <reference value="http://ihe.net/fhir/CapabilityStatement/IHE_PDQm_supplier" />
-			</reference>
-		</resource>
-		<resource>
       <reference>
         <reference value="http://ihe.net/fhir/CapabilityStatement/IHE_mACM_AlertAggregator"/>
       </reference>
@@ -50,32 +40,32 @@ The IHE mACM Profile text is Normative, this conformance resource is Informative
     </resource>
     <resource>
       <reference>
-        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_1.3.6.1.4.1.19376.1.2.5.1"/>
+        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_AlertCategory"/>
       </reference>
     </resource>
     <resource>
       <reference>
-        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_1.3.6.1.4.1.19376.1.2.5.3.1"/>
+        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_AbnormalType"/>
       </reference>
     </resource>
     <resource>
       <reference>
-        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_1.3.6.1.4.1.19376.1.2.5.3.2"/>
+        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_AlertSource"/>
       </reference>
     </resource>
     <resource>
       <reference>
-        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_1.3.6.1.4.1.19376.1.2.5.3.3"/>
+        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_AlertState"/>
       </reference>
     </resource>
     <resource>
       <reference>
-        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_1.3.6.1.4.1.19376.1.2.5.3.4"/>
+        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_EventPhase"/>
       </reference>
     </resource>
     <resource>
       <reference>
-        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_1.3.6.1.4.1.19376.1.2.5.3.5"/>
+        <reference value="http://ihe.net/fhir/CodeSystem/IHE_mACM_Characteristic_InactivationState"/>
       </reference>
     </resource>
     <resource>
@@ -110,12 +100,12 @@ The IHE mACM Profile text is Normative, this conformance resource is Informative
     </resource>
     <resource>
       <reference>
-        <reference value="http://ihe.net/fhir/ValueSet/IHE_mACM_1.3.6.1.4.1.19376.1.2.5.1"/>
+        <reference value="http://ihe.net/fhir/ValueSet/IHE_mACM_AlertCategory"/>
       </reference>
     </resource>
     <resource>
       <reference>
-        <reference value="http://ihe.net/fhir/ValueSet/IHE_mACM_1.3.6.1.4.1.19376.1.2.5.3"/>
+        <reference value="http://ihe.net/fhir/ValueSet/IHE_mACM_Characteristic"/>
       </reference>
     </resource>
 	</manifest>
