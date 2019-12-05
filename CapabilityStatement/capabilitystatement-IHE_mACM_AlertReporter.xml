@@ -49,13 +49,13 @@ The IHE mACM Profile text is Normative, this conformance resource is Informative
 			</interaction>
 			<searchParam>
 				<name value="_id"/>
-				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-_id"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
 				<type value="token"/>
 				<documentation value="Logical id of this artifact"/>
 			</searchParam>
 			<searchParam>
 				<name value="_lastUpdated"/>
-				<definition value="http://hl7.org/fhir/SearchParameter/CommunicationRequest-_lastUpdated"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
 				<type value="date"/>
 				<documentation value="When the resource version last changed"/>
 			</searchParam>
@@ -167,13 +167,13 @@ The IHE mACM Profile text is Normative, this conformance resource is Informative
 			</interaction>
 			<searchParam>
 				<name value="_id"/>
-				<definition value="http://hl7.org/fhir/SearchParameter/Communication-_id"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
 				<type value="token"/>
 				<documentation value="Logical id of this artifact"/>
 			</searchParam>
 			<searchParam>
 				<name value="_lastUpdated"/>
-				<definition value="http://hl7.org/fhir/SearchParameter/Communication-_lastUpdated"/>
+				<definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
 				<type value="date"/>
 				<documentation value="When the resource version last changed"/>
 			</searchParam>
