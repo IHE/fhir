@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.PMIR.Bundle" />
+  <text>
+    <status value="additional" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+StructureDefinition for Bundle resource constraints in the IHE IT Infrastructure Technical Framework Supplement 
+ <a href="https://wiki.ihe.net/index.php/Patient_Master_Identity_Registry_(PMIR)">Patient Master Identity Registry (PMIR)</a> 
+ The IHE PMIR Profile text is Normative, this conformance resource is Informative. </div>
+  </text>
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.Bundle" />
+  <name value="IHE_PMIR_Bundle" />
+  <title value="IHE Patient Master Identity Registry" />
+  <status value="draft" />
+  <date value="2019-12-04" />
+  <publisher value="Integrating the Health Enterprise (IHE)" />
+  <description value="See https://wiki.ihe.net/index.php/Patient_Master_Identity_Registry_(PMIR)" />
+  <purpose value="Added constraints for the Bundle resource for PMIR." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="cda" />
+    <uri value="http://hl7.org/v3/cda" />
+    <name value="CDA (R2)" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Bundle" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Bundle.type">
+      <path value="Bundle.type" />
+      <fixedCode value="message" />
+    </element>
+    <element id="Bundle.entry">
+      <path value="Bundle.entry" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="2" />
+    </element>
+    <element id="Bundle.entry:PMIRMessageHeaderEntry">
+      <path value="Bundle.entry" />
+      <sliceName value="PMIRMessageHeaderEntry" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Bundle.entry:PMIRMessageHeaderEntry.resource">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <type>
+        <code value="Resource" />
+        <profile value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.MessageHeader" />
+      </type>
+    </element>
+    <element id="Bundle.entry:PMIRPatientEntry">
+      <path value="Bundle.entry" />
+      <sliceName value="PMIRPatientEntry" />
+      <min value="1" />
+    </element>
+    <element id="Bundle.entry:PMIRPatientEntry.request">
+      <path value="Bundle.entry.request" />
+      <min value="1" />
+    </element>
+    <element id="Bundle.entry:PMIRPatientEntry.request.method">
+      <path value="Bundle.entry.request.method" />
+      <short value="POST | PUT | DELETE" />
+      <constraint>
+        <key value="ele-2" />
+        <severity value="error" />
+        <human value="request.method must be PUT, POST, or DELETE" />
+        <expression value="value=&quot;PUT&quot; or value=&quot;POST&quot; or value=&quot;DELETE&quot;" />
+        <xpath value="@value=&quot;PUT&quot; or @value=&quot;POST&quot; or @value=&quot;DELETE&quot;" />
+      </constraint>
+    </element>
+  </differential>
+</StructureDefinition>

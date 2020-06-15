@@ -45,22 +45,22 @@ The IHE PMIR Profile text is Normative, this conformance resource is Informative
     </resource>
     <resource>
       <reference>
-        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_PMIR_MessageHeader" />
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.MessageHeader" />
       </reference>
     </resource>
     <resource>
       <reference>
-        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_PMIR_Bundle" />
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.Bundle" />
       </reference>
     </resource>
     <resource>
       <reference>
-        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_PMIR_Patient_Merge" />
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.Patient.Merge" />
       </reference>
     </resource>
     <resource>
       <reference>
-        <reference value="http://ihe.net/fhir/StructureDefinition/IHE_PMIR_Patient_RelatedPerson" />
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.Patient.RelatedPerson" />
       </reference>
     </resource>
 	</manifest>
