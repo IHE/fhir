@@ -54,7 +54,7 @@ StructureDefinition for MessageHeader resource constraints in the IHE IT Infrast
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.BundleHistory" />
       </type>
     </element>
   </differential>

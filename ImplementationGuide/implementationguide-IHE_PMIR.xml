@@ -55,6 +55,11 @@ The IHE PMIR Profile text is Normative, this conformance resource is Informative
     </resource>
     <resource>
       <reference>
+        <reference value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.BundleHistory" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
         <reference value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.Patient.Merge" />
       </reference>
     </resource>

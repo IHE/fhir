@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="IHE.PMIR.Bundle" />
+  <id value="IHE.PMIR.BundleHistory" />
   <text>
     <status value="additional" />
     <div xmlns="http://www.w3.org/1999/xhtml">
@@ -8,11 +8,11 @@ StructureDefinition for Bundle resource constraints in the IHE IT Infrastructure
  <a href="https://wiki.ihe.net/index.php/Patient_Master_Identity_Registry_(PMIR)">Patient Master Identity Registry (PMIR)</a> 
  The IHE PMIR Profile text is Normative, this conformance resource is Informative. </div>
   </text>
-  <url value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.Bundle" />
-  <name value="IHE_PMIR_Bundle" />
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.BundleHistory" />
+  <name value="IHE_PMIR_BundleHistory" />
   <title value="IHE Patient Master Identity Registry" />
   <status value="draft" />
-  <date value="2019-12-04" />
+  <date value="2020-06-05" />
   <publisher value="Integrating the Health Enterprise (IHE)" />
   <description value="See https://wiki.ihe.net/index.php/Patient_Master_Identity_Registry_(PMIR)" />
   <purpose value="Added constraints for the Bundle resource for PMIR." />
@@ -45,7 +45,7 @@ StructureDefinition for Bundle resource constraints in the IHE IT Infrastructure
   <differential>
     <element id="Bundle.type">
       <path value="Bundle.type" />
-      <fixedCode value="message" />
+      <fixedCode value="history" />
     </element>
     <element id="Bundle.entry">
       <path value="Bundle.entry" />
@@ -56,34 +56,20 @@ StructureDefinition for Bundle resource constraints in the IHE IT Infrastructure
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="2" />
+      <min value="1" />
     </element>
-    <element id="Bundle.entry:PMIRMessageHeaderEntry">
+    <element id="Bundle.entry:PMIRPatientEntry">
       <path value="Bundle.entry" />
-      <sliceName value="PMIRMessageHeaderEntry" />
+      <sliceName value="PMIRPatientEntry" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Bundle.entry:PMIRMessageHeaderEntry.resource">
+    <element id="Bundle.entry:PMIRPatientEntry.resource">
       <path value="Bundle.entry.resource" />
       <min value="1" />
       <type>
         <code value="Resource" />
-        <profile value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.MessageHeader" />
-      </type>
-    </element>
-    <element id="Bundle.entry:PMIRBundleHistoryEntry">
-      <path value="Bundle.entry" />
-      <sliceName value="PMIRBundleHistoryEntry" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Bundle.entry:PMIRBundleHistoryEntry.resource">
-      <path value="Bundle.entry.resource" />
-      <min value="1" />
-      <type>
-        <code value="Resource" />
-        <profile value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.BundleHistory" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
     </element>
   </differential>
