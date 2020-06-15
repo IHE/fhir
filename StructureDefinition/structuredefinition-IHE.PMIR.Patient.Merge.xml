@@ -10,7 +10,7 @@ StructureDefinition for Patient resource constraints for merge in the IHE IT Inf
   </text>
   <url value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.Patient.Merge" />
   <name value="IHE_PMIR_Patient_Merge" />
-  <title value="IHE Patient Master Identity Registry" />
+  <title value="IHE PMIR Patient Merge" />
   <status value="draft" />
   <date value="2019-12-04" />
   <description value="See https://wiki.ihe.net/index.php/Patient_Master_Identity_Registry_(PMIR)" />

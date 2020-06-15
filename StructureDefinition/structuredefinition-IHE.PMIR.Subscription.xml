@@ -10,7 +10,7 @@ StructureDefinition for Subscription resource constraints in the IHE IT Infrastr
   </text>
   <url value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.Subscription" />
   <name value="IHE_PMIR_Subscription" />
-  <title value="IHE Patient Master Identity Registry" />
+  <title value="IHE PMIR Subscription" />
   <status value="draft" />
   <date value="2019-12-04" />
   <description value="See https://wiki.ihe.net/index.php/Patient_Master_Identity_Registry_(PMIR)" />

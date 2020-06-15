@@ -10,7 +10,7 @@ StructureDefinition for Bundle resource constraints in the IHE IT Infrastructure
   </text>
   <url value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.BundleHistory" />
   <name value="IHE_PMIR_BundleHistory" />
-  <title value="IHE Patient Master Identity Registry" />
+  <title value="IHE PMIR Bundle History" />
   <status value="draft" />
   <date value="2020-06-05" />
   <publisher value="Integrating the Health Enterprise (IHE)" />

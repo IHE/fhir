@@ -10,7 +10,7 @@ StructureDefinition for MessageHeader resource constraints in the IHE IT Infrast
   </text>
   <url value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.MessageHeader" />
   <name value="IHE_PMIR_MessageHeader" />
-  <title value="IHE Patient Master Identity Registry" />
+  <title value="IHE PMIR MessageHeader" />
   <status value="draft" />
   <date value="2019-12-04" />
   <publisher value="Integrating the Health Enterprise (IHE)" />
