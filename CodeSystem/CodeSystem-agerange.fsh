@@ -14,6 +14,9 @@ Description: "This Coding System provides a way to Code age ranges"
 * ^copyright = "Some content from IHE® Copyright © 2015 [IHE International, Inc](http://www.ihe.net/Governance/#Intellectual_Property)."
 * ^caseSensitive = true
 * ^description = """
+The description below includes test from CP-QRPH-238. The normative text describing this code system can be found at
+https://www.ihe.net/uploadedFiles/Documents/QRPH/IHE_QRPH_Suppl_ADX.pdf#page=78
+
 The representation of age group ranges code should be unambiguous, human readable and machine-readable. There being no commonly
 available coding system or convention for expressing or representing age ranges for aggregate data exchange, ADX expresses an
 age group band through two simple durations as defined in the ISO 8601. The definition below provides the grammar for a coding
