@@ -11,7 +11,7 @@ Description: "This Coding System provides a way to Code age ranges"
 * ^contact[1].name = "Keith W. Boone"
 * ^contact[1].telecom.system = #email
 * ^contact[1].telecom.value = "kboonee@ainq.com"
-* ^copyright = "Some content from IHE® Copyright © 2015 [IHE International, Inc](http://www.ihe.net/Governance/#Intellectual_Property)."
+* ^copyright = "Some content from IHEÂ® Copyright Â© 2015 [IHE International, Inc](http://www.ihe.net/Governance/#Intellectual_Property)."
 * ^caseSensitive = true
 * ^description = """
 The description below includes test from CP-QRPH-238. The normative text describing this code system can be found at
@@ -20,8 +20,8 @@ https://www.ihe.net/uploadedFiles/Documents/QRPH/IHE_QRPH_Suppl_ADX.pdf#page=78
 The representation of age group ranges code should be unambiguous, human readable and machine-readable. There being no commonly
 available coding system or convention for expressing or representing age ranges for aggregate data exchange, ADX expresses an
 age group band through two simple durations as defined in the ISO 8601. The definition below provides the grammar for a coding
-system.  The URL for this Coding System is [http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/agerange](./CodeSystem-agerange.html) (for use in HL7® FHIR®),
-and the OID is 1.3.6.1.4.1.19376.1.7.3.1.1.29.1 (for use in HL7® CDA® and Version 3 standards).
+system.  The URL for this Coding System is [http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/agerange](./CodeSystem-agerange.html) (for use in HL7Â® FHIRÂ®),
+and the OID is 1.3.6.1.4.1.19376.1.7.3.1.1.29.1 (for use in HL7Â® CDAÂ® and Version 3 standards).
 
 ADX describes an age group range as two durations:  <duration1> -- <duration2>. Where duration1 specifies the beginning of the
 age group band (everyone who is this age and above) and duration2 signify the upper bound of the age group band.
