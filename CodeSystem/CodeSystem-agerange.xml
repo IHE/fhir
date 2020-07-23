@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="agerange"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/agerange defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">P0M--P7M<a name="agerange-P0M--P7M"> </a></td><td>0-6 Months</td><td>A age of less than 7 months old</td></tr><tr><td style="white-space:nowrap">P0Y--P1Y<a name="agerange-P0Y--P1Y"> </a></td><td>&lt;1 Year</td><td>A age of less than 1 year old</td></tr><tr><td style="white-space:nowrap">P1Y--P5Y<a name="agerange-P1Y--P5Y"> </a></td><td>1-4 Years</td><td>A age greater or equal to 1 less than 5 years</td></tr><tr><td style="white-space:nowrap">P5Y--P10Y<a name="agerange-P5Y--P10Y"> </a></td><td>5-9 Years</td><td>A age greater or equal to 5 less than 10 years</td></tr><tr><td style="white-space:nowrap">P10Y--P15Y<a name="agerange-P10Y--P15Y"> </a></td><td>10-14 Years</td><td>A age greater or equal to 10 less than 15 years</td></tr><tr><td style="white-space:nowrap">P15Y--P20Y<a name="agerange-P15Y--P20Y"> </a></td><td>15-19 Years</td><td>A age greater or equal to 15 less than 20 years</td></tr><tr><td style="white-space:nowrap">P20Y--P9999Y<a name="agerange-P20Y--P9999Y"> </a></td><td>20+ Years</td><td>A age greater or equal to 20 years</td></tr></table></div>
+  </text>
+  <url value="http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/agerange"/>
+  <version value="0.2.1"/>
+  <name value="AgeRange"/>
+  <title value="Age Range Coding System"/>
+  <status value="active"/>
+  <date value="2020-07-23T16:32:41-04:00"/>
+  <publisher value="Integrating the Healthcare Enterprise (IHE)"/>
+  <contact>
+    <name value="IHE"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://ihe.net"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="John Moehrke"/>
+    <telecom>
+      <system value="email"/>
+      <value value="JohnMoehrke@gmail.com"/>
+    </telecom>
+  </contact>
+  <description value="The representation of age group ranges code should be unambiguous, human readable and machine-readable. There being no commonly&#xA;available coding system or convention for expressing or representing age ranges for aggregate data exchange, ADX expresses an&#xA;age group band through two simple durations as defined in the ISO 8601. The definition below provides the grammar for a coding&#xA;system.  The URL for this Coding System is [http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/agerange](./CodeSystem-agerange.html) (for use in HL7&#xFFFD; FHIR&#xFFFD;),&#xA;and the OID is 1.3.6.1.4.1.19376.1.7.3.1.1.29.1 (for use in HL7&#xFFFD; CDA&#xFFFD; and Version 3 standards).&#xA;&#xA;ADX describes an age group range as two durations:  &lt;duration1&gt; -- &lt;duration2&gt;. Where duration1 specifies the beginning of the&#xA;age group band (everyone who is this age and above) and duration2 signify the upper bound of the age group band.&#xA;Therefore, age groups like &quot;1-9 years&quot; means everyone who is at least one year old and less than 10 years old represented as&#xA;P1Y--P10Y,age group like &quot;10-14 years&quot; means everyone who is at least 10 years old and less than 15 years old is represented&#xA;as P10Y--P15Y.&#xA;&#xA;Durations define the amount if an intervening time between two time points. These durations are represented in the&#xA;form P[n]Y[n]M[n]DT[n]H[n]M[n]S or P[n]W. The [n] is replaced by the value for each of the time elements that follow&#xA;the [n] and the letters have the meaning:&#xA;&#xA;* P is the duration designator (for period) placed at the start of the duration representation.&#xA;* Y is the year designator that follows the value for the number of years.&#xA;* M is the month designator that follows the value for the number of months.&#xA;* W is the week designator that follows the value for the number of weeks.&#xA;* D is the day designator that follows the value for the number of days.&#xA;* T is the time designator that precedes the time components of the representation.&#xA;* H is the hour designator that follows the value for the number of hours.&#xA;* M is the minute designator that follows the value for the number of minutes.&#xA;* S is the second designator that follows the value for the number of seconds."/>
+  <copyright value="Some content from IHE&#xFFFD; Copyright &#xFFFD; 2015 [IHE International, Inc](http://www.ihe.net/Governance/#Intellectual_Property)."/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="7"/>
+  <concept>
+    <code value="P0M--P7M"/>
+    <display value="0-6 Months"/>
+    <definition value="A age of less than 7 months old"/>
+  </concept>
+  <concept>
+    <code value="P0Y--P1Y"/>
+    <display value="&lt;1 Year"/>
+    <definition value="A age of less than 1 year old"/>
+  </concept>
+  <concept>
+    <code value="P1Y--P5Y"/>
+    <display value="1-4 Years"/>
+    <definition value="A age greater or equal to 1 less than 5 years"/>
+  </concept>
+  <concept>
+    <code value="P5Y--P10Y"/>
+    <display value="5-9 Years"/>
+    <definition value="A age greater or equal to 5 less than 10 years"/>
+  </concept>
+  <concept>
+    <code value="P10Y--P15Y"/>
+    <display value="10-14 Years"/>
+    <definition value="A age greater or equal to 10 less than 15 years"/>
+  </concept>
+  <concept>
+    <code value="P15Y--P20Y"/>
+    <display value="15-19 Years"/>
+    <definition value="A age greater or equal to 15 less than 20 years"/>
+  </concept>
+  <concept>
+    <code value="P20Y--P9999Y"/>
+    <display value="20+ Years"/>
+    <definition value="A age greater or equal to 20 years"/>
+  </concept>
+</CodeSystem>
