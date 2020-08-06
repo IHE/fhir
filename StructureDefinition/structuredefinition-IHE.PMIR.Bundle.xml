@@ -54,9 +54,11 @@ StructureDefinition for Bundle resource constraints in the IHE IT Infrastructure
           <type value="profile" />
 					<path value="resource" />
         </discriminator>
-        <rules value="open" />
+        <ordered value="true" />
+        <rules value="closed" />
       </slicing>
       <min value="2" />
+      <max value="2" />
     </element>
     <element id="Bundle.entry:PMIRMessageHeaderEntry">
       <path value="Bundle.entry" />
