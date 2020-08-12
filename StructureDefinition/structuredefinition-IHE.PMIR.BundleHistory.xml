@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.PMIR.BundleHistory" />
+  <text>
+    <status value="additional" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+StructureDefinition for Bundle resource constraints in the IHE IT Infrastructure Technical Framework Supplement 
+ <a href="https://wiki.ihe.net/index.php/Patient_Master_Identity_Registry_(PMIR)">Patient Master Identity Registry (PMIR)</a> 
+ The IHE PMIR Profile text is Normative, this conformance resource is Informative. </div>
+  </text>
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.BundleHistory" />
+  <name value="IHE_PMIR_BundleHistory" />
+  <title value="IHE PMIR Bundle History" />
+  <status value="draft" />
+  <date value="2020-06-05" />
+  <publisher value="Integrating the Health Enterprise (IHE)" />
+  <description value="See https://wiki.ihe.net/index.php/Patient_Master_Identity_Registry_(PMIR)" />
+  <purpose value="Added constraints for the Bundle resource for PMIR." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="cda" />
+    <uri value="http://hl7.org/v3/cda" />
+    <name value="CDA (R2)" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Bundle" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Bundle.type">
+      <path value="Bundle.type" />
+      <fixedCode value="history" />
+    </element>
+    <element id="Bundle.entry">
+      <path value="Bundle.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+					<path value="resource" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Bundle.entry:PMIRPatientEntry">
+      <path value="Bundle.entry" />
+      <sliceName value="PMIRPatientEntry" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Bundle.entry:PMIRPatientEntry.resource">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <type>
+        <code value="Resource" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
