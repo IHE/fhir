@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="formatcode" />
+	<!-- removed text so this codeSystem will render in the IG
+	<text>
+		<status value="additional" />
+		<div xmlns="http://www.w3.org/1999/xhtml">
+The IHE FormatCode code set is defined to be the set of <a href="http://wiki.ihe.net/index.php?title=IHE_Format_Codes">FormatCode(s) defined by IHE</a>. 
+This code set additionally includes deprecated 
+format codes <a href="http://wiki.hl7.org/index.php?title=CDA_Format_Codes_for_IHE_XDS">defined by the HL7 CDA</a>. 
+The set was listed in HITSP C80 Table 2-153 Format Code Value Set Definition.   
+The use of the FormatCode specifies the technical format of the document. 
+The FormatCode is a further specialization more detailed than the mime-type. 
+The FormatCode provides sufficient information to allow any potential document consumer to know if it can process and/or display by identifying a document encoding, structure and template. 
+The actual list of codes is intended to be extensible.
+		</div>
+	</text>
+-->
+	<url value="http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"/>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:1.3.6.1.4.1.19376.1.2.3"/>
+	</identifier>
+
+	<name value="IHE_FormatCode_codesystem"/>
+	<title value="IHE Format Code set for use with Document Sharing"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2020-07-23" />
+	<publisher value="IHE"/>
+	<contact> 
+		<name value="IHE"/> 
+		<telecom> 
+			<system value="url"/> 
+			<value value="http://ihe.net"/> 
+		</telecom> 
+	</contact> 
+	<contact>
+		<name value="IHE Secretary" />
+		<telecom>
+			<system value="email" />
+			<value value="secretary@ihe.net" />
+		</telecom>
+	</contact>
+
+	<description value="The [IHE](http://www.ihe.net) FormatCode code system with cannical URI of http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode is defined to be the set of [FormatCode(s) define by IHE] (http://wiki.ihe.net/index.php?title=IHE_Format_Codes), for use with [Document Sharing](https://wiki.ihe.net/index.php/Category:DocShare). This code set additionally includes, as deprecated, format codes defined by [HL7 for some Implementation Guides](http://wiki.hl7.org/index.php?title=CDA_Format_Codes_for_IHE_XDS). The HL7 codes are now managed by HL7. The set of IHE FormatCode codes was listed in HITSP C80 Table 2-153 Format Code Value Set Definition, but since has been updated. The use of the FormatCode specifies the technical format of the document. The FormatCode tends to reference the IHE Content Profile (Implementation Guide) that defines the use-case and constraints. The FormatCode is a further specialization more detailed than the mime-type. The FormatCode provides sufficient metadata information to allow any potential document content consumer to know if it can process and/or display by identifying a document encoding, structure and template. The set of codes is intended to be extensible."/>
+	<copyright value="Some content from IHE® Copyright © 2015 [IHE International, Inc](http://www.ihe.net/Governance/#Intellectual_Property)."/>
+	<caseSensitive value="true"/> 
+	<content value="complete"/> 
+	<filter>
+		<code value="notSelectable" />
+		<operator value="=" />
+		<value value="false" />
+	</filter>
+	<property>
+		<code value="status"/>
+		<type value="code"/>
+		<uri value="http://hl7.org/fhir/concept-properties#status"/>
+		<description value="A property that indicates the status of the concept. Used to indicate Deprecated and Retired terms." />
+	</property>
+	<property>
+		<code value="notSelectable" />
+		<uri value="http://hl7.org/fhir/concept-properties#notSelectable"/> 
+		<description value="Indicates that the code is abstract - only intended to be used as a selector for other concepts"/> 
+		<type value="boolean" />
+	</property>
+	<property>
+		<code value="comment" />
+		<uri value="http://hl7.org/fhir/concept-properties#comment"/> 
+		<type value="string" />
+		<description value="Indicates the CDA-Template to use with the given formatCode, when CDA mime-type is used." />
+	</property>
+	<!-- could define our own property as we are actually including the cda-template ID as a comment, it is really not a comment
+	<property>
+		<code value="CDA-Template" />
+		<uri value="http://profiles.ihe.net/fhir/formatcode#CDA-Template"/> 
+		<description value="Indicates the CDA-Template to use with the given formatCode, when CDA mime-type is used."/> 
+		<type value="string" />
+	</property>
+	-->
+	<!-- PCC -->
+	<concept>
+		<code value="urn:ihe:pcc" />
+		<display value="PCC Domain" />
+		<definition value="Ontology group for all PCC defined FormatCodes" />
+		<property>
+			<code value="notSelectable" />
+			<valueBoolean value="true" />
+		</property>
+		<concept>
+			<code value="urn:ihe:pcc:xphr:2007"/>
+			<display value="PCC XPHR"/>
+			<definition value="Personal Health Records. Also known as HL7 CCD and HITSP C32"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.5" />
+			</property>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.6" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:aps:2007"/>
+			<display value="PCC APS"/>
+			<definition value="IHE Antepartum Summary"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.11.2" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:xds-ms:2007"/>
+			<display value="PCC XDS-MS"/>
+			<definition value="XDS Medical Summaries"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.3" />
+			</property>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.4" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:edr:2007"/>
+			<display value="PCC EDR"/>
+			<definition value="Emergency Department Referral (EDR)"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.10" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:edes:2007"/>
+			<display value="PCC EDES"/>
+			<definition value="Emergency Department Encounter Summary (EDES)"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.13.1.1" />
+			</property>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.13.1.2" />
+			</property>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.13.1.3" />
+			</property>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.13.1.4" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:apr:handp:2008"/>
+			<display value="PCC APR HANDP"/>
+			<definition value="Antepartum Record (APR) - History and Physical"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.16.1.1" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:apr:lab:2008"/>
+			<display value="PCC APR LAB"/>
+			<definition value="Antepartum Record (APR) - Laboratory"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.16.1.2" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:apr:edu:2008"/>
+			<display value="PCC APR EDU"/>
+			<definition value="Antepartum Record (APR) - Education"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.16.1.3" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:crc:2008"/>
+			<display value="PCC CRC"/>
+			<definition value="Cancer Registry Content (CRC)"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:cm:2008"/>
+			<display value="Care Management (CM)"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:irc:2008"/>
+			<display value="Immunization Registry Content (IRC)"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.18.1.2" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:tn:2007"/>
+			<display value="PCC TN"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:nn:2007"/>
+			<display value="PCC NN"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:ctn:2007"/>
+			<display value="PCC CTN"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:edpn:2007"/>
+			<display value="PCC EDPN"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:hp:2008"/>
+			<display value="PCC HP"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:ldhp:2009"/>
+			<display value="PCC LDHP"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:lds:2009"/>
+			<display value="PCC LDS"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:mds:2009"/>
+			<display value="PCC MDS"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:nds:2010"/>
+			<display value="PCC NDS"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:ppvs:2010"/>
+			<display value="PCC PPVS"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:trs:2011"/>
+			<display value="PCC TRS"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:ets:2011"/>
+			<display value="PCC ETS"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:its:2011"/>
+			<display value="PCC ITS"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:ript:2017"/>
+			<display value="PCC RIPT" />
+			<definition value="Routine Interfacility Patient Transport (RIPT)"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.28.1" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:pcs-cs:2018"/>
+			<display value="PCC PCS-CS"/>
+			<definition value="Paramedicine Care Summary - Clinical Subset (PCS-CS)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.29.1" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:pcs-cr:2018"/>
+			<display value="PCC PCS-CR"/>
+			<definition value="Paramedicine Care Summary - Complete Report (PCS-CR)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.30.1" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pcc:ips:2020"/>
+			<display value="PCC IPS"/>
+			<definition value="International Patient Summary (IPS)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="2.16.840.1.113883.10.22.1.1"/>
+<!--				Note: The template ID is taken from the HL7 IPS and this document is a version of HL7’s CDA International Patient Summary. This is an HL7 template that builds on the 2018 HL7 IPS and a collaborative document that reflects the updated items that will be harmonized. -->
+			</property>	
+		</concept>
+	</concept>
+	<!--IT Infrastructure-->
+	<concept>
+		<code value="urn:ihe:iti" />
+		<display value="IT-Infrastructure Domain" />
+		<definition value="Ontology group for all ITI defined FormatCodes" />
+		<property>
+			<code value="notSelectable" />
+			<valueBoolean value="true" />
+		</property>
+		<concept>
+			<code value="urn:ihe:iti:bppc:2007"/>
+			<display value="ITI BPPC"/>
+			<definition value="Basic Patient Privacy Consents"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.7" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:iti:bppc-sd:2007"/>
+			<display value="ITI BPPC-SD"/>
+			<definition value="Basic Patient Privacy Consents with Scanned Document"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.5.3.1.1.7.1" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:iti:xds-sd:pdf:2008"/>
+			<display value="ITI XDS-SD PDF"/>
+			<definition value="PDF embedded in CDA per XDS-SD profile"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.2.20" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:iti:xds-sd:text:2008"/>
+			<display value="ITI XDS-SD TEXT"/>
+			<definition value="Text embedded in CDA per XDS-SD profile"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.2.20" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:iti:xdw:2011:workflowDoc"/>
+			<display value="ITI XDW"/>
+			<definition value="XDW Workflow Document"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:iti:dsg:detached:2014"/>
+			<display value="ITI DSG Detached"/>
+			<definition value="DSG Detached Document"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:iti:dsg:enveloping:2014"/>
+			<display value="ITI DSG Enveloping"/>
+			<definition value="DSG Enveloping Document"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:iti:appc:2016:consent"/>
+			<display value="ITI APPC"/>
+			<definition value="Advanced Patient Privacy Consents"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:iti:xds:2017:mimeTypeSufficient"/>
+			<display value="mimeType Sufficient"/>
+			<definition value="Code to be used when the mimeType is sufficient to understanding the technical format. May be used when no more specific FormatCode is available and the mimeType is sufficient to identify the technical format"/>
+		</concept>
+	</concept>
+	<!--Laboratory-->
+	<concept>
+		<code value="urn:ihe:lab" />
+		<display value="Lab Domain" />
+		<definition value="Ontology group for all LAB defined FormatCodes" />
+		<property>
+			<code value="notSelectable" />
+			<valueBoolean value="true" />
+		</property>
+		<concept>
+			<code value="urn:ihe:lab:xd-lab:2008"/>
+			<display value="LAB XD-LAB"/>
+			<definition value="CDA Laboratory Report"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.3.3" />
+			</property>
+		</concept>
+	</concept>
+	<!--Radiology-->
+	<concept>
+		<code value="urn:ihe:rad" />
+		<display value="Radiology Domain" />
+		<definition value="Ontology group for all Radiology defined FormatCodes" />
+		<property>
+			<code value="notSelectable" />
+			<valueBoolean value="true" />
+		</property>
+		<concept>
+			<code value="urn:ihe:rad:TEXT"/>
+			<display value="RAD TEXT"/>
+			<definition value="Radiology XDS-I Text"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:rad:PDF"/>
+			<display value="RAD PDF"/>
+			<definition value="Radiology XDS-I PDF"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:rad:CDA:ImagingReportStructuredHeadings:2013"/>
+			<display value="RAD XDS-I"/>
+			<definition value="Radiology XDS-I Structured CDA"/>
+		</concept>
+	</concept>
+	<!--Cardiology-->
+	<concept>
+		<code value="urn:ihe:card" />
+		<display value="Cardiology Domain" />
+		<definition value="Ontology group for all Cardiology defined FormatCodes" />
+		<property>
+			<code value="notSelectable" />
+			<valueBoolean value="true" />
+		</property>
+		<concept>
+			<code value="urn:ihe:card:imaging:2011"/>
+			<display value="CARD Imaging"/>
+			<definition value="Cardiac Imaging Report (CRC)"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.4.1.1.1" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:card:CRC:2012"/>
+			<display value="CARD CRC"/>
+			<definition value="Cardiology Cardiology Cath Report Content (CRC)"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.4.1.1.2" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:card:EPRC-IE:2014"/>
+			<display value="CARD EPRC-IE"/>
+			<definition value="Cardiology Electrophysiology Implant/Explant Report Content (EPRC-IE)"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.4.1.1.3" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:card:CPN:2017"/>
+			<display value="CARD CPN"/>
+			<definition value="Cardiology Procedure Note (CPN)"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.4.1.1.4" />
+			</property>
+		</concept>
+	</concept>
+	<!--Dental-->
+	<concept>
+		<code value="urn:ihe:dent" />
+		<display value="Dental Domain" />
+		<definition value="Ontology group for all Dental defined FormatCodes" />
+		<property>
+			<code value="notSelectable" />
+			<valueBoolean value="true" />
+		</property>
+		<concept>
+			<code value="urn:ihe:dent:TEXT"/>
+			<display value="DENT TEXT"/>
+			<definition value="Dental CDA Wrapped Text Report (DENT)"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:dent:PDF"/>
+			<display value="DENT PDF"/>
+			<definition value="Dental PDF (DENT)"/>
+			<!-- Note PDF/A without CDA Wrapper -->
+		</concept>
+		<concept>
+			<code value="urn:ihe:dent:CDA:ImagingReportStructuredHeadings:2013"/>
+			<display value="DENT CDA"/>
+			<definition value="Dental Imaging Report with Structured Headings (DENT)"/>
+		</concept>
+	</concept>
+	<!--Anatomic Pathology-->
+	<concept>
+		<code value="urn:ihe.palm" />
+		<display value="Pathology Domain" />
+		<definition value="Ontology group for all Pathology defined FormatCodes" />
+		<property>
+			<code value="notSelectable" />
+			<valueBoolean value="true" />
+		</property>
+		<concept>
+			<code value="urn:ihe.palm:apsr:2016"/>
+			<display value="PALM APSR"/>
+			<definition value="Anatomic Pathology Structured Report"/>
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.8.1.1.1" />
+			</property>
+		</concept>
+<!-- all old ones from 2010 that are not to be recognized as the supplement was updated in 2016 and cleaned
+		<concept>
+			<code value="urn:ihe.palm:apsr:all:2010"/>
+			<display value="PALM APSR"/>
+			<definition value="Anatomic Pathology Structured Report All"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:all:2010"/>
+			<display value="PALM APSR Cancer"/>
+			<definition value="Anatomic Pathology Structured Report Cancer All"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:breast:2010"/>
+			<display value="PALM APSR Cancer Breast"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Breast"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:colon:2010"/>
+			<display value="PALM APSR Cancer Colon"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Colon"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:prostate:2010"/>
+			<display value="PALM Cancer Prostate"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Prostate"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:thyroid:2010"/>
+			<display value="PALM APSR Cancer Thyroid"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Thyroid"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:lung:2010"/>
+			<display value="PALM APSR Cancer Lung"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Lung"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:skin:2010"/>
+			<display value="PALM Cancer Skin"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Skin"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:kidney:2010"/>
+			<display value="PALM Cancer Kidney"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Kidney"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:cervix:2010"/>
+			<display value="PALM Cancer Cervix"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Cervix"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:endometrium:2010"/>
+			<display value="PALM Cancer Endometrium"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Endometrium"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:ovary:2010"/>
+			<display value="PALM Cancer Ovary"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Ovary"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:esophagus: 2010"/>
+			<display value="PALM Cancer Esophagus"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Esophagus"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:stomach: 2010"/>
+			<display value="PALM Cancer Stomach"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Stomach"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:liver:2010"/>
+			<display value="PALM Cancer Liver"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Liver"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:pancreas: 2010"/>
+			<display value="PALM Cancer Pancreas"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Pancreas"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:testis:2010"/>
+			<display value="PALM Cancer Testis"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Testis"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:urinary_bladder:2010"/>
+			<display value="PALM Cancer Urinary"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Urinary Bladder"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:lip_oral_cavity:2010"/>
+			<display value="PALM Cancer Lip"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Lip Oral Cavity"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:pharynx:2010"/>
+			<display value="PALM Cancer Pharynix"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Pharynx"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:salivary_gland:2010"/>
+			<display value="PALM Cancer Salivary"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Salivary Gland"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe.palm:apsr:cancer:larynx:2010"/>
+			<display value="PALM Cancer Larynx"/>
+			<definition value="Anatomic Pathology Structured Report Cancer Larynx"/>
+		</concept>
+-->
+	</concept>
+	<!--Pharmacy-->
+	<concept>
+		<code value="urn:ihe:pharm" />
+		<display value="Pharmacy Domain" />
+		<definition value="Ontology group for all Pharmacy defined FormatCodes" />
+		<property>
+			<code value="notSelectable" />
+			<valueBoolean value="true" />
+		</property>
+		<concept>
+			<code value="urn:ihe:pharm:pre:2010"/>
+			<display value="Pharmacy Pre"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pharm:padv:2010"/>
+			<display value="Pharmacy PADV"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pharm:dis:2010"/>
+			<display value="Pharmacy DIS"/>
+		</concept>
+		<concept>
+			<code value="urn:ihe:pharm:pml:2013"/>
+			<display value="Pharmacy PML"/>
+		</concept>
+	</concept>
+	<!-- QRPH -->
+	<concept>
+		<code value="urn:ihe:qrph" />
+		<display value="QRPH Domain" />
+		<definition value="Ontology group for all QRPH defined FormatCodes" />
+		<property>
+			<code value="notSelectable" />
+			<valueBoolean value="true" />
+		</property>
+		<concept>
+			<code value="urn:ihe:qrph:crd:2008"/>
+			<display value="QRPH CRD"/>
+			<definition value="Clinical Research Document (CRD)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.10" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:dsc:2008"/>
+			<display value="QRPH DSC"/>
+			<definition value="Drug Safety Content (DSC)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.11" />
+			</property>
+		</concept>
+<!-- not a FormatCode
+		<concept>
+			<code value="urn:ihe:qrph:rpe:2009"/>
+			<display value="QRPH RPE"/>
+			<definition value="Retrieve Process for Execution (RPE)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.12" />
+			</property>
+		</concept>
+-->
+		<concept>
+			<code value="urn:ihe:qrph:mch:2009"/>
+			<display value="QRPH MCH"/>
+			<definition value="Mother and Child Health (MCH)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.13" />
+			</property>
+			<property>
+				<code value="status"/>
+				<valueCode value="deprecated"/>
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:hbs:2009"/>
+			<display value="QRPH HBS"/>
+			<definition value="Health Birth Summary (HBS)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.13.1" />
+			</property>
+			<property>
+				<code value="status"/>
+				<valueCode value="deprecated"/>
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:prph:2009"/>
+			<display value="QRPH PRPH-Ca"/>
+			<definition value="Physician Reporting to a Public Health Repository - Cancer Registry (PRPH-Ca)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.14" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:ehcp:2010"/>
+			<display value="QRPH EHCP"/>
+			<definition value="Early Hearing Care Plan (EHCP)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.15" />
+			</property>
+			<property>
+				<code value="status"/>
+				<valueCode value="deprecated"/>
+			</property>
+		</concept>
+<!-- not a FormatCode - and deprecated
+		<concept>
+			<code value="urn:ihe:qrph:rsp:2009"/>
+			<display value="QRPH RSP"/>
+			<definition value="Redaction Services (RSP)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.16" />
+			</property>
+		</concept>
+-->		
+		<concept>
+			<code value="urn:ihe:qrph:qmd-eh:2010"/>
+			<display value="QRPH QMD-EH"/>
+			<definition value="Quality Measure Definition - Early Hearing (QMD-EH)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.17" />
+			</property>
+			<property>
+				<code value="status"/>
+				<valueCode value="deprecated"/>
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:qme-eh:2010"/>
+			<display value="QRPH QME-EH"/>
+			<definition value="Quality Measure Execution - Early Hearing (QME-EH)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.18" />
+			</property>
+			<property>
+				<code value="status"/>
+				<valueCode value="deprecated"/>
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:bfdr:2011"/>
+			<display value="QRPH BFDR"/>
+			<definition value="Birth and Fetal Death Report (BFDR)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.19" />
+			</property>
+			<property>
+				<code value="status"/>
+				<valueCode value="deprecated"/>
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:LDS-VR:2013"/>
+			<display value="QRPH LDS-VR"/>
+			<definition value="Birth and Fetal Death Reporting - LDS-VR" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.19.1.1" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:BFDR-Birth:2014"/>
+			<display value="QRPH BFDR Birth CDA document"/>
+			<definition value="BFDR Birth CDA document" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.19.2" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:BFDR-FDeath:2014"/>
+			<display value="QRPH BFDR Death CDA document"/>
+			<definition value="BFDR Death CDA document" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.19.3" />
+			</property>
+		</concept>
+<!-- not a FormatCode
+		<concept>
+			<code value="urn:ihe:qrph:nani:2012"/>
+			<display value="QRPH NANI"/>
+			<definition value="Newborn Admission Notification Information (NANI)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.20" />
+			</property>
+		</concept>
+-->
+		<concept>
+			<code value="urn:ihe:qrph:crpc:2012"/>
+			<display value="QRPH CRPC"/>
+			<definition value="Clinical Research Process Content (CRPC)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.21" />
+			</property>
+			<property>
+				<code value="status"/>
+				<valueCode value="deprecated"/>
+			</property>
+		</concept>
+<!-- not a FormatCode 
+		<concept>
+			<code value="urn:ihe:qrph:dex:2013"/>
+			<display value="QRPH DEX"/>
+			<definition value="Data Element Exchange (DEX)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.22" />
+			</property>
+		</concept>
+-->
+		<concept>
+			<code value="urn:ihe:qrph:vrdr:2013"/>
+			<display value="QRPH VRDR"/>
+			<definition value="Vital Records Death Reporting (VRDR)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.23.1" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:ms-vrdr:2013"/>
+			<display value="QRPH MS-VRDR"/>
+			<definition value="Medical Summary for VRDR Pre-pop (VRDR)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.23.2" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:hw:2013"/>
+			<display value="QRPH HW"/>
+			<definition value="Healthy Weight (HW)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.24.1" />
+			</property>
+		</concept>
+<!-- not a FormatCode and deprecated
+		<concept>
+			<code value="urn:ihe:qrph:rm:2013"/>
+			<display value="QRPH RM"/>
+			<definition value="Research Matching (RM)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.25" />
+			</property>
+		</concept>
+-->
+		<concept>
+			<code value="urn:ihe:qrph:ehdi:2014"/>
+			<display value="QRPH EHDI"/>
+			<definition value="Early Hearing Detection Intervention (EHDI)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.26" />
+			</property>
+			<property>
+				<code value="status"/>
+				<valueCode value="deprecated"/>
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:NHS-Catl-UV:2015"/>
+			<display value="QRPH EHDI NHS Cat I"/>
+			<definition value="Early Hearing Detection Intervention (EHDI) NHS QRDA Category I Report UV" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.26" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:NHS-CatIII-UV:2015"/>
+			<display value="QRPH EHDI NHS Cat III"/>
+			<definition value="Early Hearing Detection Intervention (EHDI) NHS QRDA Category III Report UV" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.26" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:HPoCUS:2014"/>
+			<display value="QRPH HPoC US"/>
+			<definition value="Hearing Plan of Care (HPoC) - US Realm" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.26" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:HPoCUV:2014"/>
+			<display value="QRPH HPoC UV"/>
+			<definition value="Hearing Plan of Care (HPoC) - UV Realm" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.26" />
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:fp:2014"/>
+			<display value="QRPH FP"/>
+			<definition value="Family Planning (FP)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.27" />
+			</property>
+			<property>
+				<code value="status"/>
+				<valueCode value="deprecated"/>
+			</property>
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:fp:2017"/>
+			<display value="QRPH FP V2"/>
+			<definition value="Family Planning (FP V2)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.27.1" />
+			</property>
+			<!-- replacement for fp:2014 -->
+		</concept>
+		<concept>
+			<code value="urn:ihe:qrph:ehdiwd:2013"/>
+			<display value="QRPH EHDI-WD"/>
+			<definition value="Early Hearing Detection and Intervention – Workflow Document (EHDI-WD)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.28" />
+			</property>
+		</concept>
+<!-- not a FormatCode
+		<concept>
+			<code value="urn:ihe:qrph:adx:2015"/>
+			<display value="QRPH ADX"/>
+			<definition value="Aggregate Data Exchange (ADX)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.29" />
+			</property>
+		</concept>
+-->
+		<concept>
+			<code value="urn:ihe:qrph:prq:2019"/>
+			<display value="QRPH PRQ"/>
+			<definition value="Prescription Repository Query (PRQ)" />
+			<property>
+				<code value="comment"/>
+				<valueString value="1.3.6.1.4.1.19376.1.7.3.1.1.30" />
+			</property>
+		</concept>
+
+	</concept>
+	<!-- HL7 -->
+	<concept>
+		<code value="urn:hl7" />
+		<display value="HL7 Organization" />
+		<definition value="Ontology group for all legacy HL7 defined FormatCodes" />
+		<property>
+			<code value="notSelectable" />
+			<valueBoolean value="true" />
+		</property>
+		<concept>
+			<!-- replaced by https://terminology.hl7.org/builds/current/site/CodeSystem-hl7-document-format-codes.html -->
+			<extension url="http://hl7.org/fhir/StructureDefinition/codesystem-replacedby">
+				<valueCoding>
+					<system value="http://terminology.hl7.org/CodeSystem/hl7-document-format-codes"/>
+					<code value="urn:hl7-org:sdwg:ccda-structuredBody:1.1"/>
+				</valueCoding>
+			</extension>
+
+			<code value="urn:hl7-org:sdwg:ccda-structuredBody:1.1"/>
+			<display value="For documents following C-CDA 1.1 constraints using a structured body."/>
+			<definition value="Now available in HL7 CodeSystem hl7-document-format-codes."/>
+			<property>
+				<code value="status"/>
+				<valueCode value="deprecated"/>
+			</property>
+		</concept>
+		<concept>
+			<!-- replaced by https://terminology.hl7.org/builds/current/site/CodeSystem-hl7-document-format-codes.html -->
+			<extension url="http://hl7.org/fhir/StructureDefinition/codesystem-replacedby">
+				<valueCoding>
+					<system value="http://terminology.hl7.org/CodeSystem/hl7-document-format-codes"/>
+					<code value="urn:hl7-org:sdwg:ccda-nonXMLBody:1.1"/>
+				</valueCoding>
+			</extension>
+			<code value="urn:hl7-org:sdwg:ccda-nonXMLBody:1.1"/>
+			<display value="For documents following C-CDA 1.1 constraints using a non structured body."/>
+			<definition value="Now available in HL7 CodeSystem hl7-document-format-codes."/>
+			<property>
+				<code value="status"/>
+				<valueCode value="deprecated"/>
+			</property>
+		</concept>
+		<concept>
+			<!-- replaced by https://terminology.hl7.org/builds/current/site/CodeSystem-hl7-document-format-codes.html -->
+			<extension url="http://hl7.org/fhir/StructureDefinition/codesystem-replacedby">
+				<valueCoding>
+					<system value="http://terminology.hl7.org/CodeSystem/hl7-document-format-codes"/>
+					<code value="urn:hl7-org:sdwg:ccda-structuredBody:2.1"/>
+				</valueCoding>
+			</extension>
+
+			<code value="urn:hl7-org:sdwg:ccda-structuredBody:2.1"/>
+			<display value="For documents following C-CDA 2.1 constraints using a structured body."/>
+			<definition value="Now available in HL7 CodeSystem hl7-document-format-codes."/>
+			<property>
+				<code value="status"/>
+				<valueCode value="deprecated"/>
+			</property>
+		</concept>
+		<concept>
+			<!-- replaced by https://terminology.hl7.org/builds/current/site/CodeSystem-hl7-document-format-codes.html -->
+			<extension url="http://hl7.org/fhir/StructureDefinition/codesystem-replacedby">
+				<valueCoding>
+					<system value="http://terminology.hl7.org/CodeSystem/hl7-document-format-codes"/>
+					<code value="urn:hl7-org:sdwg:ccda-nonXMLBody:2.1"/>
+				</valueCoding>
+			</extension>
+			<code value="urn:hl7-org:sdwg:ccda-nonXMLBody:2.1"/>
+			<display value="For documents following C-CDA 2.1 constraints using a non structured body."/>
+			<definition value="Now available in HL7 CodeSystem hl7-document-format-codes."/>
+			<property>
+				<code value="status"/>
+				<valueCode value="deprecated"/>
+			</property>
+		</concept>
+	</concept>
+</CodeSystem>
