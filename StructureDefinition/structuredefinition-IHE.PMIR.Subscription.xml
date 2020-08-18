@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="IHE.PMIR.Subscription" />
+  <text>
+    <status value="additional" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+StructureDefinition for Subscription resource constraints in the IHE IT Infrastructure Technical Framework Supplement 
+ <a href="https://wiki.ihe.net/index.php/Patient_Master_Identity_Registry_(PMIR)">Patient Master Identity Registry (PMIR)</a> 
+ The IHE PMIR Profile text is Normative, this conformance resource is Informative. </div>
+  </text>
+  <url value="http://ihe.net/fhir/StructureDefinition/IHE.PMIR.Subscription" />
+  <name value="IHE_PMIR_Subscription" />
+  <title value="IHE PMIR Subscription" />
+  <status value="draft" />
+  <date value="2019-12-04" />
+  <description value="See https://wiki.ihe.net/index.php/Patient_Master_Identity_Registry_(PMIR)" />
+  <purpose value="Added constraints for the Subscription resource for PMIR." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="cda" />
+    <uri value="http://hl7.org/v3/cda" />
+    <name value="CDA (R2)" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="loinc" />
+    <uri value="http://loinc.org" />
+    <name value="LOINC code for the element" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Subscription" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Subscription" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Subscription.contact.system">
+      <path value="Subscription.contact.system" />
+      <min value="1" />
+    </element>
+    <element id="Subscription.contact.value">
+      <path value="Subscription.contact.value" />
+      <min value="1" />
+    </element>
+    <element id="Subscription.criteria">
+      <path value="Subscription.criteria" />
+      <definition value="Must support Patient, Patient?_id=X, Patient?organization=X, and Patient?identifier=X" />
+    </element>
+    <element id="Subscription.channel.type">
+      <path value="Subscription.channel.type" />
+      <fixedCode value="message" />
+    </element>
+    <element id="Subscription.channel.endpoint">
+      <path value="Subscription.channel.endpoint" />
+      <min value="1" />
+    </element>
+    <element id="Subscription.channel.payload">
+      <path value="Subscription.channel.payload" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
