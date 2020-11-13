@@ -8,3 +8,5 @@ Issues may also be logged in this repository for issues related to the conforman
 FHIR Conformance resources are non-normative, the normative specification are the supplement or technical framework text.
 
 Note the movement to other publication methods is in progress.
+
+Format Code vocabulary is published at http://profiles.ihe.net/fhir/ihe.formatcode.fhir/
