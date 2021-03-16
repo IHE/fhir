@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-	<id value="IHE_security_types" />
+	<id value="ihe.securityTypes" />
 	<url value="http://profiles.ihe.net/fhir/ihe.securityTypes/CodeSystem/securityTypes"/>
 	<name value="IHE_SecurityTypes_codesystem"/>
 	<title value="IHE Security Types Code set for use with CapabilityStatement"/>
