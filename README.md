@@ -10,3 +10,5 @@ FHIR Conformance resources are non-normative, the normative specification are th
 Note the movement to other publication methods is in progress.
 
 Format Code vocabulary is published at http://profiles.ihe.net/fhir/ihe.formatcode.fhir/
+MHD is now published as an Implementation Guide at http://profiles.ihe.net/ITI/MHD/
+

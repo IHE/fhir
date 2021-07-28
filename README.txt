@@ -8,3 +8,4 @@ IT Infrastructure Implementation Materials can be found in the IHE ITI GitHub re
 FHIR conformance resources (e.g., StructureDefinition, CapabilityStatement, ValueSet, etc) for some IHE profiles can be found on the IHE controlled “fhir” GitHub repository found at https://github.com/IHE/fhir.
 
 Format Code vocabulary is published at http://profiles.ihe.net/fhir/ihe.formatcode.fhir/
+MHD is now published as an Implementation Guide at http://profiles.ihe.net/ITI/MHD/
