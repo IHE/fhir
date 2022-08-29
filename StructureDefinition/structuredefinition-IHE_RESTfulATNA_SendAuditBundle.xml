@@ -2,26 +2,39 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <text>
     <status value="additional" />
-    <div xmlns="http://www.w3.org/1999/xhtml"> Profile on Transaction Bundle based on IHE ITI
-            Infrastructure Technical Framework Supplement - RESTful ATNA Query and Feed. This
-            conformance resource is Informative. The Normative content can be found through <a href="http://wiki.ihe.net/index.php/Add_RESTful_Query_to_ATNA"> Add RESTful ATNA Query and Feed Rev. 4.0</a></div>
+    <div xmlns="http://www.w3.org/1999/xhtml"> Profile on Send Audit Bundle based on IHE ITI
+            Infrastructure Technical Framework Supplement - RESTful ATNA Query and Feed. 
+			<p>This profile correlates to Section 3.20.4.4: Send Audit Bundle Request Message</p>
+			<p>This conformance resource is Informative. The Normative content can be found through <a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_RESTful-ATNA.pdf"> Add RESTful ATNA Query and Feed Rev. 3.3</a></p></div>
   </text>
   <url value="http://www.ihe.net/fhir/StructureDefinition/IHE_RESTfulATNA_Send_Audit_Bundle" />
   <name value="IHE_RESTfulATNA_Send_Audit_Bundle" />
   <title value="IHE RESTfulATNA ATNA (Query and Feed) profile on Send Audit Bundle interaction" />
   <status value="draft" />
   <experimental value="false" />
-  <date value="2019-07-25" />
-  <publisher value="Integrating the Healthcare Enterprise (IHE)" />
+  <date value="2020-08-29" />
+  <publisher value="IHE IT Infrastructure Technical Committee"/>
   <contact>
-    <name value="IHE" />
     <telecom>
-      <system value="url" />
-      <value value="http://ihe.net" />
+      <system value="url"/>
+      <value value="https://www.ihe.net/ihe_domains/it_infrastructure/"/>
     </telecom>
   </contact>
-  <description value="Profile on Transaction Bundle based on IHE ITI Infrastructure Technical Framework Supplement - RESTful ATNA Query and Feed.         This conformance resource is Informative. The Normative content can be found through" />
-  <fhirVersion value="4.0.0" />
+  <contact>
+    <name value="IHE IT Infrastructure Technical Committee"/>
+    <telecom>
+      <system value="email"/>
+      <value value="iti@ihe.net"/>
+    </telecom>
+  </contact>
+  <description value="ITI-20 Send Audit Bundle Request Message - Section 3.20.4.4 - Profile on Batch Bundle based on IHE ITI Infrastructure Technical Framework Supplement - RESTful ATNA Query and Feed.         This conformance resource is Informative. The Normative content can be found through" />
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Bundle" />
@@ -30,7 +43,7 @@
   <differential>
     <element id="Bundle.type">
       <path value="Bundle.type" />
-      <fixedCode value="transaction" />
+      <fixedCode value="batch" />
     </element>
     <element id="Bundle.entry">
       <path value="Bundle.entry" />
