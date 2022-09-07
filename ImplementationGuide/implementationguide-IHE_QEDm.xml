@@ -47,7 +47,7 @@ The IHE QEDm Profile text is Normative, this conformance resource is Informative
 		</resource>
 		<resource>
 			<reference>
-			<reference value="http://ihe.net/fhir/CapabilityStatement/IHE_QEDm_Provenance" />
+			<reference value="http://ihe.net/fhir/StructureDefinition/IHE_QEDm_Provenance" />
 			</reference>
 		</resource>
 	</manifest>
