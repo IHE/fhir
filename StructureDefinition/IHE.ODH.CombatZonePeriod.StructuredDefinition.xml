@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="odh-CombatZonePeriod"/>
+    <meta>
+        <versionId value="12"/>
+        <lastUpdated value="2021-05-27T08:27:42.629+00:00"/>
+        <source value="#8TkTTE5Z1Gw1uoHF"/>
+    </meta>
+    <url value="https://profiles.ihe.net/PCC/fhir/StructureDefinition/IHE.ODH.CombatZonePeriod.StructuredDefinition"/>
+    <version value="1.0.0"/>
+    <name value="CombatZonePeriod"/>
+    <title value="Combat Zone Period"/>
+    <status value="active"/>
+    <date value="2020-01-04"/>
+    <publisher value="HL7 International Public Health Work Group"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/pher/index.cfm"/>
+        </telecom>
+    </contact>
+    <description value="A Combat Zone Period Observation is a clinical statement indicating the self-reported date range(s)when a person worked in what is considered a combat zone. Both civilian workers, such as Department of Defense contractors, and military service members could have worked in combat zones. Many people who have served in the military seek care first outside of the Veterans Health Administration system. Collecting this observation can facilitate important conversations about possible related health concerns, potentially prompting referral to the Department of Veterans’ Affairs (VA)."/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Observation"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Observation">
+            <path value="Observation"/>
+            <short value="Combat Zone Period"/>
+            <definition value="Self-reported date range(s) when a person worked in what is considered a combat zone; sometimes called a hazardous duty work. Both civilian workers, such as Department of Defense contractors, and military service members could have worked in combat zones. Multiple periods in combat zone should be recorded using multiple instances of this profile."/>
+            <isModifier value="false"/>
+            <isSummary value="false"/>
+        </element>
+        <element id="Observation.basedOn">
+            <path value="Observation.basedOn"/>
+            <short value="The plan, proposal or order that is fulfilled in whole or in part by this observation"/>
+            <definition value="The plan, proposal or order that is fulfilled in whole or in part by this observation."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+            </type>
+        </element>
+        <element id="Observation.partOf">
+            <path value="Observation.partOf"/>
+            <short value="The larger procedure that this particular observation is a component or step"/>
+            <definition value="The larger procedure that this particular observation is a component or step."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure"/>
+            </type>
+        </element>
+        <element id="Observation.category">
+            <path value="Observation.category"/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.category.coding">
+            <path value="Observation.category.coding"/>
+            <slicing id="1">
+                <discriminator>
+                    <type value="value"/>
+                    <path value="code"/>
+                </discriminator>
+                <ordered value="false"/>
+                <rules value="open"/>
+            </slicing>
+            <min value="1"/>
+            <max value="*"/>
+        </element>
+        <element id="Observation.category.coding:Fixed_social-history">
+            <path value="Observation.category.coding"/>
+            <sliceName value="Fixed_social-history"/>
+            <short value="Social History"/>
+            <definition value="Social History"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="Coding"/>
+            </type>
+            <isSummary value="true"/>
+        </element>
+        <element id="Observation.category.coding:Fixed_social-history.system">
+            <path value="Observation.category.coding.system"/>
+            <min value="1"/>
+            <max value="1"/>
+            <fixedUri value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+        </element>
+        <element id="Observation.category.coding:Fixed_social-history.code">
+            <path value="Observation.category.coding.code"/>
+            <min value="1"/>
+            <max value="1"/>
+            <fixedCode value="social-history"/>
+        </element>
+        <element id="Observation.code">
+            <path value="Observation.code"/>
+        </element>
+        <element id="Observation.code.coding">
+            <path value="Observation.code.coding"/>
+            <slicing id="2">
+                <discriminator>
+                    <type value="value"/>
+                    <path value="code"/>
+                </discriminator>
+                <ordered value="false"/>
+                <rules value="open"/>
+            </slicing>
+            <min value="1"/>
+            <max value="*"/>
+        </element>
+        <element id="Observation.code.coding:Fixed_87511-2">
+            <path value="Observation.code.coding"/>
+            <sliceName value="Fixed_87511-2"/>
+            <short value="Combat zone AndOr hazardous duty work dates"/>
+            <definition value="Combat zone AndOr hazardous duty work dates"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="Coding"/>
+            </type>
+            <isSummary value="true"/>
+        </element>
+        <element id="Observation.code.coding:Fixed_87511-2.system">
+            <path value="Observation.code.coding.system"/>
+            <min value="1"/>
+            <max value="1"/>
+            <fixedUri value="http://loinc.org"/>
+        </element>
+        <element id="Observation.code.coding:Fixed_87511-2.code">
+            <path value="Observation.code.coding.code"/>
+            <min value="1"/>
+            <max value="1"/>
+            <fixedCode value="87511-2"/>
+        </element>
+        <element id="Observation.subject">
+            <path value="Observation.subject"/>
+            <short value="The subject of an observation"/>
+            <definition value="The subject of an observation."/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="https://hl7.org/fhir/uv/ips/StructureDefinition-Patient-uv-ips.html"/>
+            </type>
+        </element>
+        <element id="Observation.focus">
+            <path value="Observation.focus"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.effective[x]">
+            <path value="Observation.effective[x]"/>
+            <min value="0"/>
+            <max value="0"/>
+            <type>
+                <code value="dateTime"/>
+            </type>
+            <type>
+                <code value="Period"/>
+            </type>
+        </element>
+        <element id="Observation.performer">
+            <path value="Observation.performer"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+                <targetProfile value="https://hl7.org/fhir/uv/ips/StructureDefinition-Patient-uv-ips.html"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+            </type>
+        </element>
+        <element id="Observation.valuePeriod">
+            <path value="Observation.valuePeriod"/>
+            <short value="Self-reported date range(s) when a person worked in what is considered a combat zone; sometimes called a hazardous duty work"/>
+            <definition value="Self-reported date range(s) when a person worked in what is considered a combat zone; sometimes called a hazardous duty work."/>
+            <type>
+                <code value="Period"/>
+            </type>
+        </element>
+        <element id="Observation.dataAbsentReason">
+            <path value="Observation.dataAbsentReason"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.interpretation">
+            <path value="Observation.interpretation"/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.bodySite">
+            <path value="Observation.bodySite"/>
+            <min value="0"/>
+            <max value="0"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="BodySite"/>
+                </extension>
+                <strength value="preferred"/>
+                <description value="Codes describing anatomical locations. May include laterality."/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/body-site"/>
+            </binding>
+        </element>
+        <element id="Observation.method">
+            <path value="Observation.method"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.specimen">
+            <path value="Observation.specimen"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.device">
+            <path value="Observation.device"/>
+            <min value="0"/>
+            <max value="0"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+            </type>
+        </element>
+        <element id="Observation.referenceRange">
+            <path value="Observation.referenceRange"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.referenceRange.type">
+            <path value="Observation.referenceRange.type"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="ObservationRangeMeaning"/>
+                </extension>
+                <strength value="extensible"/>
+                <description value="Code for the meaning of a reference range."/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/referencerange-meaning"/>
+            </binding>
+        </element>
+        <element id="Observation.referenceRange.appliesTo">
+            <path value="Observation.referenceRange.appliesTo"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="ObservationRangeType"/>
+                </extension>
+                <strength value="extensible"/>
+                <description value="Codes identifying the population the reference range applies to."/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/referencerange-appliesto"/>
+            </binding>
+        </element>
+        <element id="Observation.hasMember">
+            <path value="Observation.hasMember"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.derivedFrom">
+            <path value="Observation.derivedFrom"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+            </type>
+        </element>
+        <element id="Observation.component">
+            <path value="Observation.component"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.component.value[x]">
+            <path value="Observation.component.value[x]"/>
+            <type>
+                <code value="Quantity"/>
+            </type>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <type>
+                <code value="string"/>
+            </type>
+            <type>
+                <code value="Range"/>
+            </type>
+            <type>
+                <code value="Ratio"/>
+            </type>
+            <type>
+                <code value="SampledData"/>
+            </type>
+            <type>
+                <code value="time"/>
+            </type>
+            <type>
+                <code value="dateTime"/>
+            </type>
+            <type>
+                <code value="Period"/>
+            </type>
+        </element>
+        <element id="Observation.component.referenceRange">
+            <path value="Observation.component.referenceRange"/>
+        </element>
+        <element id="Observation.component.referenceRange.type">
+            <path value="Observation.component.referenceRange.type"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="ObservationRangeMeaning"/>
+                </extension>
+                <strength value="extensible"/>
+                <description value="Code for the meaning of a reference range."/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/referencerange-meaning"/>
+            </binding>
+        </element>
+        <element id="Observation.component.referenceRange.appliesTo">
+            <path value="Observation.component.referenceRange.appliesTo"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="ObservationRangeType"/>
+                </extension>
+                <strength value="extensible"/>
+                <description value="Codes identifying the population the reference range applies to."/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/referencerange-appliesto"/>
+            </binding>
+        </element>
+    </differential>
+</StructureDefinition>
