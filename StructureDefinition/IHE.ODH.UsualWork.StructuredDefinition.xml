@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="odh-UsualWork"/>
+    <meta>
+        <versionId value="49"/>
+        <lastUpdated value="2022-06-30T21:25:51.120+00:00"/>
+        <source value="#v66oyVWfFsrB5hlq"/>
+    </meta>
+    <url value="http://ihe.net/fhir/StructureDefinition/IHE.ODH.UsualWork.StructuredDefinition"/>
+    <version value="1.1.0"/>
+    <name value="UsualWork"/>
+    <title value="Usual Work"/>
+    <status value="active"/>
+    <date value="2020-01-04T00:00:00+00:00"/>
+    <publisher value="HL7 International Public Health Work Group"/>
+    <contact>
+        <name value="HL7 International - Public Health"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/pher"/>
+        </telecom>
+    </contact>
+    <description value="A Usual Occupation Observation is a clinical statement about the type of work (paid or unpaid) done by a person for the longest amount of time during his or her life, not including voluntary work. It includes a set of self-reported, related components about the work a person performed for the longest amount of time during his or her life, regardless of the person's current job and regardless of whether or not the person performed this work for a continuous time. It also can be used in a minor's record for the Usual Work of people who share a home with the person (see optional related subject). Usual Work supports recognition of new and known chronic conditions which evolve over many years and may become evident after the person is no longer performing that type of work, e.g., some respiratory conditions and cancers. These data also are used by public health entities and medical researchers to investigate the relationship between conditions and exposures at work and illnesses, causes of death, or cancer."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+            <display value="United States of America"/>
+        </coding>
+        <text value="United States of America"/>
+    </jurisdiction>
+    <purpose value="Observations are a key aspect of healthcare.  This resource is used to capture those that do not require more sophisticated mechanisms."/>
+    <copyright value="©2020+ HL7 International Public Health Work Group. Package hl7.fhir.us.odh#1.0.0 based on FHIR 4.0.1. Generated 2020-01-08.&#xA;Links: Home | QA Report | Search | Version History external | CC0 external | Propose a change external "/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Observation"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Observation">
+            <path value="Observation"/>
+            <short value="Usual Work"/>
+            <definition value="Related data elements about the work a person reports having performed for the longest amount of time during his or her life, regardless of the person’s current job and regardless of whether or not the person performed this work for a continuous time. Knowledge of person’s Usual Work can potentially assist in diagnosis, treatment and/or prevention of chronic condition(s) or conditions with a long latency. The potential for exposure to Occupational Hazard(s) related to an Occupation and/or an Industry can change over time, and a person could have been in and out of their Usual Work over time, so additional data are helpful to fully evaluate the possible impact of the person’s Usual Work on their health and guide appropriate use of screening tests to detect early disease. Example: a person has worked for a total of 30 years as a building carpenter (Occupation), but in various industries, mostly hotel construction. Her Usual Occupation is ‘building carpenter’ and her Usual Industry is ‘hotel construction.’ Usual Work does not include work that was unpaid or voluntary."/>
+            <isModifier value="false"/>
+            <isSummary value="false"/>
+        </element>
+        <element id="Observation.basedOn">
+            <path value="Observation.basedOn"/>
+            <short value="The plan, proposal or order that is fulfilled in whole or in part by this observation"/>
+            <definition value="The plan, proposal or order that is fulfilled in whole or in part by this observation."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+            </type>
+        </element>
+        <element id="Observation.partOf">
+            <path value="Observation.partOf"/>
+            <short value="The larger procedure that this particular observation is a component or step"/>
+            <definition value="The larger procedure that this particular observation is a component or step."/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure"/>
+            </type>
+        </element>
+        <element id="Observation.category">
+            <path value="Observation.category"/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.category.coding">
+            <path value="Observation.category.coding"/>
+            <slicing id="1">
+                <discriminator>
+                    <type value="value"/>
+                    <path value="code"/>
+                </discriminator>
+                <ordered value="false"/>
+                <rules value="open"/>
+            </slicing>
+            <min value="1"/>
+            <max value="*"/>
+        </element>
+        <element id="Observation.category.coding:Fixed_social-history">
+            <path value="Observation.category.coding"/>
+            <sliceName value="Fixed_social-history"/>
+            <short value="Social History"/>
+            <definition value="Social History"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="Coding"/>
+            </type>
+            <isSummary value="true"/>
+        </element>
+        <element id="Observation.category.coding:Fixed_social-history.system">
+            <path value="Observation.category.coding.system"/>
+            <min value="1"/>
+            <max value="1"/>
+            <fixedUri value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+        </element>
+        <element id="Observation.category.coding:Fixed_social-history.code">
+            <path value="Observation.category.coding.code"/>
+            <min value="1"/>
+            <max value="1"/>
+            <fixedCode value="social-history"/>
+        </element>
+        <element id="Observation.code">
+            <path value="Observation.code"/>
+        </element>
+        <element id="Observation.code.coding">
+            <path value="Observation.code.coding"/>
+            <slicing id="2">
+                <discriminator>
+                    <type value="value"/>
+                    <path value="code"/>
+                </discriminator>
+                <ordered value="false"/>
+                <rules value="open"/>
+            </slicing>
+            <min value="1"/>
+            <max value="*"/>
+        </element>
+        <element id="Observation.code.coding:Fixed_21843-8">
+            <path value="Observation.code.coding"/>
+            <sliceName value="Fixed_21843-8"/>
+            <short value="History of Usual Occupation"/>
+            <definition value="History of Usual Occupation"/>
+            <min value="1"/>
+            <max value="1"/>
+            <base>
+                <path value="CodeableConcept.coding"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="Coding"/>
+            </type>
+            <isSummary value="true"/>
+        </element>
+        <element id="Observation.code.coding:Fixed_21843-8.system">
+            <path value="Observation.code.coding.system"/>
+            <min value="1"/>
+            <max value="1"/>
+            <fixedUri value="http://loinc.org"/>
+        </element>
+        <element id="Observation.code.coding:Fixed_21843-8.code">
+            <path value="Observation.code.coding.code"/>
+            <min value="1"/>
+            <max value="1"/>
+            <fixedCode value="21843-8"/>
+        </element>
+        <element id="Observation.subject">
+            <path value="Observation.subject"/>
+            <short value="The subject of an observation"/>
+            <definition value="The subject of an observation."/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="https://hl7.org/fhir/uv/ips/StructureDefinition-Patient-uv-ips.html"/>
+            </type>
+        </element>
+        <element id="Observation.focus">
+            <path value="Observation.focus"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+            </type>
+        </element>
+        <element id="Observation.effectivePeriod">
+            <path value="Observation.effectivePeriod"/>
+            <short value="The period.start asserts when the usual occupation began.  NOTE: If the period.start element is missing, the start of the usual occupation is not known. The period.end asserts when the usual occupation ended. If usual occupation is current, period.end should be omitted."/>
+            <definition value="The period.start asserts when the usual occupation began.  NOTE: If the period.start element is missing, the start of the usual occupation is not known. The period.end asserts when the usual occupation ended. If Usual Occupation is current, period.end should be omitted. If the period.end is missing, it may also mean that the end of the usual occupation is not known."/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Period"/>
+            </type>
+        </element>
+        <element id="Observation.performer">
+            <path value="Observation.performer"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+                <targetProfile value="https://hl7.org/fhir/uv/ips/StructureDefinition-Patient-uv-ips.html"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+            </type>
+        </element>
+        <element id="Observation.valueCodeableConcept">
+            <path value="Observation.valueCodeableConcept"/>
+            <short value="Express the usual occupation using a coded value. If no coded value is available, use text. If the usual occupation is not available, explain using dataAbsentReason."/>
+            <definition value="Express the usual occupation using a coded value. If no coded value is available, use text. If the usual occupation is not available, explain using dataAbsentReason."/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+        </element>
+        <element id="Observation.valueCodeableConcept.coding">
+            <path value="Observation.valueCodeableConcept.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="pattern"/>
+                    <path value="$this"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="0"/>
+            <max value="*"/>
+        </element>
+        <element id="Observation.valueCodeableConcept.coding:occupationCDCCensus2010">
+            <path value="Observation.valueCodeableConcept.coding"/>
+            <sliceName value="occupationCDCCensus2010"/>
+            <short value="Occupation CDC Census 2010"/>
+            <definition value="Occupation CDC Census 2010"/>
+            <min value="0"/>
+            <max value="1"/>
+            <binding>
+                <strength value="example"/>
+                <description value="Occupation CDC Census 2010"/>
+                <valueSet value="http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7186"/>
+            </binding>
+        </element>
+        <element id="Observation.valueCodeableConcept.coding:occupationONETSOCDetailODH">
+            <path value="Observation.valueCodeableConcept.coding"/>
+            <sliceName value="occupationONETSOCDetailODH"/>
+            <short value="Occupation ONETSOC Detail (ODH)"/>
+            <definition value="Occupation ONETSOC Detail (ODH)"/>
+            <min value="0"/>
+            <max value="1"/>
+            <binding>
+                <strength value="example"/>
+                <description value="Occupation ONETSOC Detail (ODH)"/>
+                <valueSet value="http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7901"/>
+            </binding>
+        </element>
+        <element id="Observation.valueCodeableConcept.coding:occupationCDCCensus2018">
+            <path value="Observation.valueCodeableConcept.coding"/>
+            <sliceName value="occupationCDCCensus2018"/>
+            <short value="Occupation CDC Census 2018"/>
+            <definition value="Occupation CDC Census 2018"/>
+            <min value="0"/>
+            <max value="1"/>
+            <binding>
+                <strength value="example"/>
+                <description value="Occupation CDC Census 2018"/>
+                <valueSet value="http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8065"/>
+            </binding>
+        </element>
+        <element id="Observation.valueCodeableConcept.text">
+            <path value="Observation.valueCodeableConcept.text"/>
+            <short value="Use the narrative description if there is no coded value available for the usual occupation."/>
+            <definition value="Use the narrative description if there is no coded value available for the usual occupation."/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.dataAbsentReason">
+            <path value="Observation.dataAbsentReason"/>
+            <short value="The reason that there is no value available for the Occupation."/>
+            <definition value="The reason that there is no value available for the Occupation."/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.interpretation">
+            <path value="Observation.interpretation"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.bodySite">
+            <path value="Observation.bodySite"/>
+            <min value="0"/>
+            <max value="0"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="BodySite"/>
+                </extension>
+                <strength value="preferred"/>
+                <description value="Codes describing anatomical locations. May include laterality."/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/body-site"/>
+            </binding>
+        </element>
+        <element id="Observation.method">
+            <path value="Observation.method"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.specimen">
+            <path value="Observation.specimen"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.device">
+            <path value="Observation.device"/>
+            <min value="0"/>
+            <max value="0"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+            </type>
+        </element>
+        <element id="Observation.referenceRange">
+            <path value="Observation.referenceRange"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.referenceRange.type">
+            <path value="Observation.referenceRange.type"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="ObservationRangeMeaning"/>
+                </extension>
+                <strength value="extensible"/>
+                <description value="Code for the meaning of a reference range."/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/referencerange-meaning"/>
+            </binding>
+        </element>
+        <element id="Observation.referenceRange.appliesTo">
+            <path value="Observation.referenceRange.appliesTo"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="ObservationRangeType"/>
+                </extension>
+                <strength value="extensible"/>
+                <description value="Codes identifying the population the reference range applies to."/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/referencerange-appliesto"/>
+            </binding>
+        </element>
+        <element id="Observation.hasMember">
+            <path value="Observation.hasMember"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.derivedFrom">
+            <path value="Observation.derivedFrom"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"/>
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+            </type>
+        </element>
+        <element id="Observation.component">
+            <path value="Observation.component"/>
+            <slicing id="3">
+                <discriminator>
+                    <type value="value"/>
+                    <path value="code"/>
+                </discriminator>
+                <ordered value="false"/>
+                <rules value="open"/>
+            </slicing>
+            <min value="1"/>
+            <max value="*"/>
+        </element>
+        <element id="Observation.component:odh-UsualIndustry">
+            <path value="Observation.component"/>
+            <sliceName value="odh-UsualIndustry"/>
+            <short value="UsualIndustry: The industry (type of business) in which the subject has worked for the longest duration while in the usual occupation. Express the usual industry using a coded value. If no coded value is available, use text. If the usual industry is not available, explain using dataAbsentReason."/>
+            <definition value="The industry (type of business) in which the subject has worked for the longest duration while in the usual occupation. For example, a person who has spent 30 years as a building carpenter in various industries, but mostly in construction, would record a usual occupation of building carpenter and a usual industry of construction."/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.component:odh-UsualIndustry.code">
+            <path value="Observation.component.code"/>
+            <short value="History of Usual industry"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="21844-6"/>
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Observation.component:odh-UsualIndustry.valueCodeableConcept">
+            <path value="Observation.component.valueCodeableConcept"/>
+            <short value="Express the Industry using a coded value. If no coded value is available, use text. If the Industry is not available, explain using dataAbsentReason."/>
+            <definition value="Express the Industry using a coded value. If no coded value is available, use text. If the Industry is not available, explain using dataAbsentReason."/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+        </element>
+        <element id="Observation.component:odh-UsualIndustry.valueCodeableConcept.coding">
+            <path value="Observation.component.valueCodeableConcept.coding"/>
+            <slicing>
+                <discriminator>
+                    <type value="pattern"/>
+                    <path value="$this"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="0"/>
+            <max value="*"/>
+        </element>
+        <element id="Observation.component:odh-UsualIndustry.valueCodeableConcept.coding:industryCDCCensus2010">
+            <path value="Observation.component.valueCodeableConcept.coding"/>
+            <sliceName value="industryCDCCensus2010"/>
+            <short value="Industry CDC Census 2010"/>
+            <definition value="Industry CDC Census 2010"/>
+            <min value="0"/>
+            <max value="1"/>
+            <binding>
+                <strength value="example"/>
+                <description value="Industry CDC Census 2010"/>
+                <valueSet value="http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7187"/>
+            </binding>
+        </element>
+        <element id="Observation.component:odh-UsualIndustry.valueCodeableConcept.coding:industryONETSOCDetailODH">
+            <path value="Observation.component.valueCodeableConcept.coding"/>
+            <sliceName value="industryONETSOCDetailODH"/>
+            <short value="Industry NAICS Detail (ODH)"/>
+            <definition value="Industry NAICS Detail (ODH)"/>
+            <min value="0"/>
+            <max value="1"/>
+            <binding>
+                <strength value="example"/>
+                <description value="Industry NAICS Detail (ODH)"/>
+                <valueSet value="http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7900"/>
+            </binding>
+        </element>
+        <element id="Observation.component:odh-UsualIndustry.valueCodeableConcept.coding:industryCDCCensus2018">
+            <path value="Observation.component.valueCodeableConcept.coding"/>
+            <sliceName value="industryCDCCensus2018"/>
+            <short value="Industry CDC Census 2018"/>
+            <definition value="Industry CDC Census 2018"/>
+            <min value="0"/>
+            <max value="1"/>
+            <binding>
+                <strength value="example"/>
+                <description value="Industry CDC Census 2018"/>
+                <valueSet value="http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8066"/>
+            </binding>
+        </element>
+        <element id="Observation.component:odh-UsualIndustry.valueCodeableConcept.text">
+            <path value="Observation.component.valueCodeableConcept.text"/>
+            <short value="Use the narrative description if there is no coded value available for the usual industry."/>
+            <definition value="Use the narrative description if there is no coded value available for the usual industry."/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.component:odh-UsualIndustry.dataAbsentReason">
+            <path value="Observation.component.dataAbsentReason"/>
+            <short value="The reason that there is no value available for the Industry."/>
+            <definition value="The reason that there is no value available for the Industry."/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.component:odh-UsualIndustry.interpretation">
+            <path value="Observation.component.interpretation"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.component:odh-UsualIndustry.referenceRange">
+            <path value="Observation.component.referenceRange"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.component:odh-UsualIndustry.referenceRange.type">
+            <path value="Observation.component.referenceRange.type"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="ObservationRangeMeaning"/>
+                </extension>
+                <strength value="extensible"/>
+                <description value="Code for the meaning of a reference range."/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/referencerange-meaning"/>
+            </binding>
+        </element>
+        <element id="Observation.component:odh-UsualIndustry.referenceRange.appliesTo">
+            <path value="Observation.component.referenceRange.appliesTo"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="ObservationRangeType"/>
+                </extension>
+                <strength value="extensible"/>
+                <description value="Codes identifying the population the reference range applies to."/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/referencerange-appliesto"/>
+            </binding>
+        </element>
+        <element id="Observation.component:odh-UsualOccupationDuration">
+            <path value="Observation.component"/>
+            <sliceName value="odh-UsualOccupationDuration"/>
+            <short value="UsualOccupationDuration: The total of all periods of time (in years) the subject has spent in their Usual Occupation, not including intermittent period(s) when they were not working in that occupation (type of work)."/>
+            <definition value="UsualOccupationDuration: The total of all periods of time (in years) the subject has spent in their Usual Occupation, not including intermittent period(s) when they were not working in that occupation (type of work)."/>
+            <min value="0"/>
+            <max value="1"/>
+        </element>
+        <element id="Observation.component:odh-UsualOccupationDuration.code">
+            <path value="Observation.component.code"/>
+            <short value="Usual occupation duration"/>
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org"/>
+                    <code value="74163-7"/>
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Observation.component:odh-UsualOccupationDuration.valueQuantity">
+            <path value="Observation.component.valueQuantity"/>
+            <base>
+                <path value="Observation.component.value[x]"/>
+                <min value="0"/>
+                <max value="1"/>
+            </base>
+            <type>
+                <code value="Quantity"/>
+            </type>
+        </element>
+        <element id="Observation.component:odh-UsualOccupationDuration.valueQuantity.system">
+            <path value="Observation.component.valueQuantity.system"/>
+            <fixedUri value="http://unitsofmeasure.org"/>
+        </element>
+        <element id="Observation.component:odh-UsualOccupationDuration.valueQuantity.code">
+            <path value="Observation.component.valueQuantity.code"/>
+            <fixedCode value="a"/>
+        </element>
+        <element id="Observation.component:odh-UsualOccupationDuration.interpretation">
+            <path value="Observation.component.interpretation"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.component:odh-UsualOccupationDuration.referenceRange">
+            <path value="Observation.component.referenceRange"/>
+            <min value="0"/>
+            <max value="0"/>
+        </element>
+        <element id="Observation.component:odh-UsualOccupationDuration.referenceRange.type">
+            <path value="Observation.component.referenceRange.type"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="ObservationRangeMeaning"/>
+                </extension>
+                <strength value="extensible"/>
+                <description value="Code for the meaning of a reference range."/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/referencerange-meaning"/>
+            </binding>
+        </element>
+        <element id="Observation.component:odh-UsualOccupationDuration.referenceRange.appliesTo">
+            <path value="Observation.component.referenceRange.appliesTo"/>
+            <min value="0"/>
+            <max value="1"/>
+            <binding>
+                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+                    <valueString value="ObservationRangeType"/>
+                </extension>
+                <strength value="extensible"/>
+                <description value="Codes identifying the population the reference range applies to."/>
+                <valueSet value="http://hl7.org/fhir/ValueSet/referencerange-appliesto"/>
+            </binding>
+        </element>
+    </differential>
+</StructureDefinition>
